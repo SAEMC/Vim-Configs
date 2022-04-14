@@ -49,6 +49,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'preservim/nerdcommenter'
+Plugin 'blueyed/vim-diminactive'
 call vundle#end()
 filetype plugin indent on
 EOF
