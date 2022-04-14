@@ -116,6 +116,7 @@ map <C-b> <ESC>:NERDTreeToggle<CR>
 map <C-d> <ESC>:bp <BAR> bd #<CR>
 map <C-c><Left> <ESC>:bprevious!<CR>
 map <C-c><Right> <ESC>:bnext!<CR>
+vmap <C-_> <Leader>c<space>
 EOF
 
 exit 0
