@@ -1,4 +1,4 @@
-# SAEMC Vim Settings - Ver_1_0
+# SAEMC Vim Settings - Ver_2_0
 
 ### 사용 플러그인
 
@@ -12,6 +12,7 @@
 - `Plugin 'scrooloose/nerdtree'`  
 - `Plugin 'nathanaelkane/vim-indent-guides'`  
 - `Plugin 'preservim/nerdcommenter'`  
+- `Plugin 'blueyed/vim-diminactive'`  
 
 ---
 
