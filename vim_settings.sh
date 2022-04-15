@@ -90,6 +90,9 @@ set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\\
 set encoding=utf-8
 set fileencodings=utf8,cp949
 
+set splitbelow
+set termwinsize=10x0
+
 syntax on
 set background=dark
 colorscheme onedark
@@ -117,6 +120,7 @@ map <C-b> <ESC>:NERDTreeToggle<CR>
 map <C-d> <ESC>:bp <BAR> bd #<CR>
 map <C-c><Left> <ESC>:bprevious!<CR>
 map <C-c><Right> <ESC>:bnext!<CR>
+map <C-x> <ESC>:terminal<CR>
 vmap <C-_> <Leader>c<space>
 EOF
 
