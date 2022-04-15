@@ -29,7 +29,13 @@ else
 fi
 
 if [[ -d ${HOME}/.vim/bundle ]]; then
-    sudo rm -r ${HOME}/.vim/bundle
+	eval "$sudo_check"
+	
+	if [[ "$?" -eq 0 ]]; then
+    	sudo rm -r ${HOME}/.vim/bundle
+	else
+		rm -r ${HOME}/.vim/bundle
+	fi
 fi
 
 git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
