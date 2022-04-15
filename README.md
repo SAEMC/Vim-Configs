@@ -38,7 +38,8 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `Ctrl` + `b`: NerdTree 토글 온/오프  
 - `Ctrl` + `c` + `좌우방향키`: 버퍼 이동  
 - `Ctrl` + `d`: 버퍼 윈도우 닫기  
-- `Ctrl` + `/`: 비주얼 모드에서 주석 달기
+- `Ctrl` + `x`: 터미널 열기  
+- `Ctrl` + `/`: 비주얼 모드에서 주석 달기  
 
 <br/>
 
