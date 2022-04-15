@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# OSTYPE Check
 ostype=$(echo "${OSTYPE}")
 vim_check="/bin/bash -c 'vim --version >/dev/null 2>&1'"
 sudo_check="/bin/bash -c 'sudo --version >/dev/null 2>&1'"
