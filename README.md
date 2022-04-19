@@ -41,7 +41,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `Ctrl` + `c` + `좌우방향키`: [N/V/S/O] 버퍼 윈도우 이동  
 - `Ctrl` + `d`: [N/V/S/O] 버퍼 윈도우 닫기 / 터미널 닫기  
 - `Ctrl` + `x`: [N/V/S/O] 터미널 열기  
-- `Ctrl` + `w` + `상하좌우방향키`: [N/V/S/O] 윈도우 이동  
+- `Ctrl` + `w` + `상하좌우방향키`: [N/V/S/O] 분할 윈도우 이동  
 - `Ctrl` + `/`: [V] 주석 달기  
 - `r`: [NerdTree 윈도우] NerdTree 새로고침  
 
