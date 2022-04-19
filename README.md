@@ -37,10 +37,10 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 
 #### [N: Normal] | [V: Visual] | [S: Select] | [O: Operator-pending]
 
-- `Ctrl` + `b`: [N/V/S/O] NerdTree 토글 온/오프  
+- `Ctrl` + `b`: [N/V/S/O] NerdTree 토글 켜기/끄기  
 - `Ctrl` + `c` + `좌우방향키`: [N/V/S/O] 버퍼 윈도우 이동  
 - `Ctrl` + `d`: [N/V/S/O] 버퍼 윈도우 닫기 / 터미널 닫기  
-- `Ctrl` + `x`: [N/V/S/O] 터미널 열기  
+- `Ctrl` + `x`: [N/V/S/O] 터미널 수평 열기  
 - `Ctrl` + `w` + `상하좌우방향키`: [N/V/S/O] 분할 윈도우 이동  
 - `Ctrl` + `/`: [V] 주석 달기  
 - `s`: [NerdTree 윈도우] 윈도우 수직 분할  
