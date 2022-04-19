@@ -46,6 +46,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `s`: [NerdTree 윈도우] 윈도우 수직 분할  
 - `r`: [NerdTree 윈도우] NerdTree 새로고침  
 - `c`: [N/V/S/O] `set nu` / `/search` / `set list` 끄기  
+- `:set paste`: [N] 붙여넣기 정렬  
 
 <br/>
 
