@@ -43,6 +43,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `Ctrl` + `x`: [N/V/S/O] 터미널 열기  
 - `Ctrl` + `w` + `상하좌우방향키`: [N/V/S/O] 분할 윈도우 이동  
 - `Ctrl` + `/`: [V] 주석 달기  
+- `s`: [NerdTree 윈도우] 윈도우 수직 분할  
 - `r`: [NerdTree 윈도우] NerdTree 새로고침  
 - `c`: [N/V/S/O] `set nu` / `/search` / `set list` 끄기  
 
