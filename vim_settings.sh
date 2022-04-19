@@ -5,36 +5,36 @@ vim_check="/bin/bash -c 'vim --version >/dev/null 2>&1'"
 sudo_check="/bin/bash -c 'sudo --version >/dev/null 2>&1'"
 
 if [[ "$ostype" == "linux-gnu"* ]]; then
-	eval "$vim_check"
+    eval "$vim_check"
 
-	if [[ "$?" -eq 0 ]]; then
-		echo "VIM has been installed in ${ostype}"
-	else
-		eval "$sudo_check"
+    if [[ "$?" -eq 0 ]]; then
+        echo "VIM has been installed in ${ostype}"
+    else
+        eval "$sudo_check"
 
-		if [[ "$?" -eq 0 ]]; then
-			sudo apt-get update
-			sudo apt-get install -y vim
-		else
-			apt-get update
-			apt-get install -y vim
-		fi
-	fi
+        if [[ "$?" -eq 0 ]]; then
+            sudo apt-get update
+            sudo apt-get install -y vim
+        else
+            apt-get update
+            apt-get install -y vim
+        fi
+    fi
 elif [[ "$ostype" == "darwin"* ]]; then
-	echo "VIM has been installed in ${ostype}"
+    echo "VIM has been installed in ${ostype}"
 else
-	echo "${ostype} is not supported!"
-	exit 1
+    echo "${ostype} is not supported!"
+    exit 1
 fi
 
 if [[ -d ${HOME}/.vim/bundle ]]; then
-	eval "$sudo_check"
-	
-	if [[ "$?" -eq 0 ]]; then
-    	sudo rm -r ${HOME}/.vim/bundle
-	else
-		rm -r ${HOME}/.vim/bundle
-	fi
+    eval "$sudo_check"
+    
+    if [[ "$?" -eq 0 ]]; then
+        sudo rm -r ${HOME}/.vim/bundle
+    else
+        rm -r ${HOME}/.vim/bundle
+    fi
 fi
 
 git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
