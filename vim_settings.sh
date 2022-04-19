@@ -133,6 +133,7 @@ map <C-d> <ESC>:bp <BAR> bd #<CR>
 map <C-c><Left> <ESC>:bprevious!<CR>
 map <C-c><Right> <ESC>:bnext!<CR>
 map <C-x> <ESC>:terminal<CR>
+map c <ESC>:set nonu \| <ESC>:noh \| <ESC>:set nolist<CR> \| :<CR>
 vmap <C-_> <Leader>c<space>
 EOF
 
