@@ -67,9 +67,9 @@ filetype plugin indent on
 EOF
 
 if [[ -n "$user" ]]; then
-    sudo -u "$user" /bin/bash -c "sudo vim +PluginInstall +qall"
+    sudo -u "$user" /bin/bash -c "vim +PluginInstall +qall"
 else
-    sudo vim +PluginInstall +qall 
+    vim +PluginInstall +qall 
 fi
 
 sudo cat >>${user_home}/.vimrc <<EOF
