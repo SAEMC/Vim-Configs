@@ -6,7 +6,7 @@ vim_check="/bin/bash -c 'vim --version >/dev/null 2>&1'"
 sudo_check="/bin/bash -c 'sudo --version >/dev/null 2>&1'"
 
 if [[ -n "$user" ]]; then
-    user_home=$(sudo -u "$user" /bin/bash -c 'echo $HOME')
+    user_home=$(sudo -u "$user" /bin/bash -c 'echo ${HOME}')
 else
     user_home=$(echo "${HOME}")
 fi
