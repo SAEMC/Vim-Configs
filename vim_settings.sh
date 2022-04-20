@@ -37,9 +37,9 @@ if [[ -d ${HOME}/.vim/bundle ]]; then
     fi
 fi
 
-sudo git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
 
-sudo cat >${HOME}/.vimrc <<EOF
+cat >${HOME}/.vimrc <<EOF
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -58,6 +58,8 @@ Plugin 'blueyed/vim-diminactive'
 call vundle#end()
 filetype plugin indent on
 EOF
+
+vim +PluginInstall +qall
 
 sudo cat >>${HOME}/.vimrc <<EOF
 
