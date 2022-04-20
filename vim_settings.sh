@@ -61,7 +61,7 @@ EOF
 
 vim +PluginInstall +qall
 
-sudo cat >>${HOME}/.vimrc <<EOF
+cat >>${HOME}/.vimrc <<EOF
 
 if (empty(\$TMUX))
   if (has("nvim"))
