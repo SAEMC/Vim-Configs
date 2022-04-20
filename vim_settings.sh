@@ -1,8 +1,15 @@
 #!/bin/bash
 
+user="$1"
 ostype=$(echo "${OSTYPE}")
 vim_check="/bin/bash -c 'vim --version >/dev/null 2>&1'"
 sudo_check="/bin/bash -c 'sudo --version >/dev/null 2>&1'"
+
+if [[ -n "$user" ]]; then
+    user_home=$(sudo -u "$user" /bin/bash -c 'echo $HOME')
+else
+    user_home=$(echo "${HOME}")
+fi
 
 if [[ "$ostype" == "linux-gnu"* ]]; then
     eval "$vim_check"
@@ -27,19 +34,19 @@ else
     exit 1
 fi
 
-if [[ -d ${HOME}/.vim/bundle ]]; then
+if [[ -d ${user_home}/.vim/bundle ]]; then
     eval "$sudo_check"
     
     if [[ "$?" -eq 0 ]]; then
-        sudo rm -r ${HOME}/.vim/bundle
+        sudo rm -r ${user_home}/.vim/bundle
     else
-        rm -r ${HOME}/.vim/bundle
+        rm -r ${user_home}/.vim/bundle
     fi
 fi
 
-git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
+sudo git clone https://github.com/VundleVim/Vundle.vim.git ${user_home}/.vim/bundle/Vundle.vim
 
-cat >${HOME}/.vimrc <<EOF
+sudo cat >${user_home}/.vimrc <<EOF
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -59,9 +66,13 @@ call vundle#end()
 filetype plugin indent on
 EOF
 
-vim +PluginInstall +qall
+if [[ -n "$user" ]]; then
+    sudo -u "$user" /bin/bash -c "sudo vim +PluginInstall +qall"
+else
+    sudo vim +PluginInstall +qall 
+fi
 
-cat >>${HOME}/.vimrc <<EOF
+sudo cat >>${user_home}/.vimrc <<EOF
 
 if (empty(\$TMUX))
   if (has("nvim"))
