@@ -48,6 +48,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `r`: [NerdTree 윈도우] NerdTree 새로고침  
 - `c`: [N/V/S/O] `set nu` / `/search` / `set list` 끄기  
 - `:set paste`: [N] 붙여넣기 정렬  
+- `Ctrl` + `w` + `Ctrl` + `w`: 터미널에서 가장 왼쪽 윈도우로 가기  
 
 <br/>
 
