@@ -101,6 +101,7 @@ set termwinsize=10x0
 
 syntax on
 set re=0
+set complete=.,i
 set background=dark
 colorscheme onedark
 
