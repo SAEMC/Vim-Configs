@@ -132,8 +132,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 map <C-b> <ESC>:NERDTreeToggle<CR>
 map <C-d> <ESC>:bp <BAR> bd #<CR>
-map <C-c><Left> <ESC>:bprevious!<CR>
-map <C-c><Right> <ESC>:bnext!<CR>
+map <C-h> <ESC>:bprevious!<CR>
+map <C-l> <ESC>:bnext!<CR>
 map <C-x> <ESC>:terminal<CR>
 map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 vmap <C-_> <Leader>c<space>
