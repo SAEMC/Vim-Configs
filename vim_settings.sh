@@ -100,6 +100,7 @@ set splitbelow
 set termwinsize=10x0
 
 syntax on
+set re=0
 set background=dark
 colorscheme onedark
 
