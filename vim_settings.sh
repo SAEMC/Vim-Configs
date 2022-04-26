@@ -34,6 +34,9 @@ elif [[ "$ostype" == "darwin"* ]]; then
 
 # VIM PATH
 export PATH="/opt/local/bin:\$PATH"
+
+# History Timestamp Alias
+alias history="history -i 0"
 EOF
 
     (/bin/zsh -c 'source ${HOME}/.zshrc')
