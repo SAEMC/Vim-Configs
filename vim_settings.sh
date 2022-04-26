@@ -101,6 +101,7 @@ set incsearch
 set showmatch
 
 set ruler
+set backspace=indent,eol,start
 
 set paste
 set laststatus=2
