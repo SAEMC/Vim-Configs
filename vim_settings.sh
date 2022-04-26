@@ -131,13 +131,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
-map <C-b> <ESC>:NERDTreeToggle<CR>
-map <C-d> <ESC>:bp <BAR> bd #<CR>
-map <C-h> <ESC>:bprevious!<CR>
-map <C-l> <ESC>:bnext!<CR>
-map <C-x> <ESC>:terminal<CR>
-map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
-vmap <C-_> <Leader>c<space>
+map <Leader>b <ESC>:NERDTreeToggle<CR>
+map <Leader>d <ESC>:bp <BAR> bd #<CR>
+map <Leader>[ <ESC>:bprevious!<CR>
+map <Leader>] <ESC>:bnext!<CR>
+map <Leader>x <ESC>:terminal<CR>
+map <Leader>c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 EOF
 
 exit 0
