@@ -22,6 +22,18 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
     fi
 elif [[ "$ostype" == "darwin"* ]]; then
     echo "VIM has been installed in ${ostype}"
+    echo "But, Reinstall VIM to /opt/local/bin"
+    sudo mkdir -p /opt/local/bin
+    git clone https://github.com/vim/vim.git
+    (cd ./vim; ./configure --prefix=/opt/local; make; sudo make install; cd ..)
+
+    cat >>${HOME}/.zshrc <<EOF
+
+# VIM PATH
+export PATH="/opt/local/bin:\$PATH"
+EOF
+
+    (/bin/zsh -c 'source ${HOME}/.zshrc')
 else
     echo "${ostype} is not supported!"
     exit 1
