@@ -85,38 +85,33 @@ if (empty(\$TMUX))
     endif
 endif
 
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set smarttab
-
 set autoindent
+set background=dark
+set backspace=indent,eol,start
 set cindent
-set smartindent
-
+set complete=.,i
+set completeopt=menuone,noinsert
+set encoding=utf-8
+set expandtab
+set fileencodings=utf8,cp949
 set hlsearch
 set ignorecase
-set smartcase
 set incsearch
-set showmatch
-
-set ruler
-set backspace=indent,eol,start
-
 set laststatus=2
-set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\\
-set encoding=utf-8
-set fileencodings=utf8,cp949
-
+set re=0
+set ruler
+set shiftwidth=4
+set showmatch
+set smartcase
+set smartindent
+set smarttab
+set softtabstop=4
 set splitbelow
+set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
+set tabstop=4
 set termwinsize=10x0
 
 syntax on
-set re=0
-set complete=.,i
-set completeopt=menuone,noinsert
-set background=dark
 colorscheme onedark
 
 au BufReadPost *
