@@ -9,6 +9,8 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
 
     if [[ "$?" -eq 0 ]]; then
         echo "VIM has been installed in ${ostype}"
+        sudo add-apt-repository ppa:jonathonf/vim
+        sudo apt update && sudo apt install -y vim
     else
         eval "$sudo_check"
 
