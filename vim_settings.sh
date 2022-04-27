@@ -153,5 +153,3 @@ map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 EOF
 
 exit 0
-
-# HELLO
