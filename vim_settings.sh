@@ -149,7 +149,7 @@ map <Leader>d <ESC>:bp <BAR> bd #<CR>
 map <Leader>[ <ESC>:bprevious!<CR>
 map <Leader>] <ESC>:bnext!<CR>
 map <Leader>x <ESC>:terminal<CR>
-map <Leader>c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
+map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 EOF
 
 exit 0
