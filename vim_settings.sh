@@ -35,7 +35,6 @@ elif [[ "$ostype" == "darwin"* ]]; then
 # VIM PATH
 export PATH="/opt/local/bin:\$PATH"
 
-# test1
 # History Timestamp Alias
 alias history="history -i 0"
 EOF
