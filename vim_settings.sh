@@ -24,7 +24,7 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
     fi
 elif [[ "$ostype" == "darwin"* ]]; then
     echo "VIM has been installed in ${ostype}"
-    echo "But, Reinstall VIM to /opt/local/bin"
+    echo "But, Reinstall VIM into /opt/local/bin"
     echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
     sudo mkdir -p /opt/local/bin
     git clone https://github.com/vim/vim.git
