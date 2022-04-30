@@ -12,7 +12,8 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
     eval "$vim_check"
     if [[ "$?" -eq 0 ]]; then
         echo "VIM has been installed in ${ostype}"
-        sudo add-apt-repository ppa:jonathonf/vim
+        sudo apt-get install -y software-properties-common
+        sudo apt-add-repository -y ppa:jonathonf/vim
         sudo apt update && sudo apt install -y vim
     else
         eval "$sudo_check"
@@ -40,9 +41,8 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
 
     eval "$python3_check"
     if [[ "$?" -ne 0 ]]; then
-        sudo apt-get install software-properties-common
-        sudo apt-add-repository ppa:deadsnakes/ppa
-        sudo apt-get update && sudo apt-get install -y python3.8
+        sudo apt-add-repository -y ppa:deadsnakes/ppa
+        sudo apt-get update && sudo apt-get install -y python3.8 clangd
     fi
 
 cat >>${HOME}/.bashrc <<EOF
