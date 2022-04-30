@@ -4,16 +4,18 @@ ostype=$(echo "${OSTYPE}")
 vim_check="/bin/bash -c 'vim --version >/dev/null 2>&1'"
 sudo_check="/bin/bash -c 'sudo --version >/dev/null 2>&1'"
 
+nvm_check="nvm --version >/dev/null 2>&1"
+node_check="node --version >/dev/null 2>&1"
+python3_check="python3 --version >/dev/null 2>&1"
+
 if [[ "$ostype" == "linux-gnu"* ]]; then
     eval "$vim_check"
-
     if [[ "$?" -eq 0 ]]; then
         echo "VIM has been installed in ${ostype}"
         sudo add-apt-repository ppa:jonathonf/vim
         sudo apt update && sudo apt install -y vim
     else
         eval "$sudo_check"
-
         if [[ "$?" -eq 0 ]]; then
             sudo apt-get update
             sudo apt-get install -y vim
@@ -22,6 +24,33 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
             apt-get install -y vim
         fi
     fi
+
+    eval "$nvm_check"
+    if [[ "$?" -ne 0 ]]; then
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    fi
+
+    eval "$node_check"
+    if [[ "$?" -ne 0 ]]; then
+       nvm install --lts
+    fi
+
+    eval "$python3_check"
+    if [[ "$?" -ne 0 ]]; then
+        sudo apt-get install software-properties-common
+        sudo apt-add-repository ppa:deadsnakes/ppa
+        sudo apt-get update && sudo apt-get install -y python3.8
+    fi
+
+cat >>${HOME}/.bashrc <<EOF
+
+# Python Alias
+alias python=python3
+EOF
+
 elif [[ "$ostype" == "darwin"* ]]; then
     echo "VIM has been installed in ${ostype}"
     echo "But, Reinstall VIM into /opt/local/bin"
@@ -37,9 +66,33 @@ export PATH="/opt/local/bin:\$PATH"
 
 # History Timestamp Alias
 alias history="history -i 0"
+
+# Python Alias
+alias python="python3"
 EOF
 
-    (/bin/zsh -c 'source ${HOME}/.zshrc')
+    eval "$nvm_check"
+    if [[ "$?" -ne 0 ]]; then
+        /bin/zsh -c "brew install nvm"
+        mkdir ${HOME}/.nvm
+
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+        [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+        cat >>${HOME}/.zshrc <<EOF
+
+# NVM
+export NVM_DIR="\$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+EOF
+    fi
+
+    eval "$node_check"
+    if [[ "$?" -ne 0 ]]; then
+        nvm install --lts
+    fi
 else
     echo "${ostype} is not supported!"
     exit 1
@@ -47,7 +100,6 @@ fi
 
 if [[ -d ${HOME}/.vim/bundle ]]; then
     eval "$sudo_check"
-    
     if [[ "$?" -eq 0 ]]; then
         sudo rm -r ${HOME}/.vim/bundle
     else
@@ -73,6 +125,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'preservim/nerdcommenter'
 Plugin 'blueyed/vim-diminactive'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'mattn/vim-lsp-settings'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 call vundle#end()
 filetype plugin indent on
 EOF
@@ -150,6 +206,10 @@ map <Leader>[ <ESC>:bprevious!<CR>
 map <Leader>] <ESC>:bnext!<CR>
 map <Leader>x <ESC>:terminal<CR>
 map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
+
+imap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+imap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+imap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 EOF
 
 exit 0
