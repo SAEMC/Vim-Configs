@@ -1,4 +1,4 @@
-# SAEMC Vim Settings - Ver_2_0
+# SAEMC Vim Settings - Ver_3_0
 
 ### 사용 플러그인
 
@@ -13,6 +13,10 @@
 - `Plugin 'nathanaelkane/vim-indent-guides'`  
 - `Plugin 'preservim/nerdcommenter'`  
 - `Plugin 'blueyed/vim-diminactive'`  
+- `Plugin 'prabirshrestha/vim-lsp'`  
+- `Plugin 'mattn/vim-lsp-settings'`  
+- `Plugin 'prabirshrestha/asyncomplete.vim'`  
+- `Plugin 'prabirshrestha/asyncomplete-lsp.vim'`  
 
 ---
 
