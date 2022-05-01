@@ -35,6 +35,8 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
     eval "$node_check"
     if [[ "$?" -ne 0 ]]; then
        nvm install --lts
+       nvm alias default lts/*
+       nvm use lts/*
     fi
 
     sudo apt-get update && sudo apt-get install -y python3-venv
@@ -88,6 +90,8 @@ EOF
     eval "$node_check"
     if [[ "$?" -ne 0 ]]; then
         nvm install --lts
+        nvm alias default lts/*
+        nvm use lts/*
     fi
 else
     echo "${ostype} is not supported!"
