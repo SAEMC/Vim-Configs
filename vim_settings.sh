@@ -3,10 +3,8 @@
 ostype=$(echo "${OSTYPE}")
 vim_check="/bin/bash -c 'vim --version >/dev/null 2>&1'"
 sudo_check="/bin/bash -c 'sudo --version >/dev/null 2>&1'"
-
 nvm_check="nvm --version >/dev/null 2>&1"
 node_check="node --version >/dev/null 2>&1"
-python3_check="python3 --version >/dev/null 2>&1"
 
 if [[ "$ostype" == "linux-gnu"* ]]; then
     eval "$vim_check"
@@ -39,11 +37,7 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
        nvm install --lts
     fi
 
-    eval "$python3_check"
-    if [[ "$?" -ne 0 ]]; then
-        sudo apt-add-repository -y ppa:deadsnakes/ppa
-        sudo apt-get update && sudo apt-get install -y python3.8 clangd
-    fi
+    sudo apt-get update && sudo apt-get install -y python3.8-venv
 
 cat >>${HOME}/.bashrc <<EOF
 
