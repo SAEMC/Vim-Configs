@@ -37,7 +37,7 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
        nvm install --lts
     fi
 
-    sudo apt-get update && sudo apt-get install -y python3.8-venv
+    sudo apt-get update && sudo apt-get install -y python3-venv
 
 cat >>${HOME}/.bashrc <<EOF
 
