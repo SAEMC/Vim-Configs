@@ -1,19 +1,15 @@
 #!/bin/bash
 
 ostype=$(echo "${OSTYPE}")
-vim_check="/bin/bash -c 'vim --version >/dev/null 2>&1'"
 sudo_check="/bin/bash -c 'sudo --version >/dev/null 2>&1'"
 nvm_check="nvm --version >/dev/null 2>&1"
 node_check="node --version >/dev/null 2>&1"
 
 if [[ "$ostype" == "linux-gnu"* ]]; then
-    eval "$vim_check"
-    if [[ "$?" -eq 0 ]]; then
-        echo "VIM has been installed in ${ostype}"
-        sudo apt-get install -y software-properties-common
-        sudo apt-add-repository -y ppa:jonathonf/vim
-        sudo apt-get update && sudo apt-get install -y vim
-    fi
+    sudo apt-get install -y software-properties-common
+    sudo apt-add-repository -y ppa:jonathonf/vim
+    sudo apt-get update
+    sudo apt-get install -y vim
 
     eval "$nvm_check"
     if [[ "$?" -ne 0 ]]; then
