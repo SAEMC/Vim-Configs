@@ -38,6 +38,13 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
 export NVM_DIR=/usr/local/nvm
 source /opt/nvm/nvm.sh
 EOF
+
+        file_name="/etc/profile.d/nvm.sh"
+        if [[ ! -f "$file_name" ]]; then
+            echo "#!/bin/bash" | sudo tee -a $file_name >/dev/null
+            echo "VERSION=\`cat /usr/local/nvm/alias/default\`" | sudo tee -a $file_name >/dev/null
+            echo "export PATH=\"/usr/local/nvm/versions/node/v\$VERSION/bin:\$PATH\"" | sudo tee -a $file_name >/dev/null
+        fi
     fi
 
     eval "$node_check"
