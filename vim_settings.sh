@@ -43,7 +43,8 @@ EOF
     eval "$node_check"
     if [[ "$?" -ne 0 ]]; then
         (su - $USER -c 'export NVM_DIR=/usr/local/nvm && source /opt/nvm/nvm.sh && \
-            sudo nvm install --lts && sudo nvm alias default lts/* && sudo nvm use lts/*')
+            nvm install --lts')
+            # sudo nvm install --lts && sudo nvm alias default lts/* && sudo nvm use lts/*')
     fi
 
     sudo apt-get update && sudo apt-get install -y python3-venv universal-ctags
