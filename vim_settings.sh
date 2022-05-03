@@ -1,7 +1,6 @@
 #!/bin/bash
 
 ostype=$(echo "${OSTYPE}")
-sudo_check="/bin/bash -c 'sudo --version >/dev/null 2>&1'"
 nvm_check="nvm --version >/dev/null 2>&1"
 node_check="node --version >/dev/null 2>&1"
 
@@ -106,12 +105,7 @@ else
 fi
 
 if [[ -d ${HOME}/.vim/bundle ]]; then
-    eval "$sudo_check"
-    if [[ "$?" -eq 0 ]]; then
-        sudo rm -r ${HOME}/.vim/bundle
-    else
-        rm -r ${HOME}/.vim/bundle
-    fi
+    sudo rm -r ${HOME}/.vim/bundle
 fi
 
 ctags_path=$(which ctags)
