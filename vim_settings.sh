@@ -256,7 +256,7 @@ map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 
 imap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 imap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-imap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+imap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 EOF
 
 exit 0
