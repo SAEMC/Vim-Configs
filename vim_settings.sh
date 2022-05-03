@@ -23,6 +23,13 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
         sudo apt-get install -y curl
     fi
 
+    # Check TZData
+    if [[ ! -f /etc/timezone ]]; then
+        export DEBIAN_FRONTEND=noninteractive
+        export TZ=Asia/Seoul
+        sudo apt-get install -y tzdata
+    fi
+
     # Check NVM
     eval "$check_nvm"
     if [[ "$?" -ne 0 ]]; then
