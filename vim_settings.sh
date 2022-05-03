@@ -44,6 +44,7 @@ EOF
             echo "#!/bin/bash" | sudo tee -a $file_name >/dev/null
             echo "VERSION=\`cat /usr/local/nvm/alias/default\`" | sudo tee -a $file_name >/dev/null
             echo "export PATH=\"/usr/local/nvm/versions/node/v\$VERSION/bin:\$PATH\"" | sudo tee -a $file_name >/dev/null
+            sudo chmod +x $file_name 
         fi
     fi
 
