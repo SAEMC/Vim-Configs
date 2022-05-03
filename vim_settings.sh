@@ -72,7 +72,7 @@ cat >>${HOME}/.bashrc <<EOF
 alias python=python3
 EOF
 
-# If MAC
+# If Mac
 elif [[ "$ostype" == "darwin"* ]]; then
     # Add current user into SUDO
     echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
