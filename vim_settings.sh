@@ -26,10 +26,11 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
 
     eval "$nvm_check"
     if [[ "$?" -ne 0 ]]; then
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-        export NVM_DIR="$HOME/.nvm"
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+        sudo git clone https://github.com/creationix/nvm.git /opt/nvm
+        sudo mkdir /usr/local/nvm
+
+        export NVM_DIR=/usr/local/nvm
+        source /opt/nvm/nvm.sh
     fi
 
     eval "$node_check"
@@ -42,6 +43,10 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
     sudo apt-get update && sudo apt-get install -y python3-venv universal-ctags
 
 cat >>${HOME}/.bashrc <<EOF
+
+# NVM
+export NVM_DIR=/usr/local/nvm
+source /opt/nvm/nvm.sh
 
 # Python Alias
 alias python=python3
