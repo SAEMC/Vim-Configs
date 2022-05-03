@@ -26,8 +26,10 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
     # Check TZData
     if [[ ! -f /etc/timezone ]]; then
         export DEBIAN_FRONTEND=noninteractive
-        export TZ=Asia/Seoul
+
+        ln -fs /usr/share/zoneinfo/Asia/Seoul /etc/localtime
         sudo apt-get install -y tzdata
+        dpkg-reconfigure --frontend noninteractive tzdata
     fi
 
     # Check NVM
