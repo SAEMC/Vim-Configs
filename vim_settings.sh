@@ -176,7 +176,7 @@ EOF
 # Execute VIM PluginInstall
 vim +PluginInstall +qall
 
-# Write Settings into ~/.vimrc
+# Write Config into ~/.vimrc
 cat >>${HOME}/.vimrc <<EOF
 
 if (empty(\$TMUX))
