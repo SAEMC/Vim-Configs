@@ -1,8 +1,8 @@
 #!/bin/bash
 
-curl_check="curl --version >/dev/null 2>&1"
-nvm_check="nvm --version >/dev/null 2>&1"
-node_check="node --version >/dev/null 2>&1"
+check_curl="curl --version >/dev/null 2>&1"
+check_nvm="nvm --version >/dev/null 2>&1"
+check_node="node --version >/dev/null 2>&1"
 
 # Check OS
 # If Ubuntu
@@ -17,14 +17,14 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
     sudo apt-get install -y vim
 
     # Check Curl
-    eval "$curl_check"
+    eval "$check_curl"
     if [[ "$?" -ne 0 ]]; then
         # Install Curl
         sudo apt-get install -y curl
     fi
 
     # Check NVM
-    eval "$nvm_check"
+    eval "$check_nvm"
     if [[ "$?" -ne 0 ]]; then
         # Install NVM manually
         export NVM_DIR="$HOME/.nvm" && (
@@ -46,7 +46,7 @@ EOF
     fi
 
     # Check Node
-    eval "$node_check"
+    eval "$check_node"
     if [[ "$?" -ne 0 ]]; then
         # Install Node LTS
         nvm install --lts
@@ -98,7 +98,7 @@ alias python="python3"
 EOF
 
     # Check NVM
-    eval "$nvm_check"
+    eval "$check_nvm"
     if [[ "$?" -ne 0 ]]; then
         # Install NVM
         /bin/zsh -c "brew install nvm"
@@ -121,7 +121,7 @@ EOF
     fi
 
     # Check Node
-    eval "$node_check"
+    eval "$check_node"
     if [[ "$?" -ne 0 ]]; then
         # Install Node LTS
         nvm install --lts
