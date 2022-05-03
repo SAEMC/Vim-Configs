@@ -50,7 +50,14 @@ EOF
         nvm use lts/*
     fi
 
-    sudo apt-get update && sudo apt-get install -y python3-venv universal-ctags
+    # If cannot install pyls in VIM => pip install 'python-language-server[all]'
+    sudo apt-get update
+    sudo apt-get install -y python3-venv
+    sudo apt-get install -y universal-ctags
+
+    if [[ "$?" -ne 0 ]]; then
+        sudo apt-get install -y exuberant-ctags
+    fi
 
 cat >>${HOME}/.bashrc <<EOF
 
