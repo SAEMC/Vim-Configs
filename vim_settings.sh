@@ -128,6 +128,7 @@ EOF
         nvm alias default lts/*
         nvm use lts/*
     fi
+
 # If not Ubuntu or Mac
 else
     echo "${ostype} is not supported!"
