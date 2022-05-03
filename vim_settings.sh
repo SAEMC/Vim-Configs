@@ -31,22 +31,23 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
 
         export NVM_DIR=/usr/local/nvm
         source /opt/nvm/nvm.sh
+
+        cat >>${HOME}/.bashrc <<EOF
+
+# NVM
+export NVM_DIR=/usr/local/nvm
+source /opt/nvm/nvm.sh
+EOF
     fi
 
     eval "$node_check"
     if [[ "$?" -ne 0 ]]; then
-       nvm install --lts
-       nvm alias default lts/*
-       nvm use lts/*
+        (su - $USER -c 'source ${HOME}/.bashrc && nvm install --lts && nvm alias default lts/* && nvm use lts/*')
     fi
 
     sudo apt-get update && sudo apt-get install -y python3-venv universal-ctags
 
 cat >>${HOME}/.bashrc <<EOF
-
-# NVM
-export NVM_DIR=/usr/local/nvm
-source /opt/nvm/nvm.sh
 
 # Python Alias
 alias python=python3
