@@ -13,15 +13,6 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
         sudo apt-get install -y software-properties-common
         sudo apt-add-repository -y ppa:jonathonf/vim
         sudo apt-get update && sudo apt-get install -y vim
-    else
-        eval "$sudo_check"
-        if [[ "$?" -eq 0 ]]; then
-            sudo apt-get update
-            sudo apt-get install -y vim
-        else
-            apt-get update
-            apt-get install -y vim
-        fi
     fi
 
     eval "$nvm_check"
