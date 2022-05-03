@@ -19,6 +19,7 @@
 - `Plugin 'prabirshrestha/asyncomplete-lsp.vim'`  
 - `Plugin 'ap/vim-css-color'`  
 - `Plugin 'preservim/tagbar'`  
+- `Plugin 'airblade/vim-gitgutter'`  
 
 ---
 
