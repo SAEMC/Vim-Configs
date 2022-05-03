@@ -39,7 +39,7 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
        nvm use lts/*
     fi
 
-    sudo apt-get update && sudo apt-get install -y python3-venv
+    sudo apt-get update && sudo apt-get install -y python3-venv universal-ctags
 
 cat >>${HOME}/.bashrc <<EOF
 
@@ -54,6 +54,8 @@ elif [[ "$ostype" == "darwin"* ]]; then
     sudo mkdir -p /opt/local/bin
     git clone https://github.com/vim/vim.git
     (cd ./vim; ./configure --prefix=/opt/local; make; sudo make install; cd ..)
+
+    /bin/zsh -c "brew install universal-ctags"
 
     cat >>${HOME}/.zshrc <<EOF
 
@@ -107,6 +109,8 @@ if [[ -d ${HOME}/.vim/bundle ]]; then
     fi
 fi
 
+ctags_path=$(which ctags)
+
 git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
 
 cat >${HOME}/.vimrc <<EOF
@@ -130,6 +134,7 @@ Plugin 'mattn/vim-lsp-settings'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'ap/vim-css-color'
+Plugin 'preservim/tagbar'
 call vundle#end()
 filetype plugin indent on
 EOF
@@ -201,11 +206,16 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
+let g:tagbar_ctags_bin='$ctags_path'
+let g:tagbar_autoclose=0
+let g:tagbar_autofocus=1
+
 map <Leader>b <ESC>:NERDTreeToggle<CR>
 map <Leader>d <ESC>:bp <BAR> bd #<CR>
 map <Leader>[ <ESC>:bprevious!<CR>
 map <Leader>] <ESC>:bnext!<CR>
 map <Leader>x <ESC>:terminal<CR>
+map <Leader>t <ESC>:TagbarToggle<CR>
 map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 
 imap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
