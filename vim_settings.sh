@@ -254,6 +254,8 @@ map <Leader>x <ESC>:terminal<CR>
 map <Leader>t <ESC>:TagbarToggle<CR>
 map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 
+vmap <Leader>cc <Plug>NERDComToggleComment<CR>
+
 imap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 imap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 imap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
