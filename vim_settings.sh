@@ -50,7 +50,7 @@ EOF
         nvm use lts/*
     fi
 
-    # If cannot install pyls in VIM => pip install 'python-language-server[all]'
+    # Python => LspInstallServer pyls-ms
     sudo apt-get update
     sudo apt-get install -y python3-venv
     sudo apt-get install -y universal-ctags
