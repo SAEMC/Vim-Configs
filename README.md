@@ -48,6 +48,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `\` + `d`: [N/V/S/O] 버퍼 윈도우 닫기  
 - `\` + `[` or `]`: [N/V/S/O] 버퍼 윈도우 이동  
 - `\` + `x`: [N/V/S/O] 터미널 수평 열기  
+- `\` + `t`: [N/V/S/O] Tagbar 토글 켜기/끄기
 - `\` + `c` + `<space>`: [V] 주석 달기  
 - `s`: [NerdTree 윈도우] 윈도우 수직 분할  
 - `i`: [NerdTree 윈도우] 윈도우 수평 분할  
