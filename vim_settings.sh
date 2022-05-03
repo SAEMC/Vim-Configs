@@ -146,6 +146,7 @@ Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'preservim/tagbar'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
 EOF
