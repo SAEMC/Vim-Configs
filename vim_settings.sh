@@ -50,7 +50,7 @@ EOF
         nvm use lts/*
     fi
 
-    # Python => LspInstallServer pyls-ms
+    # If cannot install Pyls-all => LspInstallServer pyls-ms
     sudo apt-get update
     sudo apt-get install -y python3-venv
     sudo apt-get install -y universal-ctags
