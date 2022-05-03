@@ -1,29 +1,39 @@
 #!/bin/bash
 
-ostype=$(echo "${OSTYPE}")
 curl_check="curl --version >/dev/null 2>&1"
 nvm_check="nvm --version >/dev/null 2>&1"
 node_check="node --version >/dev/null 2>&1"
 
+# Check OS
+# If Ubuntu
+ostype=$(echo "${OSTYPE}")
 if [[ "$ostype" == "linux-gnu"* ]]; then
+    # Install Default software
     sudo apt-get install -y software-properties-common
+    # Add VIM into package
     sudo apt-add-repository -y ppa:jonathonf/vim
+    # Install VIM
     sudo apt-get update
     sudo apt-get install -y vim
 
+    # Check Curl
     eval "$curl_check"
     if [[ "$?" -ne 0 ]]; then
+        # Install Curl
         sudo apt-get install -y curl
     fi
 
+    # Check NVM
     eval "$nvm_check"
     if [[ "$?" -ne 0 ]]; then
+        # Install NVM manually
         export NVM_DIR="$HOME/.nvm" && (
         git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
         cd "$NVM_DIR"
         git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
         ) && \. "$NVM_DIR/nvm.sh"
 
+        # Write NVM path into ~/.bashrc
         cat >>${HOME}/.bashrc <<EOF
 
 # NVM
@@ -35,38 +45,46 @@ export NVM_DIR="\$HOME/.nvm"
 EOF
     fi
 
+    # Check Node
     eval "$node_check"
     if [[ "$?" -ne 0 ]]; then
+        # Install Node LTS
         nvm install --lts
         nvm alias default lts/*
         nvm use lts/*
     fi
 
-    # If cannot install pyls-all => LspInstallServer pyls-ms
+    # Install Python and Ctags
+    # If cannot install pyls-all in VIM => Enter ':LspInstallServer pyls-ms' in VIM
     sudo apt-get update
     sudo apt-get install -y python3-venv
     sudo apt-get install -y universal-ctags
 
+    # If cannot install universal-ctags => Install exuberant-ctags
     if [[ "$?" -ne 0 ]]; then
         sudo apt-get install -y exuberant-ctags
     fi
 
+# Write Python alias into ~/.bashrc
 cat >>${HOME}/.bashrc <<EOF
 
 # Python Alias
 alias python=python3
 EOF
 
+# If MAC
 elif [[ "$ostype" == "darwin"* ]]; then
-    echo "VIM has been installed in ${ostype}"
-    echo "But, Reinstall VIM into /opt/local/bin"
+    # Add current user into SUDO
     echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
+    # Install VIM 'termguicolors' version
     sudo mkdir -p /opt/local/bin
     git clone https://github.com/vim/vim.git
     (cd ./vim; ./configure --prefix=/opt/local; make; sudo make install; cd ..)
 
+    # Install universal-ctags
     /bin/zsh -c "brew install universal-ctags"
 
+    # Write VIM path and History timestamp and Python alias into ~/.zshrc
     cat >>${HOME}/.zshrc <<EOF
 
 # VIM PATH
@@ -79,8 +97,10 @@ alias history="history -i 0"
 alias python="python3"
 EOF
 
+    # Check NVM
     eval "$nvm_check"
     if [[ "$?" -ne 0 ]]; then
+        # Install NVM
         /bin/zsh -c "brew install nvm"
         mkdir ${HOME}/.nvm
 
@@ -88,6 +108,7 @@ EOF
         [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
         [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
+        # Write NVM path into ~/.zshrc
         cat >>${HOME}/.zshrc <<EOF
 
 # NVM
@@ -99,25 +120,32 @@ export NVM_DIR="\$HOME/.nvm"
 EOF
     fi
 
+    # Check Node
     eval "$node_check"
     if [[ "$?" -ne 0 ]]; then
+        # Install Node LTS
         nvm install --lts
         nvm alias default lts/*
         nvm use lts/*
     fi
+# If not Ubuntu or Mac
 else
     echo "${ostype} is not supported!"
     exit 1
 fi
 
+# Clear ~/.vim/bundle directory
 if [[ -d ${HOME}/.vim/bundle ]]; then
     sudo rm -r ${HOME}/.vim/bundle
 fi
 
+# Check Ctags path
 ctags_path=$(which ctags)
 
+# Clone VIM Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
 
+# Write Plugins into ~/.vimrc
 cat >${HOME}/.vimrc <<EOF
 set nocompatible
 filetype off
@@ -145,8 +173,10 @@ call vundle#end()
 filetype plugin indent on
 EOF
 
+# Execute VIM PluginInstall
 vim +PluginInstall +qall
 
+# Write Settings into ~/.vimrc
 cat >>${HOME}/.vimrc <<EOF
 
 if (empty(\$TMUX))
