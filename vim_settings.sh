@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ostype=$(echo "${OSTYPE}")
+curl_check="curl --version >/dev/null 2>&1"
 nvm_check="nvm --version >/dev/null 2>&1"
 node_check="node --version >/dev/null 2>&1"
 
@@ -9,6 +10,11 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
     sudo apt-add-repository -y ppa:jonathonf/vim
     sudo apt-get update
     sudo apt-get install -y vim
+
+    eval "$curl_check"
+    if [[ "$?" -ne 0 ]]; then
+        sudo apt-get install -y curl
+    fi
 
     eval "$nvm_check"
     if [[ "$?" -ne 0 ]]; then
