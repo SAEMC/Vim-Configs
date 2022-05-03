@@ -129,15 +129,6 @@ EOF
         nvm use lts/*
     fi
 
-
-
-
-
-
-
-
-
-
 # If not Ubuntu and Mac
 else
     echo "${ostype} is not supported!"
