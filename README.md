@@ -29,7 +29,7 @@
 > MAC은 Git과 Vim 모두 설치되어 있음
 ```
 $ (sudo) apt-get update && \
-  (sudo) apt-get install -y git
+  (sudo) apt-get install -y sudo git
 ```
 
 - SAEMC Vim-Settings 프로젝트 다운로드 및 실행  
