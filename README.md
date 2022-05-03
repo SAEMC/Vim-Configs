@@ -1,4 +1,4 @@
-# SAEMC Vim Settings - Ver_3_0
+# SAEMC Vim Settings - Ver_4_0
 
 ### 사용 플러그인
 
