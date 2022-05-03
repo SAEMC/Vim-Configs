@@ -18,6 +18,7 @@
 - `Plugin 'prabirshrestha/asyncomplete.vim'`  
 - `Plugin 'prabirshrestha/asyncomplete-lsp.vim'`  
 - `Plugin 'ap/vim-css-color'`  
+- `Plugin 'preservim/tagbar'`  
 
 ---
 
