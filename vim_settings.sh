@@ -26,33 +26,26 @@ if [[ "$ostype" == "linux-gnu"* ]]; then
 
     eval "$nvm_check"
     if [[ "$?" -ne 0 ]]; then
-        sudo git clone https://github.com/creationix/nvm.git /opt/nvm
-        sudo mkdir /usr/local/nvm
-
-        export NVM_DIR=/usr/local/nvm
-        source /opt/nvm/nvm.sh
+        export NVM_DIR="$HOME/.nvm" && (
+        git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+        cd "$NVM_DIR"
+        git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+        ) && \. "$NVM_DIR/nvm.sh"
 
         cat >>${HOME}/.bashrc <<EOF
 
 # NVM
-export NVM_DIR=/usr/local/nvm
-source /opt/nvm/nvm.sh
+export NVM_DIR="\$HOME/.nvm"
+[ -s "\$NVM_DIR/nvm.sh" ] && \. "\$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "\$NVM_DIR/bash_completion" ] && \. "\$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 EOF
-
-        file_name="/etc/profile.d/nvm.sh"
-        if [[ ! -f "$file_name" ]]; then
-            echo "#!/bin/bash" | sudo tee -a $file_name >/dev/null
-            echo "VERSION=\`cat /usr/local/nvm/alias/default\`" | sudo tee -a $file_name >/dev/null
-            echo "export PATH=\"/usr/local/nvm/versions/node/v\$VERSION/bin:\$PATH\"" | sudo tee -a $file_name >/dev/null
-            sudo chmod +x $file_name 
-        fi
     fi
 
     eval "$node_check"
     if [[ "$?" -ne 0 ]]; then
-        (su - $USER -c 'export NVM_DIR=/usr/local/nvm && source /opt/nvm/nvm.sh && \
-            nvm install --lts')
-            # sudo nvm install --lts && sudo nvm alias default lts/* && sudo nvm use lts/*')
+        nvm install --lts
+        nvm alias default lts/*
+        nvm use lts/*
     fi
 
     sudo apt-get update && sudo apt-get install -y python3-venv universal-ctags
