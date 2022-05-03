@@ -81,7 +81,7 @@ elif [[ "$ostype" == "darwin"* ]]; then
     git clone https://github.com/vim/vim.git
     (cd ./vim; ./configure --prefix=/opt/local; make; sudo make install; cd ..)
 
-    # Install universal-ctags
+    # Install Ctags
     /bin/zsh -c "brew install universal-ctags"
 
     # Write VIM path and History timestamp and Python alias into ~/.zshrc
