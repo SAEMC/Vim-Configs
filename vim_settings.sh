@@ -193,7 +193,7 @@ set autoindent
 set background=dark
 set backspace=indent,eol,start
 set cindent
-set complete=.,i
+set complete+=k
 set completeopt=menuone,noinsert
 set encoding=utf-8
 set expandtab
