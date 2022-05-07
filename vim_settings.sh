@@ -212,7 +212,7 @@ set smarttab
 set softtabstop=2
 set splitbelow
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
-set tabstop=4
+set tabstop=2
 set termwinsize=10x0
 
 syntax on
