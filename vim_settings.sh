@@ -204,12 +204,12 @@ set incsearch
 set laststatus=2
 set re=0
 set ruler
-set shiftwidth=4
+set shiftwidth=2
 set showmatch
 set smartcase
 set smartindent
 set smarttab
-set softtabstop=4
+set softtabstop=2
 set splitbelow
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
 set tabstop=4
