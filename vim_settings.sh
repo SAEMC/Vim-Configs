@@ -257,9 +257,18 @@ map <Leader>t <ESC>:TagbarToggle<CR>
 map <Leader>h <ESC><C-y>,<CR>
 map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 
-imap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-imap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-imap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap < <><left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap (<CR> (<CR>)<ESC>O
+inoremap [<CR> [<CR>]<ESC>O
+inoremap {<CR> {<CR>}<ESC>O
 EOF
 
 exit 0
