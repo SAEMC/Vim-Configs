@@ -229,7 +229,7 @@ au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 \ exe "norm g\`\"" |
 \ endif
-au bufenter *
+au BufEnter *
 \ if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) |
 \ q | endif
 au VimEnter *
