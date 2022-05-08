@@ -280,9 +280,9 @@ EOF
 if [[ "$target" == "" ]]; then
   install_dependencies
   install_plugins
-elif [[ "$target" == "dependencies" ]]; then
+elif [[ "$target" == "-d" ]]; then
   install_dependencies
-elif [[ "$target" == "plugins" ]]; then
+elif [[ "$target" == "-p" ]]; then
   install_plugins
 else
   echo "Nothing to install"
