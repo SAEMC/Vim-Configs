@@ -170,6 +170,7 @@ Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'preservim/tagbar'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 filetype plugin indent on
 EOF
@@ -253,6 +254,7 @@ map <Leader>[ <ESC>:bprevious!<CR>
 map <Leader>] <ESC>:bnext!<CR>
 map <Leader>x <ESC>:terminal<CR>
 map <Leader>t <ESC>:TagbarToggle<CR>
+map <Leader>h <ESC><C-y>,<CR>
 map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 
 imap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
