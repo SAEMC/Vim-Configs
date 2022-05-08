@@ -280,7 +280,7 @@ EOF
 if [[ "$target" == "" ]]; then
   install_dependencies
   install_plugins
-elif [[ "$target" == "dependencies"]]; then
+elif [[ "$target" == "dependencies" ]]; then
   install_dependencies
 elif [[ "$target" == "plugins" ]]; then
   install_plugins
