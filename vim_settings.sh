@@ -1,40 +1,43 @@
 #!/bin/bash
 
-check_curl="curl --version >/dev/null 2>&1"
-check_nvm="nvm --version >/dev/null 2>&1"
-check_node="node --version >/dev/null 2>&1"
+target="$1"
 
-# Check OS
-# If Ubuntu
-ostype=$(echo "${OSTYPE}")
-if [[ "$ostype" == "linux-gnu"* ]]; then
-    # Install Default software
-    sudo apt-get install -y software-properties-common
-    # Add VIM into package
-    sudo apt-add-repository -y ppa:jonathonf/vim
-    # Install VIM
-    sudo apt-get update
-    sudo apt-get install -y vim
+function install_dependencies() {
+  check_curl="curl --version >/dev/null 2>&1"
+  check_nvm="nvm --version >/dev/null 2>&1"
+  check_node="node --version >/dev/null 2>&1"
 
-    # Check Curl
-    eval "$check_curl"
-    if [[ "$?" -ne 0 ]]; then
-        # Install Curl
-        sudo apt-get install -y curl
-    fi
+  # Check OS
+  # If Ubuntu
+  ostype=$(echo "${OSTYPE}")
+  if [[ "$ostype" == "linux-gnu"* ]]; then
+      # Install Default software
+      sudo apt-get install -y software-properties-common
+      # Add VIM into package
+      sudo apt-add-repository -y ppa:jonathonf/vim
+      # Install VIM
+      sudo apt-get update
+      sudo apt-get install -y vim
 
-    # Check NVM
-    eval "$check_nvm"
-    if [[ "$?" -ne 0 ]]; then
-        # Install NVM manually
-        export NVM_DIR="$HOME/.nvm" && (
-        git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
-        cd "$NVM_DIR"
-        git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
-        ) && \. "$NVM_DIR/nvm.sh"
+      # Check Curl
+      eval "$check_curl"
+      if [[ "$?" -ne 0 ]]; then
+          # Install Curl
+          sudo apt-get install -y curl
+      fi
 
-        # Write NVM path into ~/.bashrc
-        cat >>${HOME}/.bashrc <<EOF
+      # Check NVM
+      eval "$check_nvm"
+      if [[ "$?" -ne 0 ]]; then
+          # Install NVM manually
+          export NVM_DIR="$HOME/.nvm" && (
+          git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+          cd "$NVM_DIR"
+          git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+          ) && \. "$NVM_DIR/nvm.sh"
+
+          # Write NVM path into ~/.bashrc
+          cat >>${HOME}/.bashrc <<EOF
 
 # NVM
 export NVM_DIR="\$HOME/.nvm"
@@ -43,49 +46,49 @@ export NVM_DIR="\$HOME/.nvm"
 # This loads nvm bash_completion
 [ -s "\$NVM_DIR/bash_completion" ] && \. "\$NVM_DIR/bash_completion"
 EOF
-    fi
+      fi
 
-    # Check Node
-    eval "$check_node"
-    if [[ "$?" -ne 0 ]]; then
-        # Install Node LTS
-        nvm install --lts
-        nvm alias default lts/*
-        nvm use lts/*
-    fi
+      # Check Node
+      eval "$check_node"
+      if [[ "$?" -ne 0 ]]; then
+          # Install Node LTS
+          nvm install --lts
+          nvm alias default lts/*
+          nvm use lts/*
+      fi
 
-    # Install Python and Ctags
-    # If cannot install pyls-all in VIM => Enter ':LspInstallServer pyls-ms' in VIM
-    sudo apt-get update
-    sudo apt-get install -y python3-venv python3-pip
-    sudo apt-get install -y universal-ctags
+      # Install Python and Ctags
+      # If cannot install pyls-all in VIM => Enter ':LspInstallServer pyls-ms' in VIM
+      sudo apt-get update
+      sudo apt-get install -y python3-venv python3-pip
+      sudo apt-get install -y universal-ctags
 
-    # If cannot install universal-ctags => Install exuberant-ctags
-    if [[ "$?" -ne 0 ]]; then
-        sudo apt-get install -y exuberant-ctags
-    fi
+      # If cannot install universal-ctags => Install exuberant-ctags
+      if [[ "$?" -ne 0 ]]; then
+          sudo apt-get install -y exuberant-ctags
+      fi
 
-# Write Python alias into ~/.bashrc
-cat >>${HOME}/.bashrc <<EOF
+  # Write Python alias into ~/.bashrc
+  cat >>${HOME}/.bashrc <<EOF
 
 # Python Alias
 alias python=python3
 EOF
 
-# If Mac
-elif [[ "$ostype" == "darwin"* ]]; then
-    # Add current user into SUDO
-    echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
-    # Install VIM 'termguicolors' version
-    sudo mkdir -p /opt/local/bin
-    git clone https://github.com/vim/vim.git
-    (cd ./vim; ./configure --prefix=/opt/local; make; sudo make install; cd ..)
+  # If Mac
+  elif [[ "$ostype" == "darwin"* ]]; then
+      # Add current user into SUDO
+      echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
+      # Install VIM 'termguicolors' version
+      sudo mkdir -p /opt/local/bin
+      git clone https://github.com/vim/vim.git
+      (cd ./vim; ./configure --prefix=/opt/local; make; sudo make install; cd ..)
 
-    # Install Ctags
-    /bin/zsh -c "brew install universal-ctags"
+      # Install Ctags
+      /bin/zsh -c "brew install universal-ctags"
 
-    # Write VIM path and History timestamp and Python alias into ~/.zshrc
-    cat >>${HOME}/.zshrc <<EOF
+      # Write VIM path and History timestamp and Python alias into ~/.zshrc
+      cat >>${HOME}/.zshrc <<EOF
 
 # VIM PATH
 export PATH="/opt/local/bin:\$PATH"
@@ -97,19 +100,19 @@ alias history="history -i 0"
 alias python="python3"
 EOF
 
-    # Check NVM
-    eval "$check_nvm"
-    if [[ "$?" -ne 0 ]]; then
-        # Install NVM
-        /bin/zsh -c "brew install nvm"
-        mkdir ${HOME}/.nvm
+      # Check NVM
+      eval "$check_nvm"
+      if [[ "$?" -ne 0 ]]; then
+          # Install NVM
+          /bin/zsh -c "brew install nvm"
+          mkdir ${HOME}/.nvm
 
-        export NVM_DIR="$HOME/.nvm"
-        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-        [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+          [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
-        # Write NVM path into ~/.zshrc
-        cat >>${HOME}/.zshrc <<EOF
+          # Write NVM path into ~/.zshrc
+          cat >>${HOME}/.zshrc <<EOF
 
 # NVM
 export NVM_DIR="\$HOME/.nvm"
@@ -118,36 +121,38 @@ export NVM_DIR="\$HOME/.nvm"
 # This loads nvm bash_completion
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 EOF
-    fi
+      fi
 
-    # Check Node
-    eval "$check_node"
-    if [[ "$?" -ne 0 ]]; then
-        # Install Node LTS
-        nvm install --lts
-        nvm alias default lts/*
-        nvm use lts/*
-    fi
+      # Check Node
+      eval "$check_node"
+      if [[ "$?" -ne 0 ]]; then
+          # Install Node LTS
+          nvm install --lts
+          nvm alias default lts/*
+          nvm use lts/*
+      fi
 
-# If not Ubuntu and Mac
-else
-    echo "${ostype} is not supported!"
-    exit 1
-fi
+  # If not Ubuntu and Mac
+  else
+      echo "${ostype} is not supported!"
+      exit 1
+  fi
+}
 
-# Clear ~/.vim/bundle directory
-if [[ -d ${HOME}/.vim/bundle ]]; then
-    sudo rm -r ${HOME}/.vim/bundle
-fi
+function install_plugins() {
+  # Clear ~/.vim/bundle directory
+  if [[ -d ${HOME}/.vim/bundle ]]; then
+      sudo rm -r ${HOME}/.vim/bundle
+  fi
 
-# Check Ctags path
-ctags_path=$(which ctags)
+  # Check Ctags path
+  ctags_path=$(which ctags)
 
-# Clone VIM Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
+  # Clone VIM Vundle
+  git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
 
-# Write Plugins into ~/.vimrc
-cat >${HOME}/.vimrc <<EOF
+  # Write Plugins into ~/.vimrc
+  cat >${HOME}/.vimrc <<EOF
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -175,11 +180,11 @@ call vundle#end()
 filetype plugin indent on
 EOF
 
-# Execute VIM PluginInstall
-vim +PluginInstall +qall
+  # Execute VIM PluginInstall
+  vim +PluginInstall +qall
 
-# Write Config into ~/.vimrc
-cat >>${HOME}/.vimrc <<EOF
+  # Write Config into ~/.vimrc
+  cat >>${HOME}/.vimrc <<EOF
 
 if (empty(\$TMUX))
     if (has("nvim"))
@@ -270,5 +275,17 @@ inoremap (<CR> (<CR>)<ESC>O
 inoremap [<CR> [<CR>]<ESC>O
 inoremap {<CR> {<CR>}<ESC>O
 EOF
+}
+
+if [[ "$target" == "" ]]; then
+  install_dependencies
+  install_plugins
+elif [[ "$target" == "dependencies"]]; then
+  install_dependencies
+elif [[ "$target" == "plugins" ]]; then
+  install_plugins
+else
+  echo "Nothing to install"
+fi
 
 exit 0
