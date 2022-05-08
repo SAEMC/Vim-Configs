@@ -204,6 +204,7 @@ set completeopt=menuone,noinsert
 set encoding=utf-8
 set expandtab
 set fileencodings=utf8,cp949
+set foldmethod=manual
 set hlsearch
 set ignorecase
 set incsearch
@@ -234,6 +235,11 @@ au bufenter *
 au VimEnter *
 \ :NERDTreeToggle |
 \ wincmd p
+augroup Folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
