@@ -20,6 +20,7 @@
 - `Plugin 'ap/vim-css-color'`  
 - `Plugin 'preservim/tagbar'`  
 - `Plugin 'airblade/vim-gitgutter'`  
+- `Plugin 'mattn/emmet-vim'`  
 
 ---
 
@@ -49,6 +50,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `\` + `[` or `]`: [N/V/S/O] 버퍼 윈도우 이동  
 - `\` + `x`: [N/V/S/O] 터미널 수평 열기  
 - `\` + `t`: [N/V/S/O] Tagbar 토글 켜기/끄기  
+- `\` + `h`: [N/V/S/O] HTML 자동완성  
 - `\` + `c` + `<space>`: [V] 주석 처리  
 - `s`: [NerdTree 윈도우] 윈도우 수직 분할  
 - `i`: [NerdTree 윈도우] 윈도우 수평 분할  
