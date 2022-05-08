@@ -236,9 +236,9 @@ au VimEnter *
 \ :NERDTreeToggle |
 \ wincmd p
 augroup Folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
+  au!
+  au BufWinLeave * mkview
+  au BufWinEnter * silent! loadview
 augroup END
 
 let g:indent_guides_enable_on_vim_startup = 1
