@@ -259,14 +259,14 @@ let g:tagbar_ctags_bin='$ctags_path'
 let g:tagbar_autoclose=0
 let g:tagbar_autofocus=1
 
-map <Leader>b <ESC>:NERDTreeToggle<CR>
-map <Leader>d <ESC>:bp <BAR> bd #<CR>
-map <Leader>[ <ESC>:bprevious!<CR>
-map <Leader>] <ESC>:bnext!<CR>
-map <Leader>x <ESC>:terminal<CR>
-map <Leader>t <ESC>:TagbarToggle<CR>
-map <Leader>h <ESC><C-y>,<CR>
-map c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
+map <silent> <Leader>b <ESC>:NERDTreeToggle<CR>
+map <silent> <Leader>d <ESC>:bp <BAR> bd #<CR>
+map <silent> <Leader>[ <ESC>:bprevious!<CR>
+map <silent> <Leader>] <ESC>:bnext!<CR>
+map <silent> <Leader>x <ESC>:terminal<CR>
+map <silent> <Leader>t <ESC>:TagbarToggle<CR>
+map <silent> <Leader>h <ESC><C-y>,<CR>
+map <silent> c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
