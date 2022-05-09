@@ -267,6 +267,9 @@ map <silent> <Leader>x <ESC>:terminal<CR>
 map <silent> <Leader>t <ESC>:TagbarToggle<CR>
 map <silent> <Leader>z <ESC><C-y>,<CR>
 map <silent> c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
+map <silent> <Leader>v "*p
+
+vnoremap <silent> <Leader>c "*y
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
