@@ -273,7 +273,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 inoremap " ""<left>
 inoremap ' ''<left>
-inoremap < <><left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
