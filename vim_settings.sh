@@ -180,7 +180,6 @@ call vundle#end()
 filetype plugin indent on
 EOF
 
-
   # Execute VIM PluginInstall
   vim +PluginInstall +qall
 
