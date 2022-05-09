@@ -53,7 +53,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `\` + `[` or `]`: [N/V/S/O] 버퍼 윈도우 이동  
 - `\` + `x`: [N/V/S/O] 터미널 수평 열기  
 - `\` + `t`: [N/V/S/O] Tagbar 토글 켜기/끄기  
-- `\` + `h`: [N/V/S/O] HTML 자동완성  
+- `\` + `z`: [N/V/S/O] HTML 젠 코딩(Zen coding)  
 - `\` + `c` + `<space>`: [V] 주석 처리  
 - `z` + `f` or `o`: [V] 코드 폴딩 접기/열기  
 - `s`: [NerdTree 윈도우] 윈도우 수직 분할  
