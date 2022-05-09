@@ -265,7 +265,7 @@ map <silent> <Leader>[ <ESC>:bprevious!<CR>
 map <silent> <Leader>] <ESC>:bnext!<CR>
 map <silent> <Leader>x <ESC>:terminal<CR>
 map <silent> <Leader>t <ESC>:TagbarToggle<CR>
-map <silent> <Leader>g <ESC><C-y>,<CR>
+map <silent> <Leader>z <ESC><C-y>,<CR>
 map <silent> c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
