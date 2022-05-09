@@ -54,6 +54,8 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `\` + `x`: [N/V/S/O] 터미널 수평 열기  
 - `\` + `t`: [N/V/S/O] Tagbar 토글 켜기/끄기  
 - `\` + `z`: [N/V/S/O] HTML 젠 코딩(Zen coding)  
+- `\` + `v`: [N/V/S/O] OS 클립보드로 붙여넣기  
+- `\` + `c`: [V] OS 클립보드로 복사  
 - `\` + `c` + `<space>`: [V] 주석 처리  
 - `z` + `f` or `o`: [V] 코드 폴딩 접기/열기  
 - `s`: [NerdTree 윈도우] 윈도우 수직 분할  
