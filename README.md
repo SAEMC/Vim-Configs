@@ -47,6 +47,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 ### 사용 방법
 
 #### [N: Normal] | [V: Visual] | [S: Select] | [O: Operator-pending] | [I: Insert]
+#### 이외의 커맨드는 Vim 기본 커맨드
 
 ##### [N/V/S/O]
 
@@ -63,10 +64,14 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 
 <br/>
 
+##### [V]
+
 - `\` + `c` + `<space>`: [V] 주석 처리  
 - `z` + `f` or `o`: [V] 코드 폴딩 접기/열기  
 
 <br/>
+
+##### [I]
 
 - `Ctrl` + `h` or `j` or `k` or `l`: [I] 커서 이동하기  
 - `Ctrl` + `t`: [I] 커서 기준 다음으로 이동하기  
@@ -74,10 +79,10 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 
 <br/>
 
+##### [Extra]
+
 - `s`: [NerdTree 윈도우] 윈도우 수직 분할  
 - `i`: [NerdTree 윈도우] 윈도우 수평 분할  
-- `r`: [NerdTree 윈도우] NerdTree 새로고침  
-
-### 이외의 커맨드는 Vim 기본 커맨드임  
+- `r`: [NerdTree 윈도우] NerdTree 새로고침    
 
 <br/>
