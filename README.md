@@ -34,9 +34,10 @@ $ (sudo) apt-get update && \
 ```
 
 - SAEMC Vim-Settings 프로젝트 다운로드 및 실행  
-> `$ ./vim_settings.sh` -> Dependencies 및 Plugins 설치  
+> `$ ./vim_settings.sh -a` -> Dependencies 및 Plugins 설치 후 .vimrc 작성  
 > `$ ./vim_settings.sh -d` -> Dependencies 설치  
 > `$ ./vim_settings.sh -p` -> Plugins 설치  
+> `$ ./vim_settings.sh -s` -> .vimrc 작성  
 ```
 $ git clone https://github.com/SAEMC/Vim-Settings.git && \
   cd ./Vim-Settings && ./vim_settings.sh
