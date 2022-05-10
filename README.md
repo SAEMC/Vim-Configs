@@ -68,5 +68,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `Ctrl` + `t`: [I] 커서 기준 다음으로 이동하기  
 - `Ctrl` + `d`: [I] 커서 기준 다음 글자 지우기  
 
+### 이외의 커맨드는 Vim 기본 커맨드임  
+
 <br/>
 
