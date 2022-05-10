@@ -255,9 +255,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
-let g:tagbar_ctags_bin='$ctags_path'
-let g:tagbar_autoclose=0
-let g:tagbar_autofocus=1
+let g:tagbar_ctags_bin = '$ctags_path'
+let g:tagbar_autoclose = 0
+let g:tagbar_autofocus = 1
 
 let s:left_line_enabled = 1
 function! LeftLineToggle()
