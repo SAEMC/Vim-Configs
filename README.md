@@ -49,7 +49,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 #### [N: Normal] | [V: Visual] | [S: Select] | [O: Operator-pending] | [I: Insert]
 #### 이외의 커맨드는 Vim 기본 커맨드
 
-##### [N/V/S/O]
+##### [N]
 
 - `\` + `b`: NerdTree 토글 켜기/끄기  
 - `\` + `d`: 버퍼 윈도우 닫기  
