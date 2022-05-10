@@ -319,7 +319,10 @@ elif [[ "$inputArg" == "-s" || "$inputArg" == "--scripts" ]]; then
   write_scripts
 else
   echo "
-  How to install SAEMC Vim Settings
+  The way you install SAEMC Vim Settings
+
+  ./vim_settings.sh [-a, -d, -p, s]
+
   -a, --all:           Install dependencies/plugins and Write \$HOME/.vimrc
   -d, --dependencies:  Install dependencies
   -p, --plugins:       Install plugins
