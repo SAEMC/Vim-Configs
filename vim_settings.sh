@@ -259,6 +259,19 @@ let g:tagbar_ctags_bin='$ctags_path'
 let g:tagbar_autoclose=0
 let g:tagbar_autofocus=1
 
+let s:left_line_enabled = 1
+function! LeftLineToggle()
+  if s:left_line_enabled
+    call lsp#disable_diagnostics_for_buffer()
+    :GitGutterBufferDisable
+    let s:left_line_enabled = 0
+  else
+    call lsp#enable_diagnostics_for_buffer()
+    :GitGutterBufferEnable
+    let s:left_line_enabled = 1
+  endif
+:endfunction
+
 map <silent> <Leader>b <ESC>:NERDTreeToggle<CR>
 map <silent> <Leader>d <ESC>:bp <BAR> bd #<CR>
 map <silent> <Leader>[ <ESC>:bprevious!<CR>
@@ -266,6 +279,7 @@ map <silent> <Leader>] <ESC>:bnext!<CR>
 map <silent> <Leader>x <ESC>:terminal<CR>
 map <silent> <Leader>t <ESC>:TagbarToggle<CR>
 map <silent> <Leader>z <ESC><C-y>,<CR>
+map <silent> <leader>h <ESC>:call LeftLineToggle()<CR>
 map <silent> c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
 map <silent> <Leader>v "*p
 
