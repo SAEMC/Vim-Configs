@@ -53,20 +53,19 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 ##### [N]
 
 - `\` + `b`: NerdTree 토글 켜기/끄기  
-- `\` + `d`: 버퍼 윈도우 닫기  
+- `\` + `d`: 버퍼 윈도우 닫기(CLI Out)  
 - `\` + `[` or `]`: 버퍼 윈도우 이동  
-- `\` + `x`: 터미널 수평 열기  
+- `\` + `x`: 터미널 수평 열기(Execution)  
 - `\` + `t`: Tagbar 토글 켜기/끄기  
 - `\` + `z`: HTML 젠 코딩(Zen coding)  
-- `\` + `h`: 왼쪽 표시 켜기/끄기  
-- `\` + `l`: `set nu` / `/search` / `set list` 끄기  
-- `\` + `v`: OS 클립보드로 붙여넣기  
+- `\` + `h`: 왼쪽 표시 켜기/끄기(Hide)  
+- `\` + `l`: `set nu` / `/search` / `set list` 끄기(CLI Clear)  
+- `\` + `v`: OS 클립보드로 붙여넣기(`Cmd` + `v`)  
 
 ##### [V]
 
-- `\` + `c`: OS 클립보드로 복사  
-- `\` + `c` + `<space>`: 주석 처리  
-- `z` + `f` or `o`: 코드 접기/열기  
+- `\` + `c`: OS 클립보드로 복사(`Cmd` + `c`)  
+- `z` + `f` or `o`: 코드 접기/열기(Fold/Open)  
 
 ##### [I]
 
