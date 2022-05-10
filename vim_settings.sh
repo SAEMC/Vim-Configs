@@ -1,6 +1,6 @@
 #!/bin/bash
 
-target="$1"
+inputArg="$1"
 
 function install_dependencies() {
   check_curl="curl --version >/dev/null 2>&1"
@@ -182,7 +182,9 @@ EOF
 
   # Execute VIM PluginInstall
   vim +PluginInstall +qall
+}
 
+function write_script() {
   # Write Config into ~/.vimrc
   cat >>${HOME}/.vimrc <<EOF
 
@@ -305,15 +307,22 @@ inoremap <C-t> <Right>
 EOF
 }
 
-if [[ "$target" == "" ]]; then
+if [[ "$inputArg" == "-a" || "$inputArg" == "--all" ]]; then
   install_dependencies
   install_plugins
-elif [[ "$target" == "-d" ]]; then
+  write_script
+elif [[ "$inputArg" == "-d" || "$inputArg" == "--dependencies" ]]; then
   install_dependencies
-elif [[ "$target" == "-p" ]]; then
+elif [[ "$inputArg" == "-p" || "$inputArg" == "--plugins" ]]; then
   install_plugins
+elif [[ "$inputArg" == "s" || "$inputArg" == "--scripts" ]]; then
+  write_script
 else
-  echo "Nothing to install"
+  echo "The way you install SAEMC Vim Settings
+  -a, --all:           Force the installation dependencies & plugins and writing \$HOME/.vimrc
+  -d, --dependencies:  Force the installation dependencies
+  -p, --plugins:       Force the installation plugins
+  -s, --scripts:       Force the writing \$HOME/.vimrc"
 fi
 
 exit 0
