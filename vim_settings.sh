@@ -272,16 +272,16 @@ function! LeftLineToggle()
   endif
 :endfunction
 
-map <silent> <Leader>b <ESC>:NERDTreeToggle<CR>
-map <silent> <Leader>d <ESC>:bp <BAR> bd #<CR>
-map <silent> <Leader>[ <ESC>:bprevious!<CR>
-map <silent> <Leader>] <ESC>:bnext!<CR>
-map <silent> <Leader>x <ESC>:terminal<CR>
-map <silent> <Leader>t <ESC>:TagbarToggle<CR>
-map <silent> <Leader>z <ESC><C-y>,<CR>
-map <silent> <leader>h <ESC>:call LeftLineToggle()<CR>
-map <silent> c <ESC>:set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
-map <silent> <Leader>v "*p
+nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
+nnoremap <silent> <Leader>[ :bprevious!<CR>
+nnoremap <silent> <Leader>] :bnext!<CR>
+nnoremap <silent> <Leader>x :terminal<CR>
+nnoremap <silent> <Leader>t :TagbarToggle<CR>
+nnoremap <silent> <Leader>z <C-y>,<CR>
+nnoremap <silent> <Leader>h :call LeftLineToggle()<CR>
+nnoremap <silent> <Leader>l :set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
+nnoremap <silent> <Leader>v "*p
 
 vnoremap <silent> <Leader>c "*y
 
