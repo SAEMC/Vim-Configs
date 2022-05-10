@@ -59,7 +59,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `\` + `z`: HTML 젠 코딩(Zen coding)  
 - `\` + `v`: OS 클립보드로 붙여넣기  
 - `\` + `h`: 왼쪽 표시 켜기/끄기  
-- `c`: `set nu` / `/search` / `set list` 끄기  
+- `\` + `l`: `set nu` / `/search` / `set list` 끄기  
 
 <br/>
 
