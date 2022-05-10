@@ -318,11 +318,13 @@ elif [[ "$inputArg" == "-p" || "$inputArg" == "--plugins" ]]; then
 elif [[ "$inputArg" == "-s" || "$inputArg" == "--scripts" ]]; then
   write_scripts
 else
-  echo "to install SAEMC Vim Settings
+  echo "
+  to install SAEMC Vim Settings
   -a, --all:           Install dependencies/plugins and Write \$HOME/.vimrc
   -d, --dependencies:  Install dependencies
   -p, --plugins:       Install plugins
-  -s, --scripts:       Write \$HOME/.vimrc"
+  -s, --scripts:       Write \$HOME/.vimrc
+  "
 fi
 
 exit 0
