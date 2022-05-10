@@ -57,18 +57,25 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `\` + `v`: [N/V/S/O] OS 클립보드로 붙여넣기  
 - `\` + `h`: [N/V/S/O] 왼쪽 표시 켜기/끄기  
 - `\` + `c`: [V] OS 클립보드로 복사  
+- `c`: [N/V/S/O] `set nu` / `/search` / `set list` 끄기  
+
+<br/>
+
 - `\` + `c` + `<space>`: [V] 주석 처리  
 - `z` + `f` or `o`: [V] 코드 폴딩 접기/열기  
-- `s`: [NerdTree 윈도우] 윈도우 수직 분할  
-- `i`: [NerdTree 윈도우] 윈도우 수평 분할  
-- `r`: [NerdTree 윈도우] NerdTree 새로고침  
-- `c`: [N/V/S/O] `set nu` / `/search` / `set list` 끄기  
-- `:set paste`: [N] 붙여넣기 정렬  
+
+<br/>
+
 - `Ctrl` + `h` or `j` or `k` or `l`: [I] 커서 이동하기  
 - `Ctrl` + `t`: [I] 커서 기준 다음으로 이동하기  
 - `Ctrl` + `d`: [I] 커서 기준 다음 글자 지우기  
 
+<br/>
+
+- `s`: [NerdTree 윈도우] 윈도우 수직 분할  
+- `i`: [NerdTree 윈도우] 윈도우 수평 분할  
+- `r`: [NerdTree 윈도우] NerdTree 새로고침  
+
 ### 이외의 커맨드는 Vim 기본 커맨드임  
 
 <br/>
-
