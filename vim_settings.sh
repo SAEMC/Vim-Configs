@@ -301,6 +301,7 @@ inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 inoremap <C-d> <C-o>x
+inoremap <C-t> <Right>
 EOF
 }
 
