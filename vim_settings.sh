@@ -323,7 +323,7 @@ else
 
   ./vim_settings.sh [ -a || -d || -p || -s ]
 
-Flags:
+Options:
   -a, --all            Install dependencies/plugins and Write \$HOME/.vimrc
   -d, --dependencies   Install dependencies only
   -p, --plugins        Install plugins only
