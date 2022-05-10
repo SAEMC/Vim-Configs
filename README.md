@@ -40,7 +40,8 @@ $ (sudo) apt-get update && \
 > `$ ./vim_settings.sh -s` -> `.vimrc`만 작성  
 ```
 $ git clone https://github.com/SAEMC/Vim-Settings.git && \
-  cd ./Vim-Settings && ./vim_settings.sh [-a || -d || -p || -s]
+  cd ./Vim-Settings
+$ ./vim_settings.sh [OPTIONS]
 ```
 
 ---
