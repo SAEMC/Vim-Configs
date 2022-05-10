@@ -315,7 +315,7 @@ elif [[ "$inputArg" == "-d" || "$inputArg" == "--dependencies" ]]; then
   install_dependencies
 elif [[ "$inputArg" == "-p" || "$inputArg" == "--plugins" ]]; then
   install_plugins
-elif [[ "$inputArg" == "s" || "$inputArg" == "--scripts" ]]; then
+elif [[ "$inputArg" == "-s" || "$inputArg" == "--scripts" ]]; then
   write_scripts
 else
   echo "The way you install SAEMC Vim Settings
