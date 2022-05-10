@@ -48,6 +48,8 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 
 #### [N: Normal] | [V: Visual] | [S: Select] | [O: Operator-pending] | [I: Insert]
 
+##### [N/V/S/O]
+
 - `\` + `b`: [N/V/S/O] NerdTree 토글 켜기/끄기  
 - `\` + `d`: [N/V/S/O] 버퍼 윈도우 닫기  
 - `\` + `[` or `]`: [N/V/S/O] 버퍼 윈도우 이동  
