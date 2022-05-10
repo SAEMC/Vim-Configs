@@ -61,7 +61,6 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `\` + `l`: `set nu` / `/search` / `set list` 끄기  
 - `\` + `v`: OS 클립보드로 붙여넣기  
 
-<br/>
 
 ##### [V]
 
