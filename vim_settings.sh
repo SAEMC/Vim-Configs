@@ -280,7 +280,7 @@ nnoremap <silent> <Leader>x :terminal<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
 nnoremap <silent> <Leader>z <C-y>,<CR>
 nnoremap <silent> <Leader>h :call LeftLineToggle()<CR>
-nnoremap <silent> <Leader>l :set nonu<CR> \| <ESC>:noh<CR> \| <ESC>:set nolist<CR>
+nnoremap <silent> <Leader>l :set nonu<CR> \| :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>v "*p
 
 vnoremap <silent> <Leader>c "*y
