@@ -321,7 +321,7 @@ else
   echo "
   The way you install SAEMC Vim Settings
 
-  ./vim_settings.sh [-a, -d, -p, s]
+  ./vim_settings.sh [ -a || -d || -p || -s ]
 
   -a, --all:           Install dependencies/plugins and Write \$HOME/.vimrc
   -d, --dependencies:  Install dependencies
