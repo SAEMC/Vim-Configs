@@ -55,6 +55,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `\` + `t`: [N/V/S/O] Tagbar 토글 켜기/끄기  
 - `\` + `z`: [N/V/S/O] HTML 젠 코딩(Zen coding)  
 - `\` + `v`: [N/V/S/O] OS 클립보드로 붙여넣기  
+- `\` + `h`: [N/V/S/O] 왼쪽 표시 켜기/끄기  
 - `\` + `c`: [V] OS 클립보드로 복사  
 - `\` + `c` + `<space>`: [V] 주석 처리  
 - `z` + `f` or `o`: [V] 코드 폴딩 접기/열기  
