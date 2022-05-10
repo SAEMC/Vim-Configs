@@ -53,25 +53,25 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 ##### [N]
 
 - `\` + `b`: NerdTree 토글 켜기/끄기  
-- `\` + `d`: 버퍼 윈도우 닫기(CLI Out)  
+- `\` + `d`: 버퍼 윈도우 닫기 (CLI Out)  
 - `\` + `[` or `]`: 버퍼 윈도우 이동  
-- `\` + `x`: 터미널 수평 열기(Execution)  
+- `\` + `x`: 터미널 수평 열기 (Execution)  
 - `\` + `t`: Tagbar 토글 켜기/끄기  
-- `\` + `z`: HTML 젠 코딩(Zen coding)  
-- `\` + `h`: 왼쪽 표시 켜기/끄기(Hide)  
-- `\` + `l`: `set nu` / `/search` / `set list` 끄기(CLI Clear)  
-- `\` + `v`: OS 클립보드로 붙여넣기(`Cmd` + `v`)  
+- `\` + `z`: HTML 젠 코딩 (Zen coding)  
+- `\` + `h`: 왼쪽 표시 켜기/끄기 (Hide)  
+- `\` + `l`: `set nu` / `/search` / `set list` 끄기 (CLI Clear)  
+- `\` + `v`: OS 클립보드로 붙여넣기 (`Cmd` + `v`)  
 
 ##### [V]
 
-- `\` + `c`: OS 클립보드로 복사(`Cmd` + `c`)  
-- `z` + `f` or `o`: 코드 접기/열기(Fold/Open)  
+- `\` + `c`: OS 클립보드로 복사 (`Cmd` + `c`)  
+- `z` + `f` or `o`: 코드 접기/열기 (Fold/Open)  
 
 ##### [I]
 
-- `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동하기(Vim moving)  
-- `Ctrl` + `t`: 커서 기준 다음 글자로 이동하기(Tab)  
-- `Ctrl` + `d`: 커서 기준 다음 글자 지우기(Delete)  
+- `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동하기 (Vim moving)  
+- `Ctrl` + `t`: 커서 기준 다음 글자로 이동하기 (Tab)  
+- `Ctrl` + `d`: 커서 기준 다음 글자 지우기 (Delete)  
 
 ##### [Extra]
 
