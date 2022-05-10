@@ -51,31 +51,31 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 
 ##### [N/V/S/O]
 
-- `\` + `b`: [N/V/S/O] NerdTree 토글 켜기/끄기  
-- `\` + `d`: [N/V/S/O] 버퍼 윈도우 닫기  
-- `\` + `[` or `]`: [N/V/S/O] 버퍼 윈도우 이동  
-- `\` + `x`: [N/V/S/O] 터미널 수평 열기  
-- `\` + `t`: [N/V/S/O] Tagbar 토글 켜기/끄기  
-- `\` + `z`: [N/V/S/O] HTML 젠 코딩(Zen coding)  
-- `\` + `v`: [N/V/S/O] OS 클립보드로 붙여넣기  
-- `\` + `h`: [N/V/S/O] 왼쪽 표시 켜기/끄기  
-- `\` + `c`: [V] OS 클립보드로 복사  
-- `c`: [N/V/S/O] `set nu` / `/search` / `set list` 끄기  
+- `\` + `b`: NerdTree 토글 켜기/끄기  
+- `\` + `d`: 버퍼 윈도우 닫기  
+- `\` + `[` or `]`: 버퍼 윈도우 이동  
+- `\` + `x`: 터미널 수평 열기  
+- `\` + `t`: Tagbar 토글 켜기/끄기  
+- `\` + `z`: HTML 젠 코딩(Zen coding)  
+- `\` + `v`: OS 클립보드로 붙여넣기  
+- `\` + `h`: 왼쪽 표시 켜기/끄기  
+- `c`: `set nu` / `/search` / `set list` 끄기  
 
 <br/>
 
 ##### [V]
 
-- `\` + `c` + `<space>`: [V] 주석 처리  
-- `z` + `f` or `o`: [V] 코드 폴딩 접기/열기  
+- `\` + `c` + `<space>`: 주석 처리  
+- `z` + `f` or `o`: 코드 폴딩 접기/열기  
+- `\` + `c`: OS 클립보드로 복사  
 
 <br/>
 
 ##### [I]
 
-- `Ctrl` + `h` or `j` or `k` or `l`: [I] 커서 이동하기  
-- `Ctrl` + `t`: [I] 커서 기준 다음으로 이동하기  
-- `Ctrl` + `d`: [I] 커서 기준 다음 글자 지우기  
+- `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동하기  
+- `Ctrl` + `t`: 커서 기준 다음으로 이동하기  
+- `Ctrl` + `d`: 커서 기준 다음 글자 지우기  
 
 <br/>
 
