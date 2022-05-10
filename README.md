@@ -61,22 +61,17 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 - `\` + `l`: `set nu` / `/search` / `set list` 끄기  
 - `\` + `v`: OS 클립보드로 붙여넣기  
 
-
 ##### [V]
 
 - `\` + `c` + `<space>`: 주석 처리  
 - `z` + `f` or `o`: 코드 폴딩 접기/열기  
 - `\` + `c`: OS 클립보드로 복사  
 
-<br/>
-
 ##### [I]
 
 - `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동하기  
 - `Ctrl` + `t`: 커서 기준 다음으로 이동하기  
 - `Ctrl` + `d`: 커서 기준 다음 글자 지우기  
-
-<br/>
 
 ##### [Extra]
 
