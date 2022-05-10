@@ -63,9 +63,9 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 
 ##### [V]
 
+- `\` + `c`: OS 클립보드로 복사  
 - `\` + `c` + `<space>`: 주석 처리  
 - `z` + `f` or `o`: 코드 폴딩 접기/열기  
-- `\` + `c`: OS 클립보드로 복사  
 
 ##### [I]
 
