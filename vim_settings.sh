@@ -324,10 +324,10 @@ The way you install SAEMC Vim Settings
 Usage:  ./vim_settings.sh [OPTIONS]
 
 Options:
-  -a, --all            Install dependencies/plugins and Write \$HOME/.vimrc
+  -a, --all            Install dependencies/plugins and Write ~/.vimrc
   -d, --dependencies   Install dependencies only
   -p, --plugins        Install plugins only
-  -s, --scripts        Write \$HOME/.vimrc only
+  -s, --scripts        Write ~/.vimrc only
   "
 fi
 
