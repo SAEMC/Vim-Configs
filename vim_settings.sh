@@ -203,6 +203,7 @@ set backspace=indent,eol,start
 set cindent
 set complete+=k
 set completeopt=menuone,noinsert
+set cursorline
 set encoding=utf-8
 set expandtab
 set fileencodings=utf8,cp949
