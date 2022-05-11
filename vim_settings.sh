@@ -288,8 +288,8 @@ nnoremap <silent> <Leader>v "*p
 
 vnoremap <silent> <Leader>c "*y
 
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : col('.') < col('$') ? "<Right>" : "<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "<Left>"
 inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -304,7 +304,6 @@ inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 inoremap <C-d> <C-o>x
-inoremap <C-t> <Right>
 EOF
 }
 
