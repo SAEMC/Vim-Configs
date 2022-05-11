@@ -71,7 +71,6 @@ $ ./vim_settings.sh [OPTIONS]
 ##### [I]
 
 - `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동하기 (Vim moving)  
-- `Ctrl` + `t`: 커서 기준 다음 글자로 이동하기 (Tab)  
 - `Ctrl` + `d`: 커서 기준 다음 글자 지우기 (Delete)  
 
 ##### [Extra]
