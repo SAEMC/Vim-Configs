@@ -303,7 +303,7 @@ inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
-inoremap <C-d> <C-o>x
+inoremap <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
 EOF
 }
 
