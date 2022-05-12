@@ -13,9 +13,9 @@ function install_dependencies() {
   if [[ "$ostype" == "linux-gnu"* ]]; then
     # Install Default software
     sudo apt-get install -y software-properties-common
-    # Add NVIM into package
+    # Add Neo VIM into package
     sudo add-apt-repository -yu ppa:neovim-ppa/stable
-    # Install NVIM
+    # Install Neo VIM
     sudo apt-get install -y neovim
 
     # Check Curl
@@ -81,7 +81,7 @@ EOF
   elif [[ "$ostype" == "darwin"* ]]; then
     # Add current user into SUDO
     echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
-    # Install NVIM
+    # Install Neo VIM
     /bin/zsh -c "brew install neovim"
     # Install Ctags
     /bin/zsh -c "brew install universal-ctags"
@@ -153,7 +153,7 @@ function install_plugins() {
   fi
     mkdir -p ${HOME}/.config/nvim
 
-  # Clone NVIM Plug
+  # Clone Neo VIM Plug
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
@@ -188,7 +188,7 @@ Plug 'mattn/emmet-vim'
 call plug#end()
 EOF
 
-  # Execute NVIM PlugInstall
+  # Execute Neo VIM PlugInstall
   nvim +PlugInstall +qall
 }
 
@@ -337,7 +337,7 @@ Options:
   -a, --all            Install dependencies/plugins and Write ~/.vimrc
   -d, --dependencies   Install dependencies only
   -p, --plugins        Install plugins only
-  -s, --scripts        Write ~/.vimrc
+  -s, --scripts        Write ~/.vimrc only
   "
 fi
 
