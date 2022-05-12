@@ -12,10 +12,7 @@
 - `Plug 'preservim/tagbar'`  
 - `Plug 'nathanaelkane/vim-indent-guides'`  
 - `Plug 'blueyed/vim-diminactive'`  
-- `Plug 'prabirshrestha/vim-lsp'`  
-- `Plug 'mattn/vim-lsp-settings'`  
-- `Plug 'prabirshrestha/asyncomplete.vim'`  
-- `Plug 'prabirshrestha/asyncomplete-lsp.vim'`  
+- `Plug 'neoclide/coc.nvim', {'branch': 'release'}`
 - `Plug 'ap/vim-css-color'`  
 - `Plug 'mattn/emmet-vim'`  
 
