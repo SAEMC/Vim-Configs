@@ -179,10 +179,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'blueyed/vim-diminactive'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'mattn/emmet-vim'
 call plug#end()
@@ -212,6 +209,7 @@ set autoindent
 set background=dark
 set backspace=indent,eol,start
 set cindent
+set cmdheight=2
 set complete+=k
 set completeopt=menuone,noinsert,noselect,preview
 set cursorline
@@ -220,13 +218,17 @@ set expandtab
 set fileencodings=utf8,cp949
 set foldmethod=manual
 set guicursor=
+set hidden
 set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
+set nobackup
+set nowritebackup
 set re=0
 set ruler
 set shiftwidth=2
+set shortmess+=c
 set showmatch
 set smartcase
 set smartindent
@@ -234,6 +236,13 @@ set smarttab
 set softtabstop=2
 set splitbelow
 set tabstop=2
+set updatetime=300
+
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 syntax on
 colorscheme onedark
@@ -248,6 +257,8 @@ au BufEnter *
 au VimEnter *
 \ :NERDTreeToggle |
 \ wincmd p
+au CursorHold * 
+\ silent call CocActionAsync('highlight')
 augroup Folds
   au!
   au BufWinLeave * mkview
@@ -272,18 +283,17 @@ let g:tagbar_ctags_bin = '$ctags_path'
 let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
 
-let s:left_line_enabled = 1
-function! LeftLineToggle()
-  if s:left_line_enabled
-    call lsp#disable_diagnostics_for_buffer()
-    :GitGutterBufferDisable
-    let s:left_line_enabled = 0
-  else
-    call lsp#enable_diagnostics_for_buffer()
-    :GitGutterBufferEnable
-    let s:left_line_enabled = 1
-  endif
-:endfunction
+let g:coc_global_extensions = [
+  \ 'coc-prettier',
+  \ 'coc-sh',
+  \ 'coc-clangd',
+  \ 'coc-css',
+  \ 'coc-html',
+  \ 'coc-tsserver',
+  \ 'coc-json',
+  \ 'coc-markdownlint',
+  \ 'coc-pyright'
+  \ ]
 
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
@@ -292,15 +302,22 @@ nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> <Leader>x :terminal<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
 nnoremap <silent> <Leader>z <C-y>,<CR>
-nnoremap <silent> <Leader>h :call LeftLineToggle()<CR>
 nnoremap <silent> <Leader>l :set nonu<CR> \| :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>v "*p
+nnoremap <silent> <Leader>gd <Plug>(coc-definition)
+nnoremap <silent> <Leader>gt <Plug>(coc-type-definition)
+nnoremap <silent> <Leader>gi <Plug>(coc-implementation)
+nnoremap <silent> <Leader>gr <Plug>(coc-references)
+nnoremap <silent> <leader>f  <Plug>(coc-format-selected)
 
 vnoremap <silent> <Leader>c "*y
 
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Left>"
-inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>"
+inoremap <expr> <TAB>
+\ pumvisible() ? "\<C-n>" :
+\ col('.') < col('$') ? "\<Right>" : "\<Tab>"
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
@@ -314,6 +331,11 @@ inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 inoremap <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 EOF
 }
 
