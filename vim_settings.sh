@@ -210,8 +210,6 @@ set background=dark
 set backspace=indent,eol,start
 set cindent
 set cmdheight=2
-set complete+=k
-set completeopt=menuone,noinsert,noselect,preview
 set cursorline
 set encoding=utf-8
 set expandtab
