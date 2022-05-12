@@ -146,6 +146,8 @@ function install_plugins() {
 
   # Check and Mkdir ~/.config/nvim directory
   if [[ -d ${HOME}/.config/nvim ]]; then
+    sudo rm -r ${HOME}/.config/nvim
+  else
     mkdir -p ${HOME}/.config/nvim
   fi
 
