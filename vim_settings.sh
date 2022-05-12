@@ -141,18 +141,14 @@ EOF
 function install_plugins() {
   # Clear ~/.local/share directory
   if [[ -d ${HOME}/.local/share/nvim ]]; then
-    sudo rm -r ${HOME}/.local/share/nvim
+    sudo rm -rf ${HOME}/.local/share/nvim
   fi
 
   # Check and Mkdir ~/.config/nvim directory
   if [[ -d ${HOME}/.config/nvim ]]; then
-    sudo rm -r ${HOME}/.config/nvim
-  else
-    mkdir -p ${HOME}/.config/nvim
+    sudo rm -rf ${HOME}/.config/nvim
   fi
-
-  # Check Ctags path
-  ctags_path=$(which ctags)
+    mkdir -p ${HOME}/.config/nvim
 
   # Clone NVIM Plug
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -183,10 +179,13 @@ call plug#end()
 EOF
 
   # Execute NVIM PlugInstall
-  vim +PlugInstall +qall
+  nvim +PlugInstall +qall
 }
 
 function write_scripts() {
+  # Check Ctags path
+  ctags_path=$(which ctags)
+
   # Write Config into ~/.config/nvim/init.vim
   cat >>${HOME}/.config/nvim/init.vim <<EOF
 
