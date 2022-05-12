@@ -71,7 +71,10 @@ EOF
   cat >>${HOME}/.bashrc <<EOF
 
 # Python Alias
-alias python=python3
+alias python="python3"
+
+# NVIM Alias
+alias vim="nvim"
 EOF
 
   # If Mac
