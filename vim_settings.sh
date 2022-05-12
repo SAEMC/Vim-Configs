@@ -78,13 +78,19 @@ EOF
   elif [[ "$ostype" == "darwin"* ]]; then
     # Add current user into SUDO
     echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
-    # Install NVIM 'termguicolors' version
+    # Install NVIM
     /bin/zsh -c "brew install neovim"
     # Install Ctags
     /bin/zsh -c "brew install universal-ctags"
 
     # Write History timestamp and Python alias into ~/.zshrc
     cat >>${HOME}/.zshrc <<EOF
+
+# Change Locale to en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# NVIM Alias
+alias vim="nvim"
 
 # History Timestamp Alias
 alias history="history -i 0"
