@@ -2,32 +2,29 @@
 
 ### 사용 플러그인
 
-- `Plugin 'VundleVim/Vundle.vim'`  
-- `Plugin 'tpope/vim-fugitive'`  
-- `Plugin 'git://git.wincent.com/command-t.git'`  
-- `Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}`  
-- `Plugin 'joshdick/onedark.vim'`  
-- `Plugin 'vim-airline/vim-airline'`  
-- `Plugin 'vim-airline/vim-airline-themes'`  
-- `Plugin 'scrooloose/nerdtree'`  
-- `Plugin 'nathanaelkane/vim-indent-guides'`  
-- `Plugin 'preservim/nerdcommenter'`  
-- `Plugin 'blueyed/vim-diminactive'`  
-- `Plugin 'prabirshrestha/vim-lsp'`  
-- `Plugin 'mattn/vim-lsp-settings'`  
-- `Plugin 'prabirshrestha/asyncomplete.vim'`  
-- `Plugin 'prabirshrestha/asyncomplete-lsp.vim'`  
-- `Plugin 'ap/vim-css-color'`  
-- `Plugin 'preservim/tagbar'`  
-- `Plugin 'airblade/vim-gitgutter'`  
-- `Plugin 'mattn/emmet-vim'`  
+- `Plug 'navarasu/onedark.nvim'`  
+- `Plug 'vim-airline/vim-airline'`  
+- `Plug 'vim-airline/vim-airline-themes'`  
+- `Plug 'tpope/vim-fugitive'`  
+- `Plug 'airblade/vim-gitgutter'`  
+- `Plug 'scrooloose/nerdtree'`  
+- `Plug 'preservim/nerdcommenter'`  
+- `Plug 'preservim/tagbar'`  
+- `Plug 'nathanaelkane/vim-indent-guides'`  
+- `Plug 'blueyed/vim-diminactive'`  
+- `Plug 'prabirshrestha/vim-lsp'`  
+- `Plug 'mattn/vim-lsp-settings'`  
+- `Plug 'prabirshrestha/asyncomplete.vim'`  
+- `Plug 'prabirshrestha/asyncomplete-lsp.vim'`  
+- `Plug 'ap/vim-css-color'`  
+- `Plug 'mattn/emmet-vim'`  
 
 ---
 
 ### 준비 사항
 
 - Linux  
-> MAC은 Git과 Vim 모두 설치되어 있음
+> MAC은 XCode/Homebrew가 이미 설치되어 있는 환경  
 ```
 $ (sudo) apt-get update && \
   (sudo) apt-get install -y sudo git
