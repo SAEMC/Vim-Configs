@@ -34,10 +34,10 @@ $ (sudo) apt-get update && \
 ```
 
 - SAEMC Vim-Settings 프로젝트 다운로드 및 실행  
-> `$ ./vim_settings.sh -a` -> Dependencies/Plugins 설치 후 `.vimrc` 작성  
+> `$ ./vim_settings.sh -a` -> Dependencies/Plugins 설치 후 Scripts 작성  
 > `$ ./vim_settings.sh -d` -> Dependencies만 설치  
 > `$ ./vim_settings.sh -p` -> Plugins만 설치  
-> `$ ./vim_settings.sh -s` -> `.vimrc`만 작성  
+> `$ ./vim_settings.sh -s` -> Scripts만 작성  
 ```
 $ git clone https://github.com/SAEMC/Vim-Settings.git && \
   cd ./Vim-Settings
@@ -56,7 +56,6 @@ $ ./vim_settings.sh [OPTIONS]
 - `\` + `b`: NerdTree 토글 켜기/끄기  
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI out)  
 - `\` + `[` or `]`: 버퍼 윈도우 이동  
-- `\` + `x`: 터미널 수평 열기 (Execution)  
 - `\` + `t`: Tagbar 토글 켜기/끄기  
 - `\` + `z`: HTML 젠 코딩 (Zen coding)  
 - `\` + `h`: 왼쪽 표시 켜기/끄기 (Hide)  
