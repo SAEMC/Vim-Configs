@@ -209,6 +209,7 @@ set encoding=utf-8
 set expandtab
 set fileencodings=utf8,cp949
 set foldmethod=manual
+set guicursor=
 set hlsearch
 set ignorecase
 set incsearch
