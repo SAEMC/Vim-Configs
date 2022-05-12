@@ -281,7 +281,7 @@ let g:tagbar_ctags_bin = '$ctags_path'
 let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
 
-# Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
+" Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-sh',
