@@ -157,8 +157,15 @@ function install_plugins() {
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-  # Write Plugins into ~/.config/nvim/init.vim
+  # Write ~/.vimrc location into ~/.config/nvim/init.vim
   cat >${HOME}/.config/nvim/init.vim <<EOF
+set runtimepath^=\$HOME/.vim runtimepath+=\$HOME/.vim/after
+let &packpath=&runtimepath
+source \$HOME/.vimrc
+EOF
+
+  # Write Plugins into ~/.vimrc
+  cat >${HOME}/.vimrc <<EOF
 set nocompatible
 filetype off
 call plug#begin()
@@ -189,8 +196,8 @@ function write_scripts() {
   # Check Ctags path
   ctags_path=$(which ctags)
 
-  # Write Config into ~/.config/nvim/init.vim
-  cat >>${HOME}/.config/nvim/init.vim <<EOF
+  # Write Config into ~/.vimrc
+  cat >>${HOME}/.vimrc <<EOF
 
 if (empty(\$TMUX))
   if (has("nvim"))
@@ -327,10 +334,10 @@ The way you install SAEMC Vim Settings
 Usage:  ./vim_settings.sh [OPTIONS]
 
 Options:
-  -a, --all            Install dependencies/plugins and Write ~/.config/nvim/init.vim
+  -a, --all            Install dependencies/plugins and Write ~/.vimrc
   -d, --dependencies   Install dependencies only
   -p, --plugins        Install plugins only
-  -s, --scripts        Write ~/.config/nvim/init.vim only
+  -s, --scripts        Write ~/.vimrc
   "
 fi
 
