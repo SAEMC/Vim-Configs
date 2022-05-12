@@ -40,7 +40,7 @@ $ ./vim_settings.sh [OPTIONS]
 
 ---
 
-### 사용 방법
+### 사용 방법 (대부분 Vim 기본 커맨드 유지)
 
 #### [N: Normal] | [V: Visual] | [S: Select] | [O: Operator-pending] | [I: Insert]
 #### 이외의 커맨드는 Vim 기본 커맨드
@@ -52,7 +52,6 @@ $ ./vim_settings.sh [OPTIONS]
 - `\` + `[` or `]`: 버퍼 윈도우 이동  
 - `\` + `t`: Tagbar 토글 켜기/끄기  
 - `\` + `z`: HTML 젠 코딩 (Zen coding)  
-- `\` + `h`: 왼쪽 표시 켜기/끄기 (Hide)  
 - `\` + `l`: `set nu` / `/search` / `set list` 끄기 (CLI clear)  
 - `\` + `v`: OS 클립보드로 붙여넣기 (`Cmd` + `v`)  
 
