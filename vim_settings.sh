@@ -13,10 +13,12 @@ function install_dependencies() {
   if [[ "$ostype" == "linux-gnu"* ]]; then
       # Install Default software
       sudo apt-get install -y software-properties-common
-      # Add VIM into package
-      sudo add-apt-repository -yu ppa:jonathonf/vim
-      # Install VIM
-      sudo apt-get install -y vim
+      # Add NVIM into package
+      sudo add-apt-repository -yu ppa:neovim-ppa/stable
+      # Install NVIM
+      sudo apt-get install -y neovim
+      # Mkdir NVIM config directory
+      mkdir -p $HOME/.config/nvim
 
       # Check Curl
       eval "$check_curl"
@@ -78,19 +80,13 @@ EOF
   elif [[ "$ostype" == "darwin"* ]]; then
       # Add current user into SUDO
       echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
-      # Install VIM 'termguicolors' version
-      sudo mkdir -p /opt/local/bin
-      git clone https://github.com/vim/vim.git
-      (cd ./vim; ./configure --prefix=/opt/local; make; sudo make install; cd ..)
-
+      # Install NVIM 'termguicolors' version
+      /bin/zsh -c "brew install neovim"
       # Install Ctags
       /bin/zsh -c "brew install universal-ctags"
 
-      # Write VIM path and History timestamp and Python alias into ~/.zshrc
+      # Write History timestamp and Python alias into ~/.zshrc
       cat >>${HOME}/.zshrc <<EOF
-
-# VIM PATH
-export PATH="/opt/local/bin:\$PATH"
 
 # History Timestamp Alias
 alias history="history -i 0"
@@ -139,53 +135,49 @@ EOF
 }
 
 function install_plugins() {
-  # Clear ~/.vim/bundle directory
-  if [[ -d ${HOME}/.vim/bundle ]]; then
-      sudo rm -r ${HOME}/.vim/bundle
+  # Clear ~/.local/share directory
+  if [[ -d ${HOME}/.local/share/nvim ]]; then
+      sudo rm -r ${HOME}/.local/share/nvim
   fi
 
   # Check Ctags path
   ctags_path=$(which ctags)
 
-  # Clone VIM Vundle
-  git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
+  # Clone NVIM Plug
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-  # Write Plugins into ~/.vimrc
-  cat >${HOME}/.vimrc <<EOF
+  # Write Plugins into ~/.config/nvim/init.vim
+  cat >${HOME}/.config/nvim/init.vim <<EOF
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'joshdick/onedark.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'preservim/nerdcommenter'
-Plugin 'blueyed/vim-diminactive'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'mattn/vim-lsp-settings'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/asyncomplete-lsp.vim'
-Plugin 'ap/vim-css-color'
-Plugin 'preservim/tagbar'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'mattn/emmet-vim'
-call vundle#end()
-filetype plugin indent on
+call plug#begin()
+Plug 'navarasu/onedark.nvim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/tagbar'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'blueyed/vim-diminactive'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'ap/vim-css-color'
+Plug 'mattn/emmet-vim'
+call plug#end()
 EOF
 
-  # Execute VIM PluginInstall
-  vim +PluginInstall +qall
+  # Execute NVIM PlugInstall
+  vim +PlugInstall +qall
 }
 
 function write_scripts() {
-  # Write Config into ~/.vimrc
-  cat >>${HOME}/.vimrc <<EOF
+  # Write Config into ~/.config/nvim/init.vim
+  cat >>${HOME}/.config/nvim/init.vim <<EOF
 
 if (empty(\$TMUX))
     if (has("nvim"))
@@ -220,9 +212,7 @@ set smartindent
 set smarttab
 set softtabstop=2
 set splitbelow
-set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\\
 set tabstop=2
-set termwinsize=10x0
 
 syntax on
 colorscheme onedark
@@ -323,10 +313,10 @@ The way you install SAEMC Vim Settings
 Usage:  ./vim_settings.sh [OPTIONS]
 
 Options:
-  -a, --all            Install dependencies/plugins and Write ~/.vimrc
+  -a, --all            Install dependencies/plugins and Write ~/.config/nvim/init.vim
   -d, --dependencies   Install dependencies only
   -p, --plugins        Install plugins only
-  -s, --scripts        Write ~/.vimrc only
+  -s, --scripts        Write ~/.config/nvim/init.vim only
   "
 fi
 
