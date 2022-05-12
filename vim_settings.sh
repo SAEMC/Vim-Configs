@@ -14,9 +14,8 @@ function install_dependencies() {
       # Install Default software
       sudo apt-get install -y software-properties-common
       # Add VIM into package
-      sudo apt-add-repository -y ppa:jonathonf/vim
+      sudo add-apt-repository -yu ppa:jonathonf/vim
       # Install VIM
-      sudo apt-get update
       sudo apt-get install -y vim
 
       # Check Curl
