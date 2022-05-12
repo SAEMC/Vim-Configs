@@ -59,7 +59,7 @@ EOF
     # Install Python and Ctags
     # If cannot install pyls-all in VIM => Enter ':LspInstallServer pyls-ms' in VIM
     sudo apt-get update
-    # sudo apt-get install -y python3-venv python3-pip
+    sudo apt-get install -y python3-venv python3-pip
     sudo apt-get install -y universal-ctags
 
     # If cannot install universal-ctags => Install exuberant-ctags
