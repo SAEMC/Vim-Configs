@@ -11,34 +11,32 @@ function install_dependencies() {
   # If Ubuntu
   ostype=$(echo "${OSTYPE}")
   if [[ "$ostype" == "linux-gnu"* ]]; then
-      # Install Default software
-      sudo apt-get install -y software-properties-common
-      # Add NVIM into package
-      sudo add-apt-repository -yu ppa:neovim-ppa/stable
-      # Install NVIM
-      sudo apt-get install -y neovim
-      # Mkdir NVIM config directory
-      mkdir -p $HOME/.config/nvim
+    # Install Default software
+    sudo apt-get install -y software-properties-common
+    # Add NVIM into package
+    sudo add-apt-repository -yu ppa:neovim-ppa/stable
+    # Install NVIM
+    sudo apt-get install -y neovim
 
-      # Check Curl
-      eval "$check_curl"
-      if [[ "$?" -ne 0 ]]; then
-          # Install Curl
-          sudo apt-get install -y curl
-      fi
+    # Check Curl
+    eval "$check_curl"
+    if [[ "$?" -ne 0 ]]; then
+      # Install Curl
+      sudo apt-get install -y curl
+    fi
 
-      # Check NVM
-      eval "$check_nvm"
-      if [[ "$?" -ne 0 ]]; then
-          # Install NVM manually
-          export NVM_DIR="$HOME/.nvm" && (
-          git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
-          cd "$NVM_DIR"
-          git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
-          ) && \. "$NVM_DIR/nvm.sh"
+    # Check NVM
+    eval "$check_nvm"
+    if [[ "$?" -ne 0 ]]; then
+      # Install NVM manually
+      export NVM_DIR="$HOME/.nvm" && (
+      git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+      cd "$NVM_DIR"
+      git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+      ) && \. "$NVM_DIR/nvm.sh"
 
-          # Write NVM path into ~/.bashrc
-          cat >>${HOME}/.bashrc <<EOF
+      # Write NVM path into ~/.bashrc
+      cat >>${HOME}/.bashrc <<EOF
 
 # NVM
 export NVM_DIR="\$HOME/.nvm"
@@ -47,27 +45,27 @@ export NVM_DIR="\$HOME/.nvm"
 # This loads nvm bash_completion
 [ -s "\$NVM_DIR/bash_completion" ] && \. "\$NVM_DIR/bash_completion"
 EOF
-      fi
+    fi
 
-      # Check Node
-      eval "$check_node"
-      if [[ "$?" -ne 0 ]]; then
-          # Install Node LTS
-          nvm install --lts
-          nvm alias default lts/*
-          nvm use lts/*
-      fi
+    # Check Node
+    eval "$check_node"
+    if [[ "$?" -ne 0 ]]; then
+      # Install Node LTS
+      nvm install --lts
+      nvm alias default lts/*
+      nvm use lts/*
+    fi
 
-      # Install Python and Ctags
-      # If cannot install pyls-all in VIM => Enter ':LspInstallServer pyls-ms' in VIM
-      sudo apt-get update
-      sudo apt-get install -y python3-venv python3-pip
-      sudo apt-get install -y universal-ctags
+    # Install Python and Ctags
+    # If cannot install pyls-all in VIM => Enter ':LspInstallServer pyls-ms' in VIM
+    sudo apt-get update
+    sudo apt-get install -y python3-venv python3-pip
+    sudo apt-get install -y universal-ctags
 
-      # If cannot install universal-ctags => Install exuberant-ctags
-      if [[ "$?" -ne 0 ]]; then
-          sudo apt-get install -y exuberant-ctags
-      fi
+    # If cannot install universal-ctags => Install exuberant-ctags
+    if [[ "$?" -ne 0 ]]; then
+      sudo apt-get install -y exuberant-ctags
+    fi
 
   # Write Python alias into ~/.bashrc
   cat >>${HOME}/.bashrc <<EOF
@@ -78,15 +76,15 @@ EOF
 
   # If Mac
   elif [[ "$ostype" == "darwin"* ]]; then
-      # Add current user into SUDO
-      echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
-      # Install NVIM 'termguicolors' version
-      /bin/zsh -c "brew install neovim"
-      # Install Ctags
-      /bin/zsh -c "brew install universal-ctags"
+    # Add current user into SUDO
+    echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
+    # Install NVIM 'termguicolors' version
+    /bin/zsh -c "brew install neovim"
+    # Install Ctags
+    /bin/zsh -c "brew install universal-ctags"
 
-      # Write History timestamp and Python alias into ~/.zshrc
-      cat >>${HOME}/.zshrc <<EOF
+    # Write History timestamp and Python alias into ~/.zshrc
+    cat >>${HOME}/.zshrc <<EOF
 
 # History Timestamp Alias
 alias history="history -i 0"
@@ -95,19 +93,19 @@ alias history="history -i 0"
 alias python="python3"
 EOF
 
-      # Check NVM
-      eval "$check_nvm"
-      if [[ "$?" -ne 0 ]]; then
-          # Install NVM
-          /bin/zsh -c "brew install nvm"
-          mkdir ${HOME}/.nvm
+    # Check NVM
+    eval "$check_nvm"
+    if [[ "$?" -ne 0 ]]; then
+      # Install NVM
+      /bin/zsh -c "brew install nvm"
+      mkdir ${HOME}/.nvm
 
-          export NVM_DIR="$HOME/.nvm"
-          [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-          [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+      [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
-          # Write NVM path into ~/.zshrc
-          cat >>${HOME}/.zshrc <<EOF
+      # Write NVM path into ~/.zshrc
+      cat >>${HOME}/.zshrc <<EOF
 
 # NVM
 export NVM_DIR="\$HOME/.nvm"
@@ -116,28 +114,33 @@ export NVM_DIR="\$HOME/.nvm"
 # This loads nvm bash_completion
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 EOF
-      fi
+    fi
 
-      # Check Node
-      eval "$check_node"
-      if [[ "$?" -ne 0 ]]; then
-          # Install Node LTS
-          nvm install --lts
-          nvm alias default lts/*
-          nvm use lts/*
-      fi
+    # Check Node
+    eval "$check_node"
+    if [[ "$?" -ne 0 ]]; then
+      # Install Node LTS
+      nvm install --lts
+      nvm alias default lts/*
+      nvm use lts/*
+    fi
 
   # If not Ubuntu and Mac
   else
-      echo "${ostype} is not supported!"
-      exit 1
+    echo "${ostype} is not supported!"
+    exit 1
   fi
 }
 
 function install_plugins() {
   # Clear ~/.local/share directory
   if [[ -d ${HOME}/.local/share/nvim ]]; then
-      sudo rm -r ${HOME}/.local/share/nvim
+    sudo rm -r ${HOME}/.local/share/nvim
+  fi
+
+  # Check and Mkdir ~/.config/nvim directory
+  if [[ -d ${HOME}/.config/nvim ]]; then
+    mkdir -p ${HOME}/.config/nvim
   fi
 
   # Check Ctags path
@@ -180,12 +183,12 @@ function write_scripts() {
   cat >>${HOME}/.config/nvim/init.vim <<EOF
 
 if (empty(\$TMUX))
-    if (has("nvim"))
-        let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
-    endif
-    if (has("termguicolors"))
-        set termguicolors
-    endif
+  if (has("nvim"))
+    let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
 endif
 
 set autoindent
