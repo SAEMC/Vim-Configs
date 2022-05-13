@@ -319,19 +319,6 @@ let g:coc_global_extensions = [
   \ 'coc-yaml'
   \ ]
 
-let s:left_line_enabled = 1
-function! LeftLineToggle()
-  if s:left_line_enabled
-    call CocAction('diagnosticToggle')
-    :GitGutterBufferDisable
-    let s:left_line_enabled = 0
-  else
-    call CocAction('diagnosticToggle')
-    :GitGutterBufferEnable
-    let s:left_line_enabled = 1
-  endif
-:endfunction
-
 command! -nargs=* T split | resize 10 | terminal <args>
 command! -nargs=* VT vsplit | terminal <args>
 
@@ -342,7 +329,7 @@ nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
-nnoremap <silent> <Leader>h :call LeftLineToggle()<CR>
+nnoremap <silent> <Leader>h :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>n :set rnu<CR>
 nnoremap <silent> <Leader>l :set nonu<CR> \| :set nornu<CR> \| :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>v "*p
