@@ -160,6 +160,14 @@ EOF
 }
 
 function installPlugins() {
+  # Check OS
+  ostype=$(echo "${OSTYPE}")
+  # if not Ubuntu and Mac
+  if [[ "$ostype" != "linux-gnu"* && "$ostype" != "darwin"* ]]; then
+    echo "${ostype} is not supported!"
+    exit 1
+  fi
+
   # Clear ~/.local/share directory
   if [[ -d ${HOME}/.local/share/nvim ]]; then
     sudo rm -rf ${HOME}/.local/share/nvim
@@ -212,6 +220,21 @@ EOF
 }
 
 function writeScripts() {
+  # Clear All lines after 'call plug#end()'
+  # Check OS
+  ostype=$(echo "${OSTYPE}")
+  # if Ubuntu
+  if [[ "$ostype" == "linux-gnu"* ]]; then
+    sed -i '/^call plug#end()*/q' ${HOME}/.vimrc
+  # if Mac
+  elif [[ "$ostype" == "darwin"* ]]; then
+    sed -i '' '/^call plug#end()*/q' ${HOME}/.vimrc
+  # If not Ubuntu and Mac
+  else
+    echo "${ostype} is not supported!"
+    exit 1
+  fi
+
   # Clear ~/.config/nvim/coc-settings.json file
   if [[ -f ${HOME}/.config/nvim/coc-settings.json ]]; then
     sudo rm ${HOME}/.config/nvim/coc-settings.json
