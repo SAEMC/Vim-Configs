@@ -12,9 +12,6 @@ function installDependencies() {
   # If Ubuntu
   ostype=$(echo "${OSTYPE}")
   if [[ "$ostype" == "linux-gnu"* ]]; then
-    # Install Default software
-    sudo apt-get install -y software-properties-common
-
     # Check Local time
     eval "$check_lc"
     if [[ "$?" -ne 0 ]]; then
@@ -24,6 +21,9 @@ function installDependencies() {
       sudo apt-get install -y tzdata
       sudo dpkg-reconfigure --frontend noninteractive tzdata
     fi
+
+    # Install Default software
+    sudo apt-get install -y software-properties-common
 
     # Check Curl
     eval "$check_curl"
