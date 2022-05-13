@@ -246,6 +246,7 @@ set laststatus=2
 set nobackup
 set nowritebackup
 set re=0
+set rnu
 set ruler
 set shiftwidth=2
 set shortmess+=c
@@ -328,7 +329,8 @@ nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
-nnoremap <silent> <Leader>l :set nonu<CR> \| :noh<CR> \| :set nolist<CR>
+nnoremap <silent> <Leader>n :set rnu<CR>
+nnoremap <silent> <Leader>l :set nonu<CR> \| :set nornu<CR> \| :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>v "*p
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gt <Plug>(coc-type-definition)
