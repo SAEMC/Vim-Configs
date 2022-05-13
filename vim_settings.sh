@@ -313,6 +313,11 @@ let g:coc_global_extensions = [
   \ 'coc-yaml'
   \ ]
 
+command! -nargs=* T split | resize 10 | terminal <args>
+command! -nargs=* VT vsplit | terminal <args>
+
+nnoremap <silent> <Leader>x :T<CR>i
+nnoremap <silent> <Leader>xv :VT<CR>i
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>[ :bprevious!<CR>
