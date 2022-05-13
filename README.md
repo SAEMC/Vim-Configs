@@ -37,7 +37,7 @@ $ git clone https://github.com/SAEMC/Vim-Settings.git && \
 $ ./vim_settings.sh [OPTIONS]
 ```
 
-- 설치 활성화  
+- Dependencies 설치 활성화 (Plugins만 설치 및 Scripts만 작성은 제외)  
 > Linux인 경우  
 ```bash
 $ source ~/.bashrc
