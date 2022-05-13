@@ -1,8 +1,6 @@
 #!/bin/bash
 
-inputArg="$1"
-
-function install_dependencies() {
+function installDependencies() {
   check_curl="curl --version >/dev/null 2>&1"
   check_nvm="nvm --version >/dev/null 2>&1"
   check_node="node --version >/dev/null 2>&1"
@@ -141,7 +139,7 @@ EOF
   fi
 }
 
-function install_plugins() {
+function installPlugins() {
   # Clear ~/.local/share directory
   if [[ -d ${HOME}/.local/share/nvim ]]; then
     sudo rm -rf ${HOME}/.local/share/nvim
@@ -189,7 +187,7 @@ EOF
   nvim +PlugInstall +qall
 }
 
-function write_scripts() {
+function writeScripts() {
   # Check Ctags path
   ctags_path=$(which ctags)
 
@@ -338,28 +336,61 @@ endif
 EOF
 }
 
-if [[ "$inputArg" == "-a" || "$inputArg" == "--all" ]]; then
-  install_dependencies
-  install_plugins
-  write_scripts
-elif [[ "$inputArg" == "-d" || "$inputArg" == "--dependencies" ]]; then
-  install_dependencies
-elif [[ "$inputArg" == "-p" || "$inputArg" == "--plugins" ]]; then
-  install_plugins
-elif [[ "$inputArg" == "-s" || "$inputArg" == "--scripts" ]]; then
-  write_scripts
-else
-  echo "
-The way you install SAEMC Vim Settings
+usgMsg="Usage:  $(basename $0) [-a] [-d] [-p] [-s]"
+optMsg="Options:
+  -a   Install dependencies/plugins and Write ~/.vimrc
+  -d   Install dependencies only
+  -p   Install plugins only
+  -s   Write ~/.vimrc only"
+invMsg="Invalid command option."
+args=""
 
-Usage:  ./vim_settings.sh [OPTIONS]
-
-Options:
-  -a, --all            Install dependencies/plugins and Write ~/.vimrc
-  -d, --dependencies   Install dependencies only
-  -p, --plugins        Install plugins only
-  -s, --scripts        Write ~/.vimrc only
-  "
+if [[ -z "$1" ]]; then
+  echo "Need to enter command option."
+  echo "$usgMsg"
+  exit 1
 fi
+
+while getopts ':adps :h' opt; do
+  case "$opt" in
+    a | d | p | s)
+      args+="${opt}"
+      ;;
+    h)
+      echo -e "The way you install SAEMC Vim Settings.\n"
+      echo -e "${usgMsg}\n"
+      echo -e "$optMsg"
+      exit 0
+      ;;
+    ?)
+      echo "$invMsg"
+      echo "$usgMsg"
+      exit 1
+      ;;
+  esac
+done
+
+args=$(echo $args | grep -o . | sort | uniq | tr -d "\n")
+
+for (( i = 0; i < ${#args}; i++ )); do
+  arg="${args:$i:1}"
+
+  if [[ "$arg" == "a" ]]; then
+    installDependencies
+    installPlugins
+    writeScripts
+    exit 0
+  elif [[ "$arg" == "d" ]]; then
+    installDependencies
+  elif [[ "$arg" == "p" ]]; then
+    installPlugins
+  elif [[ "$arg" == "s" ]]; then
+    writeScripts
+  else
+    echo "$invMsg"
+    echo "$usgMsg"
+    exit 1
+  fi
+done
 
 exit 0
