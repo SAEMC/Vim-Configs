@@ -296,7 +296,8 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-json',
   \ 'coc-markdownlint',
-  \ 'coc-pyright'
+  \ 'coc-pyright',
+  \ 'coc-yaml'
   \ ]
 
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
