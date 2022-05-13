@@ -356,6 +356,11 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
+tnoremap <silent> <C-w>h <C-\><C-n><C-w>h
+tnoremap <silent> <C-w>j <C-\><C-n><C-w>j
+tnoremap <silent> <C-w>k <C-\><C-n><C-w>k
+tnoremap <silent> <C-w>l <C-\><C-n><C-w>l
 EOF
 }
 
