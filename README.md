@@ -20,8 +20,8 @@
 ### 준비 사항
 
 - Linux  
-> MAC은 XCode/Homebrew가 이미 설치되어 있는 환경  
-```
+> Mac은 XCode/Homebrew가 이미 설치되어 있는 환경  
+```bash
 $ (sudo) apt-get update && \
   (sudo) apt-get install -y sudo git
 ```
@@ -31,10 +31,20 @@ $ (sudo) apt-get update && \
 > `$ ./vim_settings.sh -d` -> Dependencies만 설치  
 > `$ ./vim_settings.sh -p` -> Plugins만 설치  
 > `$ ./vim_settings.sh -s` -> Scripts만 작성  
-```
+```bash
 $ git clone https://github.com/SAEMC/Vim-Settings.git && \
   cd ./Vim-Settings
 $ ./vim_settings.sh [OPTIONS]
+```
+
+- 설치 활성화  
+> Linux인 경우  
+```bash
+$ source ~/.bashrc
+```
+> Mac인 경우  
+```bash
+$ source ~/.zshrc
 ```
 
 ---
