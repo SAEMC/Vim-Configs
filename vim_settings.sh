@@ -303,11 +303,11 @@ nnoremap <silent> <Leader>t :TagbarToggle<CR>
 nnoremap <silent> <Leader>z <C-y>,<CR>
 nnoremap <silent> <Leader>l :set nonu<CR> \| :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>v "*p
-nnoremap <silent> <Leader>gd <Plug>(coc-definition)
-nnoremap <silent> <Leader>gt <Plug>(coc-type-definition)
-nnoremap <silent> <Leader>gi <Plug>(coc-implementation)
-nnoremap <silent> <Leader>gr <Plug>(coc-references)
-nnoremap <silent> <leader>f  <Plug>(coc-format-selected)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gt <Plug>(coc-type-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gr <Plug>(coc-references)
+nnoremap <silent> f  <Plug>(coc-format-selected)
 
 vnoremap <silent> <Leader>c "*y
 
