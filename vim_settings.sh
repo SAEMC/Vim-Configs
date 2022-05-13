@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function installDependencies() {
-  check_lc="ls /etc/localtime >/dev/null 2>&1"
+  check_localtime="ls /etc/localtime >/dev/null 2>&1"
   check_curl="curl --version >/dev/null 2>&1"
   check_neovim="nvim --version >/dev/null 2>&1"
   check_nvm="nvm --version >/dev/null 2>&1"
@@ -13,7 +13,7 @@ function installDependencies() {
   ostype=$(echo "${OSTYPE}")
   if [[ "$ostype" == "linux-gnu"* ]]; then
     # Check Local time
-    eval "$check_lc"
+    eval "$check_localtime"
     if [[ "$?" -ne 0 ]]; then
       # Set Environment variable
       export DEBIAN_FRONTEND=noninteractive
