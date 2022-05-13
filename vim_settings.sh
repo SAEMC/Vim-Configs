@@ -306,7 +306,6 @@ let g:tagbar_autofocus = 1
 
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 let g:coc_global_extensions = [
-  \ 'coc-sh',
   \ 'coc-clangd',
   \ 'coc-css',
   \ 'coc-emmet',
@@ -316,6 +315,7 @@ let g:coc_global_extensions = [
   \ 'coc-markdownlint',
   \ 'coc-prettier',
   \ 'coc-pyright',
+  \ 'coc-sh',
   \ 'coc-yaml'
   \ ]
 
