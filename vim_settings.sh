@@ -199,7 +199,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'blueyed/vim-diminactive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
-Plug 'mattn/emmet-vim'
 call plug#end()
 EOF
 
@@ -305,6 +304,7 @@ let g:coc_global_extensions = [
   \ 'coc-sh',
   \ 'coc-clangd',
   \ 'coc-css',
+  \ 'coc-emmet',
   \ 'coc-html',
   \ 'coc-tsserver',
   \ 'coc-json',
