@@ -49,10 +49,11 @@ $ source ~/.zshrc
 
 ---
 
-### 사용 방법 (대부분 Vim 기본 커맨드 유지)
+### 사용 방법
 
 #### [N: Normal] | [V: Visual] | [S: Select] | [O: Operator-pending] | [I: Insert]
-#### 이외의 커맨드는 Vim 기본 커맨드
+#### 매핑된 커맨드는 `~/.vimrc` 파일 확인
+#### 이외의 커맨드는 Vim 기본 커맨드 (Vim 기본 커맨드 참조)
 
 ##### [N]
 
