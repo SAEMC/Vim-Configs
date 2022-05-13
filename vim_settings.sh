@@ -344,7 +344,7 @@ inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" :
 \ col('.') < col('$') ? "\<Right>" : "\<Tab>"
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
-inoremap <silent> <expr> <CR> pumvisible() ? "\<C-y>" : "\<Tab>"
+inoremap <silent> <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <silent> " ""<left>
 inoremap <silent> ' ''<left>
 inoremap <silent> ( ()<left>
