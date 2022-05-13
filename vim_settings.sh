@@ -337,6 +337,8 @@ nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
 nnoremap <silent> gr <Plug>(coc-references)
 nnoremap <silent> gt <Plug>(coc-type-definition)
+nnoremap <silent> g[ <Plug>(coc-diagnostic-prev)
+nnoremap <silent> g] <Plug>(coc-diagnostic-next)
 
 vnoremap <silent> <Leader>c "*y
 
