@@ -176,11 +176,6 @@ function installPlugins() {
     sudo rm ${HOME}/.vimrc
   fi
 
-  # Clear ~/.config/nvim/coc-settings.json file
-  if [[ -f ${HOME}/.config/nvim/coc-settings.json ]]; then
-    sudo rm ${HOME}/.config/nvim/coc-settings.json
-  fi
-
   # Clone Neo VIM Plug
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -217,6 +212,11 @@ EOF
 }
 
 function writeScripts() {
+  # Clear ~/.config/nvim/coc-settings.json file
+  if [[ -f ${HOME}/.config/nvim/coc-settings.json ]]; then
+    sudo rm ${HOME}/.config/nvim/coc-settings.json
+  fi
+
   # Check Ctags path
   ctags_path=$(which ctags)
 
