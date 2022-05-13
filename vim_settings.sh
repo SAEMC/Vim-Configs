@@ -317,7 +317,6 @@ nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
-nnoremap <silent> <Leader>x :terminal<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
 nnoremap <silent> <Leader>l :set nonu<CR> \| :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>v "*p
