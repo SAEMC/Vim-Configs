@@ -344,6 +344,8 @@ inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
 inoremap <silent> <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <silent> <expr> <C-Space> coc#refresh()
+inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
 inoremap <silent> " ""<left>
 inoremap <silent> ' ''<left>
 inoremap <silent> ( ()<left>
@@ -356,12 +358,6 @@ inoremap <silent> <C-h> <C-o>h
 inoremap <silent> <C-j> <C-o>j
 inoremap <silent> <C-k> <C-o>k
 inoremap <silent> <C-l> <C-o>l
-inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
-if has('nvim')
-  inoremap <silent> <expr> <c-space> coc#refresh()
-else
-  inoremap <silent> <expr> <c-@> coc#refresh()
-endif
 
 tnoremap <silent> <C-w>h <C-\><C-n><C-w>h
 tnoremap <silent> <C-w>j <C-\><C-n><C-w>j
