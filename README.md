@@ -32,7 +32,7 @@ $ (sudo) apt-get update && \
 > `$ ./vim_settings.sh -p` -> Plugins만 설치 (작성되어 있는 Scripts 제거됨)  
 > `$ ./vim_settings.sh -s` -> Scripts만 작성  
 ```bash
-$ git clone https://github.com/SAEMC/Vim-Settings.git && \
+$ git clone https://github.com/SAEMC/Vim-Settings && \
   cd ./Vim-Settings
 $ ./vim_settings.sh [OPTIONS]
 ```
