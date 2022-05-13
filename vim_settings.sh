@@ -341,8 +341,7 @@ nnoremap <silent> gr <Plug>(coc-references)
 vnoremap <silent> <Leader>c "*y
 
 inoremap <silent> <expr> <TAB>
-\ pumvisible() ? "\<C-n>" :
-\ col('.') < col('$') ? "\<Right>" : "\<Tab>"
+\ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
 inoremap <silent> <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <silent> " ""<left>
