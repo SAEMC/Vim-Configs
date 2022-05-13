@@ -343,18 +343,18 @@ inoremap <silent> <expr> <TAB>
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
 inoremap <silent> <expr> <CR> pumvisible() ? coc#_select_confirm()
 \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap (<CR> (<CR>)<ESC>O
-inoremap [<CR> [<CR>]<ESC>O
-inoremap {<CR> {<CR>}<ESC>O
-inoremap <C-h> <C-o>h
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
-inoremap <C-l> <C-o>l
+inoremap <silent> " ""<left>
+inoremap <silent> ' ''<left>
+inoremap <silent> ( ()<left>
+inoremap <silent> [ []<left>
+inoremap <silent> { {}<left>
+inoremap <silent> (<CR> (<CR>)<ESC>O
+inoremap <silent> [<CR> [<CR>]<ESC>O
+inoremap <silent> {<CR> {<CR>}<ESC>O
+inoremap <silent> <C-h> <C-o>h
+inoremap <silent> <C-j> <C-o>j
+inoremap <silent> <C-k> <C-o>k
+inoremap <silent> <C-l> <C-o>l
 inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
 if has('nvim')
   inoremap <silent> <expr> <c-space> coc#refresh()
