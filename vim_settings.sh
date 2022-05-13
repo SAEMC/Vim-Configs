@@ -15,8 +15,10 @@ function installDependencies() {
     # Check Local time
     eval "$check_lc"
     if [[ "$?" -ne 0 ]]; then
+      # Set Environment variable
       export DEBIAN_FRONTEND=noninteractive
 
+      # Install TZdata noninteractive mode
       sudo ln -fs /usr/share/zoneinfo/Asia/Seoul /etc/localtime
       sudo apt-get install -y tzdata
       sudo dpkg-reconfigure --frontend noninteractive tzdata
