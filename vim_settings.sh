@@ -332,11 +332,11 @@ nnoremap <silent> gr <Plug>(coc-references)
 
 vnoremap <silent> <Leader>c "*y
 
-inoremap <expr> <TAB>
+inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" :
 \ col('.') < col('$') ? "\<Right>" : "\<Tab>"
-inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
+inoremap <silent> <expr> <CR> pumvisible() ? coc#_select_confirm()
 \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -350,11 +350,11 @@ inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
-inoremap <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
+inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <silent> <expr> <c-space> coc#refresh()
 else
-  inoremap <silent><expr> <c-@> coc#refresh()
+  inoremap <silent> <expr> <c-@> coc#refresh()
 endif
 
 tnoremap <silent> <C-w>h <C-\><C-n><C-w>h
