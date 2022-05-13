@@ -312,7 +312,6 @@ nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gt <Plug>(coc-type-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
 nnoremap <silent> gr <Plug>(coc-references)
-nnoremap <silent> f  <Plug>(coc-format-selected)
 
 vnoremap <silent> <Leader>c "*y
 
