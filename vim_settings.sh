@@ -10,8 +10,8 @@ function installDependencies() {
 
   # Check OS
   # If Ubuntu
-  ostype=$(echo "${OSTYPE}")
-  if [[ "$ostype" == "linux-gnu"* ]]; then
+  os_type=$(echo "${OSTYPE}")
+  if [[ "$os_type" == "linux-gnu"* ]]; then
     # Check Local time
     eval "$check_localtime"
     if [[ "$?" -ne 0 ]]; then
@@ -95,7 +95,7 @@ EOF
     fi
 
   # If Mac
-  elif [[ "$ostype" == "darwin"* ]]; then
+  elif [[ "$os_type" == "darwin"* ]]; then
     # Check Neo VIM
     eval "$check_neovim"
     if [[ "$?" -ne 0 ]]; then
@@ -154,17 +154,17 @@ EOF
 
   # If not Ubuntu and Mac
   else
-    echo "${ostype} is not supported!"
+    echo "${os_type} is not supported!"
     exit 1
   fi
 }
 
 function installPlugins() {
   # Check OS
-  ostype=$(echo "${OSTYPE}")
+  os_type=$(echo "${OSTYPE}")
   # if not Ubuntu and Mac
-  if [[ "$ostype" != "linux-gnu"* && "$ostype" != "darwin"* ]]; then
-    echo "${ostype} is not supported!"
+  if [[ "$os_type" != "linux-gnu"* && "$ostype" != "darwin"* ]]; then
+    echo "${os_type} is not supported!"
     exit 1
   fi
 
@@ -221,17 +221,18 @@ EOF
 
 function writeScripts() {
   # Clear All lines after 'call plug#end()'
+  last_line="call plug#end()"
   # Check OS
-  ostype=$(echo "${OSTYPE}")
+  os_type=$(echo "${OSTYPE}")
   # if Ubuntu
-  if [[ "$ostype" == "linux-gnu"* ]]; then
-    sed -i '/^call plug#end()*/q' ${HOME}/.vimrc
+  if [[ "$os_type" == "linux-gnu"* ]]; then
+    sed -i "/^${last_line}*/q" ${HOME}/.vimrc
   # if Mac
-  elif [[ "$ostype" == "darwin"* ]]; then
-    sed -i '' '/^call plug#end()*/q' ${HOME}/.vimrc
+  elif [[ "$os_type" == "darwin"* ]]; then
+    sed -i '' "/^${last_line}*/q" ${HOME}/.vimrc
   # If not Ubuntu and Mac
   else
-    echo "${ostype} is not supported!"
+    echo "${os_type} is not supported!"
     exit 1
   fi
 
@@ -404,18 +405,18 @@ EOF
 EOF
 }
 
-usgMsg="Usage:  $(basename $0) [-a] [-d] [-p] [-s]"
-optMsg="Options:
+usage_msg="Usage:  $(basename $0) [-a] [-d] [-p] [-s]"
+option_msg="Options:
   -a   Install dependencies/plugins and Write ~/.vimrc
   -d   Install dependencies only
   -p   Install plugins only
   -s   Write ~/.vimrc only"
-invMsg="Invalid command option."
+invalid_msg="Invalid command option."
 args=""
 
 if [[ -z "$1" ]]; then
   echo "Need to enter command option."
-  echo "$usgMsg"
+  echo "$usage_msg"
   exit 1
 fi
 
@@ -426,13 +427,13 @@ while getopts ':adps :h' opt; do
       ;;
     h)
       echo -e "The way you install SAEMC Vim Settings.\n"
-      echo -e "${usgMsg}\n"
-      echo -e "$optMsg"
+      echo -e "${usage_msg}\n"
+      echo -e "$option_msg"
       exit 0
       ;;
     ?)
-      echo "$invMsg"
-      echo "$usgMsg"
+      echo "$invalid_msg"
+      echo "$usage_msg"
       exit 1
       ;;
   esac
@@ -455,8 +456,8 @@ for (( i = 0; i < ${#args}; i++ )); do
   elif [[ "$arg" == "s" ]]; then
     writeScripts
   else
-    echo "$invMsg"
-    echo "$usgMsg"
+    echo "$invalid_msg"
+    echo "$usage_msg"
     exit 1
   fi
 done
