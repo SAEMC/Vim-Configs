@@ -2,8 +2,10 @@
 
 function installDependencies() {
   check_curl="curl --version >/dev/null 2>&1"
+  check_neovim="nvim --version >/dev/null 2>&1"
   check_nvm="nvm --version >/dev/null 2>&1"
   check_node="node --version >/dev/null 2>&1"
+  check_ctags="ctags --version >/dev/null 2>&1"
 
   # Check OS
   # If Ubuntu
@@ -11,16 +13,28 @@ function installDependencies() {
   if [[ "$ostype" == "linux-gnu"* ]]; then
     # Install Default software
     sudo apt-get install -y software-properties-common
-    # Add Neo VIM into package
-    sudo add-apt-repository -yu ppa:neovim-ppa/stable
-    # Install Neo VIM
-    sudo apt-get install -y neovim
 
     # Check Curl
     eval "$check_curl"
     if [[ "$?" -ne 0 ]]; then
       # Install Curl
       sudo apt-get install -y curl
+    fi
+
+    # Check Neo VIM
+    eval "$check_neovim"
+    if [[ "$?" -ne 0 ]]; then
+      # Add Neo VIM into package
+      sudo add-apt-repository -yu ppa:neovim-ppa/stable
+      # Install Neo VIM
+      sudo apt-get install -y neovim
+      
+      # Write Neo VIM alias into ~/.bashrc
+      cat >>${HOME}/.bashrc <<EOF
+
+# NVIM Alias
+alias vim="nvim"
+EOF
     fi
 
     # Check NVM
@@ -54,51 +68,44 @@ EOF
       nvm use lts/*
     fi
 
-    # Install Python and Ctags
-    # If cannot install pyls-all in VIM => Enter ':LspInstallServer pyls-ms' in VIM
-    sudo apt-get update
-    # sudo apt-get install -y python3-venv python3-pip
-    sudo apt-get install -y universal-ctags
-
-    # If cannot install universal-ctags => Install exuberant-ctags
+    # Check Ctags
+    eval "$check_ctags"
     if [[ "$?" -ne 0 ]]; then
-      sudo apt-get install -y exuberant-ctags
+      # Install Ctags
+      sudo apt-get update
+      sudo apt-get install -y universal-ctags
+
+      # If cannot install universal-ctags => Install exuberant-ctags
+      if [[ "$?" -ne 0 ]]; then
+        sudo apt-get install -y exuberant-ctags
+      fi
     fi
-
-  # Write Python alias into ~/.bashrc
-  cat >>${HOME}/.bashrc <<EOF
-
-# Python Alias
-alias python="python3"
-
-# NVIM Alias
-alias vim="nvim"
-EOF
 
   # If Mac
   elif [[ "$ostype" == "darwin"* ]]; then
-    # Add current user into SUDO
-    echo "${USER} ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers >/dev/null
-    # Install Neo VIM
-    /bin/zsh -c "brew install neovim"
-    # Install Ctags
-    /bin/zsh -c "brew install universal-ctags"
+    # Check Neo VIM
+    eval "$check_neovim"
+    if [[ "$?" -ne 0 ]]; then
+      # Install Neo VIM
+      /bin/zsh -c "brew install neovim"
 
-    # Write History timestamp and Python alias into ~/.zshrc
-    cat >>${HOME}/.zshrc <<EOF
+      # Write Locale and Neo VIM alias into ~/.zshrc
+      cat >>${HOME}/.zshrc <<EOF
 
 # Change Locale to en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # NVIM Alias
 alias vim="nvim"
-
-# History Timestamp Alias
-alias history="history -i 0"
-
-# Python Alias
-alias python="python3"
 EOF
+    fi
+
+    # Check Ctags
+    eval "$check_ctags"
+    if [[ "$?" -ne 0 ]]; then
+      # Install Ctags
+      /bin/zsh -c "brew install universal-ctags"
+    fi
 
     # Check NVM
     eval "$check_nvm"
