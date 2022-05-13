@@ -52,7 +52,7 @@ $ ./vim_settings.sh [OPTIONS]
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI out)  
 - `\` + `[` or `]`: 버퍼 윈도우 이동  
 - `\` + `t`: Tagbar 토글 켜기/끄기  
-- `\` + `h`: CoC 검사 / Gitgutter 표시 토글 켜기/끄기 (Hide)  
+- `\` + `h`: CoC 검사 / GitGutter 표시 토글 켜기/끄기 (Hide)  
 - `\` + `n`: Relative number 켜기  
 - `\` + `l`: `set nu` / `set rnu` / `/search` / `set list` 끄기 (CLI clear)  
 - `\` + `v`: OS 클립보드로 붙여넣기 (`Cmd` + `v`)  
@@ -71,6 +71,6 @@ $ ./vim_settings.sh [OPTIONS]
 
 - `s`: [NerdTree 윈도우] 윈도우 수직 분할  
 - `i`: [NerdTree 윈도우] 윈도우 수평 분할  
-- `r`: [NerdTree 윈도우] NerdTree 새로고침    
+- `r`: [NerdTree 윈도우] NerdTree 새로고침  
 
 <br/>
