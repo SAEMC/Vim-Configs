@@ -165,11 +165,16 @@ function installPlugins() {
     sudo rm -rf ${HOME}/.local/share/nvim
   fi
 
-  # Check and Mkdir ~/.config/nvim directory
+  # Clear ~/.config/nvim directory
   if [[ -d ${HOME}/.config/nvim ]]; then
     sudo rm -rf ${HOME}/.config/nvim
   fi
     mkdir -p ${HOME}/.config/nvim
+
+  # Clear ~/.vimrc file
+  if [[ -f ${HOME}/.vimrc ]]; then
+    sudo rm ${HOME}/.vimrc
+  fi
 
   # Clone Neo VIM Plug
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
