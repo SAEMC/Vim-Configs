@@ -52,7 +52,8 @@ $ ./vim_settings.sh [OPTIONS]
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI out)  
 - `\` + `[` or `]`: 버퍼 윈도우 이동  
 - `\` + `t`: Tagbar 토글 켜기/끄기  
-- `\` + `l`: `set nu` / `/search` / `set list` 끄기 (CLI clear)  
+- `\` + `n`: Relative number 켜기  
+- `\` + `l`: `set nu` / `set rnu` / `/search` / `set list` 끄기 (CLI clear)  
 - `\` + `v`: OS 클립보드로 붙여넣기 (`Cmd` + `v`)  
 
 ##### [V]
