@@ -345,7 +345,7 @@ inoremap <silent> <expr> <TAB>
 \ col('.') < col('$') ? "\<Right>" : "\<Tab>"
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
 inoremap <silent> <expr> <CR> pumvisible() ? coc#_select_confirm()
-\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+\: "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
 inoremap <silent> " ""<left>
 inoremap <silent> ' ''<left>
 inoremap <silent> ( ()<left>
