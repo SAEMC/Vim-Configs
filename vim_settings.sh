@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function installDependencies() {
+  check_lc="ls /etc/localtime >/dev/null 2>&1"
   check_curl="curl --version >/dev/null 2>&1"
   check_neovim="nvim --version >/dev/null 2>&1"
   check_nvm="nvm --version >/dev/null 2>&1"
@@ -13,6 +14,16 @@ function installDependencies() {
   if [[ "$ostype" == "linux-gnu"* ]]; then
     # Install Default software
     sudo apt-get install -y software-properties-common
+
+    # Check Local time
+    eval "$check_lc"
+    if [[ "$?" -ne 0 ]]; then
+      export DEBIAN_FRONTEND=noninteractive
+
+      sudo ln -fs /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+      sudo apt-get install -y tzdata
+      sudo dpkg-reconfigure --frontend noninteractive tzdata
+    fi
 
     # Check Curl
     eval "$check_curl"
