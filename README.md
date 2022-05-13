@@ -14,7 +14,6 @@
 - `Plug 'blueyed/vim-diminactive'`  
 - `Plug 'neoclide/coc.nvim', {'branch': 'release'}`
 - `Plug 'ap/vim-css-color'`  
-- `Plug 'mattn/emmet-vim'`  
 
 ---
 
@@ -51,7 +50,6 @@ $ ./vim_settings.sh [OPTIONS]
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI out)  
 - `\` + `[` or `]`: 버퍼 윈도우 이동  
 - `\` + `t`: Tagbar 토글 켜기/끄기  
-- `\` + `z`: HTML 젠 코딩 (Zen coding)  
 - `\` + `l`: `set nu` / `/search` / `set list` 끄기 (CLI clear)  
 - `\` + `v`: OS 클립보드로 붙여넣기 (`Cmd` + `v`)  
 
