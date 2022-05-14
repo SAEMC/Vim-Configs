@@ -402,7 +402,17 @@ EOF
   # Write Config into ~/.config/nvim/coc-settings.json
   cat >${HOME}/.config/nvim/coc-settings.json <<EOF
 {
-  "coc.preferences.promptInput": false
+  "coc.preferences.promptInput": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "sccs",
+    "html",
+    "javascripts",
+    "json",
+    "markdown",
+    "typescript",
+    "yaml"
+  ]
 }
 EOF
 }
