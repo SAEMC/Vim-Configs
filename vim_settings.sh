@@ -367,6 +367,7 @@ nnoremap <silent> <Leader>x :T<CR>i
 nnoremap <silent> <Leader>xv :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
+nnoremap <silent> c ciw
 nnoremap <silent> ga :<C-u>CocList diagnostics<CR>
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
