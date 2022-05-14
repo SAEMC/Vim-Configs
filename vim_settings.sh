@@ -335,6 +335,7 @@ let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
 
 let g:AutoPairsMapCh = 0
+let g:AutoPairsShortcutFastWrap = '<C-e>'
 
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 let g:coc_global_extensions = [
