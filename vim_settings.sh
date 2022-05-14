@@ -10,9 +10,10 @@ function installDependencies() {
   check_pip3="pip3 --version >/dev/null 2>&1"
 
   # Check OS
-  # If Ubuntu
   os_type=$(echo "${OSTYPE}")
   echo -e "\n *** Check OSTYPE *** \n"
+
+  # If Ubuntu
   if [[ "$os_type" == "linux-gnu"* ]]; then
     echo -e "\n *** Detected Ubuntu *** \n"
     # Check Local time
