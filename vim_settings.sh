@@ -17,9 +17,10 @@ function installDependencies() {
   if [[ "$os_type" == "linux-gnu"* ]]; then
     echo -e "\n *** Detected Ubuntu *** \n"
 
+
     # Install Default software
     echo -e "\n *** Install Default software *** \n"
-    sudo apt-get install -y software-properties-common
+    sudo apt-get update && sudo apt-get install -y software-properties-common
 
     # Check Local time
     eval "$check_localtime"
