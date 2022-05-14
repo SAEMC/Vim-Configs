@@ -66,7 +66,7 @@ $ source ~/.zshrc
 - `\` + `f`: 코드 폴딩 토글 (Fold)  
 - `\` + `h`: CoC 검사 / GitGutter 표시 토글 (Hide)  
 - `\` + `l`: `/search` / `:set list` 결과 끄기 (CLI `Ctrl` + `l`)  
-- `\` + `r`: Relative number 토글  
+- `\` + `n`: 라인 넘버링 토글  
 - `\` + `t`: Tagbar 토글  
 - `\` + `v`: OS 클립보드로 붙여넣기 (`Cmd` + `v`)  
 - `\` + `x`: 터미널 수평 열기  
