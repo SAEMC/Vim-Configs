@@ -163,7 +163,7 @@ function installPlugins() {
   # Check OS
   os_type=$(echo "${OSTYPE}")
   # if not Ubuntu and Mac
-  if [[ "$os_type" != "linux-gnu"* && "$ostype" != "darwin"* ]]; then
+  if [[ "$os_type" != "linux-gnu"* && "$os_type" != "darwin"* ]]; then
     echo "${os_type} is not supported!"
     exit 1
   fi
