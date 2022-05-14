@@ -39,18 +39,18 @@ function installDependencies() {
       sudo apt-get install -y curl
     fi
 
-    # Check Neo VIM
+    # Check NeoVIM
     eval "$check_neovim"
     if [[ "$?" -ne 0 ]]; then
-      # Add Neo VIM into package
-      echo -e "\n *** Add Neo VIM into package *** \n"
+      # Add NeoVIM into package
+      echo -e "\n *** Add NeoVIM into package *** \n"
       sudo add-apt-repository -yu ppa:neovim-ppa/stable
-      # Install Neo VIM
-      echo -e "\n *** Install Neo VIM *** \n"
+      # Install NeoVIM
+      echo -e "\n *** Install NeoVIM *** \n"
       sudo apt-get install -y neovim
       
-      # Write Neo VIM alias into ~/.bashrc
-      echo -e "\n *** Write Neo VIM alias into ~/.bashrc ***\n"
+      # Write NeoVIM alias into ~/.bashrc
+      echo -e "\n *** Write NeoVIM alias into ~/.bashrc ***\n"
       cat >>${HOME}/.bashrc <<EOF
 
 # NVIM Alias
@@ -124,15 +124,15 @@ EOF
   elif [[ "$os_type" == "darwin"* ]]; then
     echo -e "\n *** Detected Mac *** \n"
 
-    # Check Neo VIM
+    # Check NeoVIM
     eval "$check_neovim"
     if [[ "$?" -ne 0 ]]; then
-      # Install Neo VIM
-      echo -e "\n *** Install Neo VIM *** \n"
+      # Install NeoVIM
+      echo -e "\n *** Install NeoVIM *** \n"
       /bin/zsh -c "brew install neovim"
 
-      # Write Locale and Neo VIM alias into ~/.zshrc
-      echo -e "\n *** Write Locale and Neo VIM alias into ~/.zshrc ***\n"
+      # Write Locale and NeoVIM alias into ~/.zshrc
+      echo -e "\n *** Write Locale and NeoVIM alias into ~/.zshrc ***\n"
       cat >>${HOME}/.zshrc <<EOF
 
 # Change Locale to en_US.UTF-8
@@ -226,7 +226,7 @@ function installPlugins() {
     sudo rm ${HOME}/.vimrc
   fi
 
-  # Clone Neo VIM Plug
+  # Clone NeoVIM Plug
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
@@ -262,8 +262,8 @@ Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 call plug#end()
 EOF
 
-  # Execute Neo VIM PlugInstall
-  echo -e "\n *** Execute Neo VIM PlugInstall *** \n"
+  # Execute NeoVIM PlugInstall
+  echo -e "\n *** Execute NeoVIM PlugInstall *** \n"
   nvim +PlugInstall +qall
 }
 
