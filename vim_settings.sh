@@ -357,6 +357,7 @@ command! -nargs=* VT vsplit | terminal <args>
 
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
+nnoremap <silent> <Leader>f zo
 nnoremap <silent> <Leader>h :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>l :set nonu<CR> \| :set nornu<CR> \| :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>n :set rnu<CR>
@@ -376,6 +377,7 @@ nnoremap <silent> g] <Plug>(coc-diagnostic-next)
 nmap <silent> <F2> <Plug>(coc-rename)
 
 vnoremap <silent> <Leader>c "*y
+vnoremap <silent> <Leader>f zf
 vmap <silent> s <S-s>
 
 inoremap <silent> <expr> <TAB>
