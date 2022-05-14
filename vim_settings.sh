@@ -51,18 +51,22 @@ alias vim="nvim"
 EOF
     fi
 
-    # Check NVM
-    eval "$check_nvm"
-    if [[ "$?" -ne 0 ]]; then
-      # Install NVM manually
-      export NVM_DIR="$HOME/.nvm" && (
-      git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
-      cd "$NVM_DIR"
-      git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
-      ) && \. "$NVM_DIR/nvm.sh"
+    # Check Node
+    eval "$check_node"
+    if [[ "$?" -ne 0 ]];
 
-      # Write NVM path into ~/.bashrc
-      cat >>${HOME}/.bashrc <<EOF
+      # Check NVM
+      eval "$check_nvm"
+      if [[ "$?" -ne 0 ]]; then
+        # Install NVM manually
+        export NVM_DIR="$HOME/.nvm" && (
+        git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+        cd "$NVM_DIR"
+        git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+        ) && \. "$NVM_DIR/nvm.sh"
+
+        # Write NVM path into ~/.bashrc
+        cat >>${HOME}/.bashrc <<EOF
 
 # NVM
 export NVM_DIR="\$HOME/.nvm"
@@ -71,11 +75,8 @@ export NVM_DIR="\$HOME/.nvm"
 # This loads nvm bash_completion
 [ -s "\$NVM_DIR/bash_completion" ] && \. "\$NVM_DIR/bash_completion"
 EOF
-    fi
+      fi
 
-    # Check Node
-    eval "$check_node"
-    if [[ "$?" -ne 0 ]]; then
       # Install Node LTS
       nvm install --lts
       nvm alias default lts/*
@@ -131,19 +132,23 @@ EOF
       /bin/zsh -c "brew install universal-ctags"
     fi
 
-    # Check NVM
-    eval "$check_nvm"
+    #Check Node
+    eval "$check_node"
     if [[ "$?" -ne 0 ]]; then
-      # Install NVM
-      /bin/zsh -c "brew install nvm"
-      mkdir ${HOME}/.nvm
 
-      export NVM_DIR="$HOME/.nvm"
-      [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-      [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+      # Check NVM
+      eval "$check_nvm"
+      if [[ "$?" -ne 0 ]]; then
+        # Install NVM
+        /bin/zsh -c "brew install nvm"
+        mkdir ${HOME}/.nvm
 
-      # Write NVM path into ~/.zshrc
-      cat >>${HOME}/.zshrc <<EOF
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+        [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+        # Write NVM path into ~/.zshrc
+        cat >>${HOME}/.zshrc <<EOF
 
 # NVM
 export NVM_DIR="\$HOME/.nvm"
@@ -152,11 +157,8 @@ export NVM_DIR="\$HOME/.nvm"
 # This loads nvm bash_completion
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 EOF
-    fi
+      fi
 
-    # Check Node
-    eval "$check_node"
-    if [[ "$?" -ne 0 ]]; then
       # Install Node LTS
       nvm install --lts
       nvm alias default lts/*
