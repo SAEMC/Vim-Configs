@@ -7,6 +7,7 @@ function installDependencies() {
   check_nvm="nvm --version >/dev/null 2>&1"
   check_node="node --version >/dev/null 2>&1"
   check_ctags="ctags --version >/dev/null 2>&1"
+  check_pip3="pip3 --version >/dev/null 2>&1"
 
   # Check OS
   # If Ubuntu
@@ -94,6 +95,16 @@ EOF
       fi
     fi
 
+    # Check PIP3
+    eval "$check_pip3"
+    if [[ "$?" -ne 0 ]]; then
+      # Install PIP3
+      sudo apt-get install -y python3-pip
+    fi 
+    
+    # Install YAPF
+    pip3 install yapf
+
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     # Check Neo VIM
@@ -151,6 +162,9 @@ EOF
       nvm alias default lts/*
       nvm use lts/*
     fi
+
+    # Install YAPF
+    pip3 install yapf
 
   # If not Ubuntu and Mac
   else
@@ -214,6 +228,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 call plug#end()
 EOF
 
@@ -315,6 +330,11 @@ augroup Folds
   au!
   au BufWinLeave * mkview
   au BufWinEnter * silent! loadview
+augroup END
+augroup PyFormatOnSave
+  au!
+  au FileType python silent!
+  au BufWritePre * silent! YAPF
 augroup END
 
 let g:indent_guides_enable_on_vim_startup = 1
