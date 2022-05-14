@@ -12,26 +12,31 @@ function installDependencies() {
   # Check OS
   # If Ubuntu
   os_type=$(echo "${OSTYPE}")
+  echo -e "\n *** Check OSTYPE *** \n"
   if [[ "$os_type" == "linux-gnu"* ]]; then
+    echo -e "\n *** Detected Ubuntu *** \n"
     # Check Local time
     eval "$check_localtime"
     if [[ "$?" -ne 0 ]]; then
       # Set Environment variable
+      echo -e "\n *** Install TZdata non-interactive mode *** \n"
       export DEBIAN_FRONTEND=noninteractive
 
-      # Install TZdata noninteractive mode
+      # Install TZdata non-interactive mode
       sudo ln -fs /usr/share/zoneinfo/Asia/Seoul /etc/localtime
       sudo apt-get install -y tzdata
       sudo dpkg-reconfigure --frontend noninteractive tzdata
     fi
 
     # Install Default software
+    echo -e "\n *** Install Default software *** \n"
     sudo apt-get install -y software-properties-common
 
     # Check Curl
     eval "$check_curl"
     if [[ "$?" -ne 0 ]]; then
       # Install Curl
+      echo -e "\n *** Install Curl *** \n"
       sudo apt-get install -y curl
     fi
 
@@ -39,8 +44,10 @@ function installDependencies() {
     eval "$check_neovim"
     if [[ "$?" -ne 0 ]]; then
       # Add Neo VIM into package
+      echo -e "\n *** Add Neo VIM into package *** \n"
       sudo add-apt-repository -yu ppa:neovim-ppa/stable
       # Install Neo VIM
+      echo -e "\n *** Install Neo VIM *** \n"
       sudo apt-get install -y neovim
       
       # Write Neo VIM alias into ~/.bashrc
@@ -59,6 +66,7 @@ EOF
       eval "$check_nvm"
       if [[ "$?" -ne 0 ]]; then
         # Install NVM manually
+        echo -e "\n *** Install NVM manually *** \n"
         export NVM_DIR="$HOME/.nvm" && (
         git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
         cd "$NVM_DIR"
@@ -78,6 +86,7 @@ EOF
       fi
 
       # Install Node LTS
+      echo -e "\n *** Install Node LTS *** \n"
       nvm install --lts
       nvm alias default lts/*
       nvm use lts/*
@@ -87,11 +96,13 @@ EOF
     eval "$check_ctags"
     if [[ "$?" -ne 0 ]]; then
       # Install Ctags
+      echo -e "\n *** Install Ctags *** \n"
       sudo apt-get update
       sudo apt-get install -y universal-ctags
 
       # If cannot install universal-ctags => Install exuberant-ctags
       if [[ "$?" -ne 0 ]]; then
+        echo -e "\n *** Install exuberant-ctags *** \n"
         sudo apt-get install -y exuberant-ctags
       fi
     fi
@@ -100,18 +111,23 @@ EOF
     eval "$check_pip3"
     if [[ "$?" -ne 0 ]]; then
       # Install PIP3
+      echo -e "\n *** Install PIP3 *** \n"
       sudo apt-get install -y python3-pip
     fi 
     
     # Install YAPF
+    echo -e "\n *** Install YAPF *** \n"
     pip3 install yapf
 
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
+    echo -e "\n *** Detected Mac *** \n"
+
     # Check Neo VIM
     eval "$check_neovim"
     if [[ "$?" -ne 0 ]]; then
       # Install Neo VIM
+      echo -e "\n *** Install Neo VIM *** \n"
       /bin/zsh -c "brew install neovim"
 
       # Write Locale and Neo VIM alias into ~/.zshrc
@@ -129,6 +145,7 @@ EOF
     eval "$check_ctags"
     if [[ "$?" -ne 0 ]]; then
       # Install Ctags
+      echo -e "\n *** Install Ctags *** \n"
       /bin/zsh -c "brew install universal-ctags"
     fi
 
@@ -140,6 +157,7 @@ EOF
       eval "$check_nvm"
       if [[ "$?" -ne 0 ]]; then
         # Install NVM
+        echo -e "\n *** Install NVM *** \n"
         /bin/zsh -c "brew install nvm"
         mkdir ${HOME}/.nvm
 
@@ -160,12 +178,14 @@ EOF
       fi
 
       # Install Node LTS
+      echo -e "\n *** Install Node LTS *** \n"
       nvm install --lts
       nvm alias default lts/*
       nvm use lts/*
     fi
 
     # Install YAPF
+    echo -e "\n *** Install YAPF *** \n"
     pip3 install yapf
 
   # If not Ubuntu and Mac
@@ -186,17 +206,20 @@ function installPlugins() {
 
   # Clear ~/.local/share directory
   if [[ -d ${HOME}/.local/share/nvim ]]; then
+    echo -e "\n *** Clear ~/.local/share directory *** \n"
     sudo rm -rf ${HOME}/.local/share/nvim
   fi
 
   # Clear ~/.config/nvim directory
   if [[ -d ${HOME}/.config/nvim ]]; then
+    echo -e "\n *** Clear ~/.config/nvim directory *** \n"
     sudo rm -rf ${HOME}/.config/nvim
   fi
     mkdir -p ${HOME}/.config/nvim
 
   # Clear ~/.vimrc file
   if [[ -f ${HOME}/.vimrc ]]; then
+    echo -e "\n *** Clear ~/.vimrc file *** \n"
     sudo rm ${HOME}/.vimrc
   fi
 
@@ -235,6 +258,7 @@ call plug#end()
 EOF
 
   # Execute Neo VIM PlugInstall
+  echo -e "\n *** Execute Neo VIM PlugInstall *** \n"
   nvim +PlugInstall +qall
 }
 
@@ -257,6 +281,7 @@ function writeScripts() {
 
   # Clear ~/.config/nvim/coc-settings.json file
   if [[ -f ${HOME}/.config/nvim/coc-settings.json ]]; then
+    echo -e "\n *** Clear ~/.config/nvim/coc-settings.json file *** \n"
     sudo rm ${HOME}/.config/nvim/coc-settings.json
   fi
 
