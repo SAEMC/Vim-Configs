@@ -16,6 +16,7 @@
 - `Plug 'ap/vim-css-color'`
 - `Plug 'jiangmiao/auto-pairs'`
 - `Plug 'tpope/vim-surround'`
+- `Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }`
 
 ---
 
