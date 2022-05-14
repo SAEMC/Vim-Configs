@@ -213,6 +213,7 @@ Plug 'blueyed/vim-diminactive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 call plug#end()
 EOF
 
@@ -335,7 +336,6 @@ let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
 
 let g:AutoPairsMapCh = 0
-let g:AutoPairsShortcutFastWrap = '<C-e>'
 
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 let g:coc_global_extensions = [
@@ -376,6 +376,7 @@ nnoremap <silent> g] <Plug>(coc-diagnostic-next)
 nmap <silent> <F2> <Plug>(coc-rename)
 
 vnoremap <silent> <Leader>c "*y
+vmap <silent> s <S-s>
 
 inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
