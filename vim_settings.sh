@@ -53,7 +53,7 @@ EOF
 
     # Check Node
     eval "$check_node"
-    if [[ "$?" -ne 0 ]];
+    if [[ "$?" -ne 0 ]]; then
 
       # Check NVM
       eval "$check_nvm"
@@ -178,7 +178,7 @@ EOF
 function installPlugins() {
   # Check OS
   os_type=$(echo "${OSTYPE}")
-  # if not Ubuntu and Mac
+  # If not Ubuntu and Mac
   if [[ "$os_type" != "linux-gnu"* && "$os_type" != "darwin"* ]]; then
     echo "${os_type} is not supported!"
     exit 1
@@ -243,10 +243,10 @@ function writeScripts() {
   last_line="call plug#end()"
   # Check OS
   os_type=$(echo "${OSTYPE}")
-  # if Ubuntu
+  # If Ubuntu
   if [[ "$os_type" == "linux-gnu"* ]]; then
     sed -i "/^${last_line}*/q" ${HOME}/.vimrc
-  # if Mac
+  # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     sed -i '' "/^${last_line}*/q" ${HOME}/.vimrc
   # If not Ubuntu and Mac
@@ -288,7 +288,6 @@ set foldmethod=manual
 set guicursor=n-o-i-r-c-ci-cr-sm:ver1,v-ve:hor1
 set hidden
 set hlsearch
-set ignorecase
 set incsearch
 set laststatus=2
 set nobackup
