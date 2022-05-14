@@ -108,11 +108,11 @@ EOF
       fi
     fi
 
-    # Check PIP3
+    # Check Pip3
     eval "$check_pip3"
     if [[ "$?" -ne 0 ]]; then
-      # Install PIP3
-      echo -e "\n *** Install PIP3 *** \n"
+      # Install Pip3
+      echo -e "\n *** Install Pip3 *** \n"
       sudo apt-get install -y python3-pip
     fi 
     
