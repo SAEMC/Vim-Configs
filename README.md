@@ -65,7 +65,7 @@ $ source ~/.zshrc
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI out)  
 - `\` + `f`: 코드 폴딩 토글 (Fold)  
 - `\` + `h`: CoC 검사 / GitGutter 표시 토글 (Hide)  
-- `\` + `l`: `/search` 결과 끄기 (CLI clear)  
+- `\` + `l`: `/search` / `:set list` 결과 끄기 (CLI clear)  
 - `\` + `r`: Relative number 토글  
 - `\` + `t`: Tagbar 토글  
 - `\` + `v`: OS 클립보드로 붙여넣기 (`Cmd` + `v`)  
