@@ -16,6 +16,7 @@ function installDependencies() {
   # If Ubuntu
   if [[ "$os_type" == "linux-gnu"* ]]; then
     echo -e "\n *** Detected Ubuntu *** \n"
+
     # Check Local time
     eval "$check_localtime"
     if [[ "$?" -ne 0 ]]; then
