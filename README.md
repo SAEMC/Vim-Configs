@@ -63,6 +63,7 @@ $ source ~/.zshrc
 
 - `\` + `b`: NerdTree 토글 켜기/끄기  
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI out)  
+- `\` + `f`: 코드 폴딩 토글 (Fold)  
 - `\` + `h`: CoC 검사 / GitGutter 표시 토글 켜기/끄기 (Hide)  
 - `\` + `l`: `set nu` / `set rnu` / `/search` / `set list` 끄기 (CLI clear)  
 - `\` + `n`: Relative number 켜기  
@@ -75,17 +76,19 @@ $ source ~/.zshrc
 ##### [V]
 
 - `\` + `c`: OS 클립보드로 복사 (`Cmd` + `c`)  
-- `z` + `f` or `o`: 코드 접기/열기 (Fold/Open)  
+- `\` + `f`: 코드 폴딩 토글 (Fold)  
+- `c`: 선택된 부분 수정 (Change)  
+- `s`: 선택된 부분 서라운드 (Surround)  
 
 ##### [I]
 
 - `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동하기 (Vim moving)  
 - `Ctrl` + `d`: 커서 기준 다음 글자 지우기 (Delete)  
 
-##### [Extra]
+##### [NerdTree 윈도우]
 
-- `s`: [NerdTree 윈도우] 윈도우 수직 분할  
-- `i`: [NerdTree 윈도우] 윈도우 수평 분할  
-- `r`: [NerdTree 윈도우] NerdTree 새로고침  
+- `s`: 윈도우 수직 분할  
+- `i`: 윈도우 수평 분할  
+- `r`: 윈도우 새로고침  
 
 <br/>
