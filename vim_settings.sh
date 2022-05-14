@@ -17,6 +17,10 @@ function installDependencies() {
   if [[ "$os_type" == "linux-gnu"* ]]; then
     echo -e "\n *** Detected Ubuntu *** \n"
 
+    # Install Default software
+    echo -e "\n *** Install Default software *** \n"
+    sudo apt-get install -y software-properties-common
+
     # Check Local time
     eval "$check_localtime"
     if [[ "$?" -ne 0 ]]; then
@@ -28,10 +32,6 @@ function installDependencies() {
       sudo apt-get install -y tzdata
       sudo dpkg-reconfigure --frontend noninteractive tzdata
     fi
-
-    # Install Default software
-    echo -e "\n *** Install Default software *** \n"
-    sudo apt-get install -y software-properties-common
 
     # Check Curl
     eval "$check_curl"
