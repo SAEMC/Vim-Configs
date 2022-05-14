@@ -212,6 +212,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'blueyed/vim-diminactive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 EOF
 
@@ -333,6 +334,8 @@ let g:tagbar_ctags_bin = '$ctags_path'
 let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
 
+let g:AutoPairsMapCh = 0
+
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 let g:coc_global_extensions = [
   \ 'coc-clangd',
@@ -378,14 +381,6 @@ inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
 inoremap <silent> <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <silent> <expr> <C-Space> coc#refresh()
 inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
-inoremap <silent> " ""<left>
-inoremap <silent> ' ''<left>
-inoremap <silent> ( ()<left>
-inoremap <silent> [ []<left>
-inoremap <silent> { {}<left>
-inoremap <silent> (<CR> (<CR>)<ESC>O
-inoremap <silent> [<CR> [<CR>]<ESC>O
-inoremap <silent> {<CR> {<CR>}<ESC>O
 inoremap <silent> <C-h> <C-o>h
 inoremap <silent> <C-j> <C-o>j
 inoremap <silent> <C-k> <C-o>k
