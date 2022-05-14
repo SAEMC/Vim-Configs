@@ -277,7 +277,7 @@ set laststatus=2
 set nobackup
 set nowritebackup
 set re=0
-set rnu
+set nu rnu
 set ruler
 set shiftwidth=2
 set shortmess+=c
@@ -360,7 +360,7 @@ nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>f zo
 nnoremap <silent> <Leader>h :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
-nnoremap <silent> <Leader>r :set rnu!<CR>
+nnoremap <silent> <Leader>n :set nu! rnu!<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
 nnoremap <silent> <Leader>v "*p
 nnoremap <silent> <Leader>x :T<CR>i
