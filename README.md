@@ -61,13 +61,13 @@ $ source ~/.zshrc
 
 ##### [N]
 
-- `\` + `b`: NerdTree 토글 켜기/끄기  
+- `\` + `b`: NerdTree 토글  
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI out)  
 - `\` + `f`: 코드 폴딩 토글 (Fold)  
-- `\` + `h`: CoC 검사 / GitGutter 표시 토글 켜기/끄기 (Hide)  
-- `\` + `l`: `set nu` / `set rnu` / `/search` / `set list` 끄기 (CLI clear)  
-- `\` + `n`: Relative number 켜기  
-- `\` + `t`: Tagbar 토글 켜기/끄기  
+- `\` + `h`: CoC 검사 / GitGutter 표시 토글 (Hide)  
+- `\` + `l`: `/search` 결과 끄기 (CLI clear)  
+- `\` + `r`: Relative number 토글  
+- `\` + `t`: Tagbar 토글  
 - `\` + `v`: OS 클립보드로 붙여넣기 (`Cmd` + `v`)  
 - `\` + `x`: 터미널 수평 열기  
 - `\` + `x` + `v`: 터미널 수직 열기  
