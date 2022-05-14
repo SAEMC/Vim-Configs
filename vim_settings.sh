@@ -402,16 +402,7 @@ EOF
   cat >${HOME}/.config/nvim/coc-settings.json <<EOF
 {
   "coc.preferences.promptInput": false,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "sccs",
-    "html",
-    "javascripts",
-    "json",
-    "markdown",
-    "typescript",
-    "yaml"
-  ]
+  "coc.preferences.formatOnSaveFiletypes": ["*"]
 }
 EOF
 }
