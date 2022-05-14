@@ -58,7 +58,7 @@ function installDependencies() {
       echo -e "\n *** Write NeoVIM alias into ~/.bashrc ***\n"
       cat >>${HOME}/.bashrc <<EOF
 
-# NVIM Alias
+# NeoVIM Alias
 alias vim="nvim"
 EOF
     fi
@@ -143,7 +143,7 @@ EOF
 # Change Locale to en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# NVIM Alias
+# NeoVIM Alias
 alias vim="nvim"
 EOF
     fi
