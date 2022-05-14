@@ -379,6 +379,7 @@ nmap <silent> <F2> <Plug>(coc-rename)
 
 vnoremap <silent> <Leader>c "*y
 vnoremap <silent> <Leader>f zf
+vnoremap <silent> f <Plug>(coc-format-selected)
 vmap <silent> s <S-s>
 
 inoremap <silent> <expr> <TAB>
