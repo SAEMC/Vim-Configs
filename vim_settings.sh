@@ -18,11 +18,10 @@ function installDependencies() {
     # Check Local time
     eval "$check_localtime"
     if [[ "$?" -ne 0 ]]; then
-      # Set Environment variable
+      # Install TZdata non-interactive mode
       echo -e "\n *** Install TZdata non-interactive mode *** \n"
       export DEBIAN_FRONTEND=noninteractive
 
-      # Install TZdata non-interactive mode
       sudo ln -fs /usr/share/zoneinfo/Asia/Seoul /etc/localtime
       sudo apt-get install -y tzdata
       sudo dpkg-reconfigure --frontend noninteractive tzdata
@@ -51,6 +50,7 @@ function installDependencies() {
       sudo apt-get install -y neovim
       
       # Write Neo VIM alias into ~/.bashrc
+      echo -e "\n *** Write Neo VIM alias into ~/.bashrc ***\n"
       cat >>${HOME}/.bashrc <<EOF
 
 # NVIM Alias
@@ -74,6 +74,7 @@ EOF
         ) && \. "$NVM_DIR/nvm.sh"
 
         # Write NVM path into ~/.bashrc
+        echo -e "\n *** Write NVM path into ~/.bashrc ***\n"
         cat >>${HOME}/.bashrc <<EOF
 
 # NVM
@@ -131,6 +132,7 @@ EOF
       /bin/zsh -c "brew install neovim"
 
       # Write Locale and Neo VIM alias into ~/.zshrc
+      echo -e "\n *** Write Locale and Neo VIM alias into ~/.zshrc ***\n"
       cat >>${HOME}/.zshrc <<EOF
 
 # Change Locale to en_US.UTF-8
@@ -166,6 +168,7 @@ EOF
         [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
         # Write NVM path into ~/.zshrc
+        echo -e "\n *** Write NVM path into ~/.zshrc ***\n"
         cat >>${HOME}/.zshrc <<EOF
 
 # NVM
@@ -228,6 +231,7 @@ function installPlugins() {
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
   # Write ~/.vimrc location into ~/.config/nvim/init.vim
+  echo -e "\n *** Write ~/.vimrc location into ~/.config/nvim/init.vim ***\n"
   cat >${HOME}/.config/nvim/init.vim <<EOF
 set runtimepath^=\$HOME/.vim runtimepath+=\$HOME/.vim/after
 let &packpath=&runtimepath
@@ -235,6 +239,7 @@ source \$HOME/.vimrc
 EOF
 
   # Write Plugins into ~/.vimrc
+  echo -e "\n *** Write Plugins into ~/.vimrc ***\n"
   cat >${HOME}/.vimrc <<EOF
 set nocompatible
 filetype off
@@ -289,6 +294,7 @@ function writeScripts() {
   ctags_path=$(which ctags)
 
   # Write Config into ~/.vimrc
+  echo -e "\n *** Write Config into ~/.vimrc ***\n"
   cat >>${HOME}/.vimrc <<EOF
 
 if (empty(\$TMUX))
@@ -445,6 +451,7 @@ tnoremap <silent> <C-w>l <C-\><C-n><C-w>l
 EOF
 
   # Write Config into ~/.config/nvim/coc-settings.json
+  echo -e "\n *** Write Config into ~/.config/nvim/coc-settings.json ***\n"
   cat >${HOME}/.config/nvim/coc-settings.json <<EOF
 {
   "coc.preferences.promptInput": false,
