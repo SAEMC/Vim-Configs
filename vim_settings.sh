@@ -33,7 +33,8 @@ function installDependencies() {
 
     # Install Default software
     echo -e "\n *** Install Default software *** \n"
-    sudo apt-get update && sudo apt-get install -y software-properties-common
+    sudo apt-get update
+    sudo apt-get install -y software-properties-common
 
     # Check Curl
     eval "$check_curl"
