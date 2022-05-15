@@ -264,7 +264,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'ambv/black'
 call plug#end()
 EOF
 
