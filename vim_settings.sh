@@ -125,7 +125,7 @@ EOF
       # Install Pip3
       echo -e "\n *** Install Pip3 *** \n"
       sudo apt-get install -y python3-pip
-    if
+    fi
     
     # Install Black
     echo -e "\n *** Install Black *** \n"
@@ -204,7 +204,7 @@ EOF
       # Install Pip3
       echo -e "\n *** Install Pip3 *** \n"
       /bin/zsh -c "brew install python3"
-    if
+    fi
 
     # Install Black
     echo -e "\n *** Install Black *** \n"
