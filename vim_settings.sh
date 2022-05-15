@@ -293,9 +293,11 @@ function writeScripts() {
   # If Ubuntu
   if [[ "$os_type" == "linux-gnu"* ]]; then
     sed -i "/^${last_line}*/q" ${HOME}/.vimrc
+    black_path="~/.local/bin/black"
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     sed -i '' "/^${last_line}*/q" ${HOME}/.vimrc
+    black_path="/opt/homebrew/bin/black"
   # If not Ubuntu and Mac
   else
     echo "${os_type} is not supported!"
@@ -310,9 +312,6 @@ function writeScripts() {
 
   # Check Ctags path
   ctags_path=$(which ctags)
-
-  # Check Black path
-  black_path=$(which black)
 
   # Write Config into ~/.vimrc
   echo -e "\n *** Write Config into ~/.vimrc *** \n"
