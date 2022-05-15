@@ -301,7 +301,11 @@ function writeScripts() {
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     sed -i '' "/^${last_line}*/q" ${HOME}/.vimrc
-    black_path="/opt/homebrew/bin/black"
+
+    black_path=$(which black)
+    if [[ "$?" -ne 0 ]]; then
+      black_path="/opt/homebrew/bin/black"
+    fi 
   # If not Ubuntu and Mac
   else
     echo "${os_type} is not supported!"
