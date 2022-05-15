@@ -8,6 +8,7 @@ function installDependencies() {
   check_node="node --version >/dev/null 2>&1"
   check_ctags="ctags --version >/dev/null 2>&1"
   check_pip3="pip3 --version >/dev/null 2>&1"
+  check_neovim_alias="grep -w 'alias vim=\"nvim\"' ~/.bashrc >/dev/null 2>&1"
 
   # Check OS
   os_type=$(echo "${OSTYPE}")
@@ -54,6 +55,11 @@ function installDependencies() {
       echo -e "\n *** Install NeoVIM *** \n"
       sudo apt-get install -y neovim
       
+    fi
+
+    # Check NeoVIM alias
+    eval "$check_neovim_alias"
+    if [[ "$?" -ne 0 ]]; then
       # Write NeoVIM alias into ~/.bashrc
       echo -e "\n *** Write NeoVIM alias into ~/.bashrc *** \n"
       cat >>${HOME}/.bashrc <<EOF
