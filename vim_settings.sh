@@ -293,7 +293,11 @@ function writeScripts() {
   # If Ubuntu
   if [[ "$os_type" == "linux-gnu"* ]]; then
     sed -i "/^${last_line}*/q" ${HOME}/.vimrc
-    black_path="~/.local/bin/black"
+    
+    black_path=$(which black)
+    if [[ "$?" -ne 0 ]]; then
+      black_path="~/.local/bin/black"
+    fi 
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     sed -i '' "/^${last_line}*/q" ${HOME}/.vimrc
