@@ -7,6 +7,7 @@ function installDependencies() {
   check_nvm="nvm --version >/dev/null 2>&1"
   check_node="node --version >/dev/null 2>&1"
   check_ctags="ctags --version >/dev/null 2>&1"
+  check_pip3="pip3 --version >/dev/null 2>&1"
   check_neovim_alias="grep -w 'alias vim=\"nvim\"' ~/.bashrc >/dev/null 2>&1"
 
   # Check OS
@@ -118,9 +119,13 @@ EOF
       fi
     fi
 
-    # Install Pip3
-    echo -e "\n *** Install Pip3 *** \n"
-    sudo apt-get install -y python3-pip
+    # Check Pip3
+    eval "$check_pip3"
+    if [[ "$?" -ne 0 ]]; then
+      # Install Pip3
+      echo -e "\n *** Install Pip3 *** \n"
+      sudo apt-get install -y python3-pip
+    if
     
     # Install Black
     echo -e "\n *** Install Black *** \n"
@@ -192,6 +197,14 @@ EOF
       nvm alias default lts/*
       nvm use lts/*
     fi
+
+    # Check Pip3
+    eval "$check_pip3"
+    if [[ "$?" -ne 0 ]]; then
+      # Install Pip3
+      echo -e "\n *** Install Pip3 *** \n"
+      /bin/zsh -c "brew install python3"
+    if
 
     # Install Black
     echo -e "\n *** Install Black *** \n"
