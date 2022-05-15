@@ -55,7 +55,7 @@ function installDependencies() {
       sudo apt-get install -y neovim
       
       # Write NeoVIM alias into ~/.bashrc
-      echo -e "\n *** Write NeoVIM alias into ~/.bashrc ***\n"
+      echo -e "\n *** Write NeoVIM alias into ~/.bashrc *** \n"
       cat >>${HOME}/.bashrc <<EOF
 
 # NeoVIM Alias
@@ -79,7 +79,7 @@ EOF
         ) && \. "$NVM_DIR/nvm.sh"
 
         # Write NVM path into ~/.bashrc
-        echo -e "\n *** Write NVM path into ~/.bashrc ***\n"
+        echo -e "\n *** Write NVM path into ~/.bashrc *** \n"
         cat >>${HOME}/.bashrc <<EOF
 
 # NVM
@@ -137,7 +137,7 @@ EOF
       /bin/zsh -c "brew install neovim"
 
       # Write Locale and NeoVIM alias into ~/.zshrc
-      echo -e "\n *** Write Locale and NeoVIM alias into ~/.zshrc ***\n"
+      echo -e "\n *** Write Locale and NeoVIM alias into ~/.zshrc *** \n"
       cat >>${HOME}/.zshrc <<EOF
 
 # Change Locale to en_US.UTF-8
@@ -173,7 +173,7 @@ EOF
         [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
         # Write NVM path into ~/.zshrc
-        echo -e "\n *** Write NVM path into ~/.zshrc ***\n"
+        echo -e "\n *** Write NVM path into ~/.zshrc *** \n"
         cat >>${HOME}/.zshrc <<EOF
 
 # NVM
@@ -236,7 +236,7 @@ function installPlugins() {
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
   # Write ~/.vimrc location into ~/.config/nvim/init.vim
-  echo -e "\n *** Write ~/.vimrc location into ~/.config/nvim/init.vim ***\n"
+  echo -e "\n *** Write ~/.vimrc location into ~/.config/nvim/init.vim *** \n"
   cat >${HOME}/.config/nvim/init.vim <<EOF
 set runtimepath^=\$HOME/.vim runtimepath+=\$HOME/.vim/after
 let &packpath=&runtimepath
@@ -244,7 +244,7 @@ source \$HOME/.vimrc
 EOF
 
   # Write Plugins into ~/.vimrc
-  echo -e "\n *** Write Plugins into ~/.vimrc ***\n"
+  echo -e "\n *** Write Plugins into ~/.vimrc *** \n"
   cat >${HOME}/.vimrc <<EOF
 set nocompatible
 filetype off
@@ -299,7 +299,7 @@ function writeScripts() {
   ctags_path=$(which ctags)
 
   # Write Config into ~/.vimrc
-  echo -e "\n *** Write Config into ~/.vimrc ***\n"
+  echo -e "\n *** Write Config into ~/.vimrc *** \n"
   cat >>${HOME}/.vimrc <<EOF
 
 if (empty(\$TMUX))
@@ -456,7 +456,7 @@ tnoremap <silent> <C-w>l <C-\><C-n><C-w>l
 EOF
 
   # Write Config into ~/.config/nvim/coc-settings.json
-  echo -e "\n *** Write Config into ~/.config/nvim/coc-settings.json ***\n"
+  echo -e "\n *** Write Config into ~/.config/nvim/coc-settings.json *** \n"
   cat >${HOME}/.config/nvim/coc-settings.json <<EOF
 {
   "coc.preferences.promptInput": false,
