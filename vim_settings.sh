@@ -45,26 +45,26 @@ function installDependencies() {
       sudo apt-get install -y curl
     fi
 
-    # Check NeoVIM
+    # Check Neo VIM
     eval "$check_neovim"
     if [[ "$?" -ne 0 ]]; then
-      # Add NeoVIM into package
-      echo -e "\n *** Add NeoVIM into package *** \n"
+      # Add Neo VIM into package
+      echo -e "\n *** Add Neo VIM into package *** \n"
       sudo add-apt-repository -yu ppa:neovim-ppa/stable
-      # Install NeoVIM
-      echo -e "\n *** Install NeoVIM *** \n"
+      # Install Neo VIM
+      echo -e "\n *** Install Neo VIM *** \n"
       sudo apt-get install -y neovim
       
     fi
 
-    # Check NeoVIM alias
+    # Check Neo VIM alias
     eval "$check_neovim_alias"
     if [[ "$?" -ne 0 ]]; then
-      # Write NeoVIM alias into ~/.bashrc
-      echo -e "\n *** Write NeoVIM alias into ~/.bashrc *** \n"
+      # Write Neo VIM alias into ~/.bashrc
+      echo -e "\n *** Write Neo VIM alias into ~/.bashrc *** \n"
       cat >>${HOME}/.bashrc <<EOF
 
-# NeoVIM Alias
+# Neo VIM Alias
 alias vim="nvim"
 EOF
     fi
@@ -135,21 +135,21 @@ EOF
   elif [[ "$os_type" == "darwin"* ]]; then
     echo -e "\n *** Detected Mac *** \n"
 
-    # Check NeoVIM
+    # Check Neo VIM
     eval "$check_neovim"
     if [[ "$?" -ne 0 ]]; then
-      # Install NeoVIM
-      echo -e "\n *** Install NeoVIM *** \n"
+      # Install Neo VIM
+      echo -e "\n *** Install Neo VIM *** \n"
       /bin/zsh -c "brew install neovim"
 
-      # Write Locale and NeoVIM alias into ~/.zshrc
-      echo -e "\n *** Write Locale and NeoVIM alias into ~/.zshrc *** \n"
+      # Write Locale and Neo VIM alias into ~/.zshrc
+      echo -e "\n *** Write Locale and Neo VIM alias into ~/.zshrc *** \n"
       cat >>${HOME}/.zshrc <<EOF
 
 # Change Locale to en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# NeoVIM Alias
+# Neo VIM Alias
 alias vim="nvim"
 EOF
     fi
@@ -245,7 +245,7 @@ function installPlugins() {
     sudo rm ${HOME}/.vimrc
   fi
 
-  # Clone NeoVIM Plug
+  # Clone Neo VIM Plug
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
@@ -280,8 +280,8 @@ Plug 'tpope/vim-surround'
 call plug#end()
 EOF
 
-  # Execute NeoVIM PlugInstall
-  echo -e "\n *** Execute NeoVIM PlugInstall *** \n"
+  # Execute Neo VIM PlugInstall
+  echo -e "\n *** Execute Neo VIM PlugInstall *** \n"
   nvim +PlugInstall +qall
 }
 
