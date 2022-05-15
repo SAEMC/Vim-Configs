@@ -122,9 +122,9 @@ EOF
     echo -e "\n *** Install Pip3 *** \n"
     sudo apt-get install -y python3-pip
     
-    # Install YAPF
-    echo -e "\n *** Install YAPF *** \n"
-    pip3 install yapf
+    # Install Black
+    echo -e "\n *** Install Black *** \n"
+    pip3 install black
 
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
@@ -193,9 +193,9 @@ EOF
       nvm use lts/*
     fi
 
-    # Install YAPF
-    echo -e "\n *** Install YAPF *** \n"
-    pip3 install yapf
+    # Install Black
+    echo -e "\n *** Install Black *** \n"
+    pip3 install black
 
   # If not Ubuntu and Mac
   else
@@ -264,7 +264,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
+Plug 'ambv/black'
 call plug#end()
 EOF
 
@@ -298,6 +298,9 @@ function writeScripts() {
 
   # Check Ctags path
   ctags_path=$(which ctags)
+
+  # Check Black path
+  black_path=$(which black)
 
   # Write Config into ~/.vimrc
   echo -e "\n *** Write Config into ~/.vimrc *** \n"
@@ -368,11 +371,6 @@ augroup Folds
   au!
   au BufWinLeave * mkview
   au BufWinEnter * silent! loadview
-augroup END
-augroup PyFormatOnSave
-  au!
-  au FileType python silent!
-  au BufWritePre * silent! YAPF
 augroup END
 
 let g:indent_guides_enable_on_vim_startup = 1
@@ -461,7 +459,9 @@ EOF
   cat >${HOME}/.config/nvim/coc-settings.json <<EOF
 {
   "coc.preferences.promptInput": false,
-  "coc.preferences.formatOnSaveFiletypes": ["*"]
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "${black_path}"
 }
 EOF
 }
