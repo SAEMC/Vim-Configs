@@ -124,7 +124,7 @@ EOF
     if [[ "$?" -ne 0 ]]; then
       # Install Pip3
       echo -e "\n *** Install Pip3 *** \n"
-      sudo apt-get install -y python3-pip
+      sudo apt-get install -y python3-venv python3-pip
     fi 
     
     # Install YAPF
