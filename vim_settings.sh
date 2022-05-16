@@ -135,6 +135,16 @@ EOF
   elif [[ "$os_type" == "darwin"* ]]; then
     echo -e "\n *** Detected Mac *** \n"
 
+    # Check Homebrew
+    brew_path=$(which brew)
+    if [[ "$?" -ne 0 ]]; then
+      echo "Mac should install Homebrew first!"
+      exit 1
+    fi
+
+    # Set Homebrew path
+    export PATH="$brew_path:$PATH"
+
     # Clear Homebrew core repo
     sudo rm -rf $(brew --rep homebrew/repo)
     /bin/zsh -c "brew update"
@@ -212,7 +222,9 @@ EOF
 
     # Install Black
     echo -e "\n *** Install Black *** \n"
-    export PATH="/opt/homebrew/bin/pip:$PATH"
+    pip3_path=${brew_path/%brew/pip3}
+    # Set Pip3 path
+    export PATH="$pip3_path:$PATH"
     pip3 install black
 
   # If not Ubuntu and Mac
@@ -309,7 +321,7 @@ function writeScripts() {
 
     black_path=$(which black)
     if [[ "$?" -ne 0 ]]; then
-      black_path="/opt/homebrew/bin/black"
+      black_path=${brew_path/%brew/black}
     fi 
   # If not Ubuntu and Mac
   else
