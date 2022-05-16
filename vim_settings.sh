@@ -16,7 +16,7 @@ function installDependencies() {
 
   # If Ubuntu
   if [[ "$os_type" == "linux-gnu"* ]]; then
-    echo -e "\n *** Detected Ubuntu *** \n"
+    echo -e "\n *** Ubuntu detected *** \n"
 
     sudo apt-get update
 
@@ -133,7 +133,7 @@ EOF
 
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
-    echo -e "\n *** Detected Mac *** \n"
+    echo -e "\n *** Mac detected *** \n"
 
     # Check Homebrew
     brew_path=$(which brew)
@@ -229,7 +229,7 @@ EOF
 
   # If not Ubuntu and Mac
   else
-    echo "${os_type} is not supported!"
+    echo "${os_type} not supports!"
     exit 1
   fi
 }
@@ -239,7 +239,7 @@ function installPlugins() {
   os_type=$(echo "${OSTYPE}")
   # If not Ubuntu and Mac
   if [[ "$os_type" != "linux-gnu"* && "$os_type" != "darwin"* ]]; then
-    echo "${os_type} is not supported!"
+    echo "${os_type} not supports!"
     exit 1
   fi
 
@@ -325,7 +325,7 @@ function writeScripts() {
     fi 
   # If not Ubuntu and Mac
   else
-    echo "${os_type} is not supported!"
+    echo "${os_type} not supports!"
     exit 1
   fi
 
