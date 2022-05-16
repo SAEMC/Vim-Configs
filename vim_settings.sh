@@ -323,11 +323,18 @@ function writeScripts() {
     
     black_path=$(which black)
     if [[ "$?" -ne 0 ]]; then
-      black_path="~/.local/bin/black"
+      black_path="/usr/local/bin/black"
     fi 
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     sed -i '' "/^${last_line}*/q" ${HOME}/.vimrc
+
+    # Check Homebrew
+    brew_path=$(which brew)
+    if [[ "$?" -ne 0 ]]; then
+      echo "Mac should install Homebrew first!"
+      exit 1
+    fi
 
     black_path=$(which black)
     if [[ "$?" -ne 0 ]]; then
