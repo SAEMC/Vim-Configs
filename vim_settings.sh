@@ -135,6 +135,10 @@ EOF
   elif [[ "$os_type" == "darwin"* ]]; then
     echo -e "\n *** Detected Mac *** \n"
 
+    # Clear Homebrew core repo
+    sudo rm -rf $(brew --rep homebrew/repo)
+    /bin/zsh -c "brew update"
+
     # Check Neo VIM
     eval "$check_neovim"
     if [[ "$?" -ne 0 ]]; then
@@ -208,6 +212,7 @@ EOF
 
     # Install Black
     echo -e "\n *** Install Black *** \n"
+    export PATH="/opt/homebrew/bin/pip:$PATH"
     pip3 install black
 
   # If not Ubuntu and Mac
