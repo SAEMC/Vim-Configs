@@ -49,12 +49,22 @@ function installDependencies() {
     eval "$check_neovim"
     if [[ "$?" -ne 0 ]]; then
       # Add Neo VIM into package
-      echo -e "\n *** Add Neo VIM into package *** \n"
+      echo -e "\n *** Add Neo VIM (Stable) into package *** \n"
       sudo add-apt-repository -yu ppa:neovim-ppa/stable
-      # Install Neo VIM
-      echo -e "\n *** Install Neo VIM *** \n"
+
+      # Install Neo VIM (Stable)
+      echo -e "\n *** Install Neo VIM (Stable) *** \n"
       sudo apt-get install -y neovim
-      
+    fi
+
+    # If cannot install neovim/stable => Install neovim/unstable
+    if [[ "$?" -ne 0 ]]; then
+      echo -e "\n *** Add Neo VIM (Unstable) into package *** \n"
+      sudo add-apt-repository -yu ppa:neovim-ppa/unstable
+
+      # Install Neo VIM (Unstable)
+      echo -e "\n *** Install Neo VIM (Unstable) *** \n"
+      sudo apt-get install -y neovim
     fi
 
     # Check Neo VIM alias
