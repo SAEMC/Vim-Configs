@@ -412,12 +412,18 @@ au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 \ exe "norm g\`\"" |
 \ endif
-au BufEnter *
-\ if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) |
-\ q | endif
 au VimEnter *
-\ :NERDTreeToggle |
+\ NERDTree |
 \ wincmd p
+au BufEnter *
+\ if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+\ quit | endif
+au BufEnter *
+\ if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+\ quit | endif
+au BufWinEnter *
+\ if getcmdwintype() == '' |
+\ silent NERDTreeMirror | endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
 augroup Folds
