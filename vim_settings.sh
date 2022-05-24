@@ -454,6 +454,9 @@ let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 
+let g:NERDTreeMapOpenSplit = '<Leader>h'
+let g:NERDTreeMapOpenVSplit = '<Leader>v'
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
