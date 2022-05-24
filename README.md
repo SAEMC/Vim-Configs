@@ -69,7 +69,7 @@ $ source ~/.zshrc
 
 ##### [N]
 
-- `\` + `b`: NerdTree 토글
+- `\` + `b`: NerdTree 토글 (VSCode Tree Open)
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI `Ctrl` + `d`)
 - `\` + `f`: 코드 폴딩 토글 (Fold)
 - `\` + `h`: 터미널 수평 분할 (Horizontal)
