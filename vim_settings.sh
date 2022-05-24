@@ -437,6 +437,13 @@ au BufWinEnter *
 \ silent NERDTreeMirror | endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
+augroup OnNerdTree
+  au!
+  au FileType nerdtree nmap <buffer> <silent> <Leader>h i
+  au FileType nerdtree nmap <buffer> <silent> <Leader>v s
+  au FileType nerdtree nmap <buffer> <silent> <Leader>e A
+  au FileType nerdtree nmap <buffer> <silent> <Leader>r R
+augroup END
 augroup Folds
   au!
   au BufWinLeave * mkview
@@ -453,11 +460,6 @@ let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
-
-let g:NERDTreeMapOpenSplit = '<Leader>h'
-let g:NERDTreeMapOpenVSplit = '<Leader>v'
-let g:NERDTreeMapRefreshRoot = '<Leader>r'
-let g:NERDTreeMapToggleZoom = '<Leader>e'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
@@ -496,12 +498,12 @@ let g:coc_global_extensions = [
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>f zo
+nnoremap <silent> <Leader>h :T<CR>i
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>n :set number! relativenumber!<CR>
 nnoremap <silent> <Leader>p :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
-nnoremap <silent> <Leader>th :T<CR>i
-nnoremap <silent> <Leader>tt :TagbarToggle<CR>
-nnoremap <silent> <Leader>tv :VT<CR>i
+nnoremap <silent> <Leader>t :TagbarToggle<CR>
+nnoremap <silent> <Leader>v :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> c ciw
