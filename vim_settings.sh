@@ -464,7 +464,7 @@ let g:tagbar_autofocus = 1
 
 let g:AutoPairsMapCh = 0
 
-" iTerm2 [Preferences] -> [General] -> [Selection]
+" [iTerm2] -> [Preferences] -> [General] -> [Selection]
 " Check on 'Applications in terminal may access clipboard'
 let g:oscyank_max_length = 1000000
 let g:oscyank_term = 'tmux'
