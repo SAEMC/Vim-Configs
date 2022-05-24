@@ -287,8 +287,11 @@ EOF
   # Write Plugins into ~/.vimrc
   echo -e "\n *** Write Plugins into ~/.vimrc *** \n"
   cat >${HOME}/.vimrc <<EOF
+" [[ Init ]]
 set nocompatible
 filetype off
+
+" [[ Plugs ]]
 call plug#begin()
 Plug 'navarasu/onedark.nvim'
 Plug 'vim-airline/vim-airline'
@@ -360,6 +363,7 @@ function writeScripts() {
   echo -e "\n *** Write Config into ~/.vimrc *** \n"
   cat >>${HOME}/.vimrc <<EOF
 
+" [[ Native Variables ]]
 if (empty(\$TMUX))
   if (has("nvim"))
     let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -410,6 +414,11 @@ endif
 syntax on
 colorscheme onedark
 
+" [[ Native Commands ]]
+command! -nargs=* T split | resize 10 | terminal <args>
+command! -nargs=* VT vsplit | terminal <args>
+
+" [[ Auto Commands ]]
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 \ exe "norm g\`\"" |
@@ -434,6 +443,7 @@ augroup Folds
   au BufWinEnter * silent! loadview
 augroup END
 
+" [[ Plug Variables ]]
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
@@ -475,9 +485,7 @@ let g:coc_global_extensions = [
   \ 'coc-yaml'
   \ ]
 
-command! -nargs=* T split | resize 10 | terminal <args>
-command! -nargs=* VT vsplit | terminal <args>
-
+" [[ Mappings ]]
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>f zo
