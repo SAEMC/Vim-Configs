@@ -73,7 +73,7 @@ $ source ~/.zshrc
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI `Ctrl` + `d`)
 - `\` + `h`: 터미널 수평 분할 (Horizontal)
 - `\` + `l`: `/search` / `:set list` 결과 끄기 (CLI `Ctrl` + `l`)
-- `\` + `n`: 라인 넘버링 토글
+- `\` + `n`: 라인 넘버링 토글 (Number)
 - `\` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
 - `\` + `t`: Tagbar 토글 (Tagbar)
 - `\` + `v`: 터미널 수직 분할 (Vertical)
