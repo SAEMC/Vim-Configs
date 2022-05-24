@@ -475,6 +475,7 @@ let g:oscyank_silent = v:true
 let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-css',
+  \ 'coc-docker',
   \ 'coc-emmet',
   \ 'coc-html',
   \ 'coc-tsserver',
