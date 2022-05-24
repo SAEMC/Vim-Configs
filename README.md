@@ -72,12 +72,12 @@ $ source ~/.zshrc
 - `\` + `b`: NerdTree 토글
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI `Ctrl` + `d`)
 - `\` + `f`: 코드 폴딩 토글 (Fold)
+- `\` + `h`: 터미널 수평 분할 (Horizontal)
 - `\` + `l`: `/search` / `:set list` 결과 끄기 (CLI `Ctrl` + `l`)
 - `\` + `n`: 라인 넘버링 토글
 - `\` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
-- `\` + `t` + `h`: 터미널 수평 분할 (Terminal with Horizontal)
-- `\` + `t` + `t`: Tagbar 토글 (Tagbar Toggle)
-- `\` + `t` + `v`: 터미널 수직 분할 (Terminal with Vertical)
+- `\` + `t`: Tagbar 토글 (Tagbar)
+- `\` + `v`: 터미널 수직 분할 (Vertical)
 - `\` + `[` or `]`: 버퍼 윈도우 이동
 - `c`: 커서 기준 단어 수정 (Change)
 
@@ -96,9 +96,9 @@ $ source ~/.zshrc
 
 ##### [NerdTree 윈도우]
 
-- `\` + `h`: 윈도우 수평 분할 (Horizontal)
-- `\` + `v`: 윈도우 수직 분할 (Vertical)
-- `\` + `r`: 윈도우 새로고침 (Refresh)
 - `\` + `e`: 윈도우 확장 토글 (Extend)
+- `\` + `h`: 윈도우 수평 분할 (Horizontal)
+- `\` + `r`: 윈도우 새로고침 (Refresh)
+- `\` + `v`: 윈도우 수직 분할 (Vertical)
 
 <br/>
