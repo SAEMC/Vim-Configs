@@ -497,7 +497,6 @@ let g:coc_global_extensions = [
 " [[ Key Mappings ]]
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
-nnoremap <silent> <Leader>f zo
 nnoremap <silent> <Leader>h :T<CR>i
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>n :set number! relativenumber!<CR>
@@ -516,7 +515,7 @@ nnoremap <silent> g[ <Plug>(coc-diagnostic-prev)
 nnoremap <silent> g] <Plug>(coc-diagnostic-next)
 nmap <silent> <F2> <Plug>(coc-rename)
 
-vnoremap <silent> <Leader>f zf
+vnoremap <silent> <expr> <Leader>f foldclosed('.') != -1 ? 'zo' : 'zf'
 vnoremap <silent> <C-c> :OSCYank<CR>
 vmap <silent> <C-_> <Plug>NERDCommenterToggle
 vmap <silent> s <S-s>
