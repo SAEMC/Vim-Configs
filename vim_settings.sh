@@ -495,8 +495,8 @@ nnoremap <silent> <Leader>h :call CocAction('diagnosticToggle')<CR> \| :GitGutte
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>n :set number! relativenumber!<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
-nnoremap <silent> <Leader>x :T<CR>i
-nnoremap <silent> <Leader>xv :VT<CR>i
+nnoremap <silent> <Leader>i :T<CR>i
+nnoremap <silent> <Leader>s :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> c ciw
