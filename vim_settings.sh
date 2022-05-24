@@ -478,7 +478,6 @@ let g:coc_global_extensions = [
   \ 'coc-emmet',
   \ 'coc-html',
   \ 'coc-tsserver',
-  \ 'coc-java',
   \ 'coc-json',
   \ 'coc-markdownlint',
   \ 'coc-prettier',
