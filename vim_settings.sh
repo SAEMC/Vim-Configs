@@ -304,6 +304,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 call plug#end()
 EOF
 
@@ -453,6 +454,10 @@ let g:tagbar_autofocus = 1
 
 let g:AutoPairsMapCh = 0
 
+let g:oscyank_max_length = 1000000
+let g:oscyank_term = 'tmux'
+let g:oscyank_silent = v:true
+
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 let g:coc_global_extensions = [
   \ 'coc-clangd',
@@ -482,7 +487,6 @@ nnoremap <silent> <Leader>x :T<CR>i
 nnoremap <silent> <Leader>xv :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
-nnoremap <silent> <C-v> "*p
 nnoremap <silent> c ciw
 nnoremap <silent> ga :<C-u>CocList diagnostics<CR>
 nnoremap <silent> gd <Plug>(coc-definition)
@@ -494,7 +498,7 @@ nnoremap <silent> g] <Plug>(coc-diagnostic-next)
 nmap <silent> <F2> <Plug>(coc-rename)
 
 vnoremap <silent> <Leader>f zf
-vnoremap <silent> <C-c> "*y
+vnoremap <silent> <C-c> :OSCYank<CR>
 vmap <silent> <Leader>q <Plug>NERDCommenterToggle
 vmap <silent> s <S-s>
 
