@@ -90,7 +90,7 @@ $ source ~/.zshrc
 
 ##### [I]
 
-- `Ctrl` + `d`: 커서 기준 다음 글자 지우기 (Delete)
+- `Ctrl` + `d`: 커서 포함 다음 글자 지우기 (Delete)
 - `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동하기 (Vim moving)
 
 ##### [NerdTree 윈도우]
