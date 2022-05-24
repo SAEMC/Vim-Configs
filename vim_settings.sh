@@ -494,9 +494,9 @@ nnoremap <silent> <Leader>f zo
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>n :set number! relativenumber!<CR>
 nnoremap <silent> <Leader>p :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
-nnoremap <silent> <Leader>t :TagbarToggle<CR>
-nnoremap <silent> <Leader>ti :T<CR>i
-nnoremap <silent> <Leader>ts :VT<CR>i
+nnoremap <silent> <Leader>r :TagbarToggle<CR>
+nnoremap <silent> <Leader>th :T<CR>i
+nnoremap <silent> <Leader>tv :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> c ciw
