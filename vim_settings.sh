@@ -456,6 +456,8 @@ let g:NERDCommentEmptyLines = 1
 
 let g:NERDTreeMapOpenSplit = '<Leader>h'
 let g:NERDTreeMapOpenVSplit = '<Leader>v'
+let g:NERDTreeMapRefreshRoot = '<Leader>r'
+let g:NERDTreeMapToggleZoom = '<Leader>e'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
