@@ -85,7 +85,7 @@ $ source ~/.zshrc
 - `\` + `f`: 코드 폴딩 토글 (Fold)
 - `\` + `c`: 선택된 부분 수정 (Change)
 - `\` + `s`: 선택된 부분 서라운드 (Surround)
-- `Ctrl` + `c`: OS 클립보드로 복사 (`Cmd` + `c`)
+- `Ctrl` + `c`: OS 클립보드로 복사 (Mac `Cmd` + `c`)
 - `Ctrl` + `/`: 주석 토글 (VSCode `Cmd` + `/`)
 
 ##### [I]
