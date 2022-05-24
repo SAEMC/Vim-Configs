@@ -363,7 +363,7 @@ function writeScripts() {
   echo -e "\n *** Write Config into ~/.vimrc *** \n"
   cat >>${HOME}/.vimrc <<EOF
 
-" [[ Native Variables ]]
+" [[ Native Options ]]
 if (empty(\$TMUX))
   if (has("nvim"))
     let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -450,7 +450,7 @@ augroup Folds
   au BufWinEnter * silent! loadview
 augroup END
 
-" [[ Plug Variables ]]
+" [[ Plug Options ]]
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
@@ -494,7 +494,7 @@ let g:coc_global_extensions = [
   \ 'coc-yaml'
   \ ]
 
-" [[ Mappings ]]
+" [[ Key Mappings ]]
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>f zo
