@@ -466,6 +466,7 @@ let g:AutoPairsMapCh = 0
 
 " [iTerm2] -> [Preferences] -> [General] -> [Selection]
 " Check up 'Applications in terminal may access clipboard'
+" [oscyank_max_length] -> ASCII == 1 / Non-ASCII == 3
 let g:oscyank_max_length = 1000000
 let g:oscyank_term = 'tmux'
 let g:oscyank_silent = v:true
