@@ -16,6 +16,7 @@
 - `Plug 'ap/vim-css-color'`
 - `Plug 'jiangmiao/auto-pairs'`
 - `Plug 'tpope/vim-surround'`
+- `Plug 'ojroques/vim-oscyank', {'branch': 'main'}`
 
 ---
 
@@ -78,7 +79,6 @@ $ source ~/.zshrc
 - `\` + `x`: 터미널 수평 열기
 - `\` + `x` + `v`: 터미널 수직 열기
 - `\` + `[` or `]`: 버퍼 윈도우 이동
-- `Ctrl` + `v`: OS 클립보드로 붙여넣기 (`Cmd` + `v`)
 - `c`: 커서 기준 단어 수정 (Change)
 
 ##### [V]
