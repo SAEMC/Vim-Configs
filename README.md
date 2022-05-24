@@ -75,9 +75,9 @@ $ source ~/.zshrc
 - `\` + `l`: `/search` / `:set list` 결과 끄기 (CLI `Ctrl` + `l`)
 - `\` + `n`: 라인 넘버링 토글
 - `\` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
-- `\` + `t`: Tagbar 토글
-- `\` + `t` + `i`: 터미널 수평 분할 (하단 NerdTree 수평 분할처럼)
-- `\` + `t` + `s`: 터미널 수직 분할 (하단 NerdTree 수직 분할처럼)
+- `\` + `r`: Tagbar 토글 (for References)
+- `\` + `t` + `h`: 터미널 수평 분할 (Terminal with Horizontal)
+- `\` + `t` + `v`: 터미널 수직 분할 (Terminal with Vertical)
 - `\` + `[` or `]`: 버퍼 윈도우 이동
 - `c`: 커서 기준 단어 수정 (Change)
 
