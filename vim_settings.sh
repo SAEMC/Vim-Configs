@@ -491,9 +491,9 @@ let g:coc_global_extensions = [
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>f zo
-nnoremap <silent> <Leader>h :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>n :set number! relativenumber!<CR>
+nnoremap <silent> <Leader>p :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
 nnoremap <silent> <Leader>ti :T<CR>i
 nnoremap <silent> <Leader>ts :VT<CR>i
