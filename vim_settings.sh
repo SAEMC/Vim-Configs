@@ -518,7 +518,7 @@ nmap <silent> <F2> <Plug>(coc-rename)
 
 vnoremap <silent> <Leader>f zf
 vnoremap <silent> <C-c> :OSCYank<CR>
-vmap <silent> <Leader>q <Plug>NERDCommenterToggle
+vmap <silent> <C-_> <Plug>NERDCommenterToggle
 vmap <silent> s <S-s>
 
 inoremap <silent> <expr> <TAB>
