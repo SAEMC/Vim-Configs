@@ -65,13 +65,13 @@ $ source ~/.zshrc
 
 #### 이외의 커맨드는 Vim 기본 커맨드 (Vim 기본 커맨드 참조)
 
-<br>
+<br/>
 
 ##### [N]
 
 - `\` + `b`: NerdTree 토글 (VSCode Tree Open)
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI `Ctrl` + `d`)
-- `\` + `f`: 코드 폴딩 토글 (Fold)
+- `\` + `f`: 코드 폴딩 해제 (Fold)
 - `\` + `h`: 터미널 수평 분할 (Horizontal)
 - `\` + `l`: `/search` / `:set list` 결과 끄기 (CLI `Ctrl` + `l`)
 - `\` + `n`: 라인 넘버링 토글
@@ -83,7 +83,7 @@ $ source ~/.zshrc
 
 ##### [V]
 
-- `\` + `f`: 코드 폴딩 토글 (Fold)
+- `\` + `f`: 코드 폴딩 설정 (Fold)
 - `Ctrl` + `c`: OS 클립보드로 복사 (`Cmd` + `c`)
 - `Ctrl` + `/`: 주석 토글 (VSCode `Cmd` + `/`)
 - `c`: 선택된 부분 수정 (Change)
