@@ -496,6 +496,7 @@ let g:coc_global_extensions = [
 
 " [[ Key Mappings ]]
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>c ciw
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>h :T<CR>i
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
@@ -505,7 +506,6 @@ nnoremap <silent> <Leader>t :TagbarToggle<CR>
 nnoremap <silent> <Leader>v :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
-nnoremap <silent> c ciw
 nnoremap <silent> ga :<C-u>CocList diagnostics<CR>
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
@@ -518,7 +518,8 @@ nmap <silent> <F2> <Plug>(coc-rename)
 vnoremap <silent> <expr> <Leader>f foldclosed('.') != -1 ? 'zo' : 'zf'
 vnoremap <silent> <C-c> :OSCYank<CR>
 vmap <silent> <C-_> <Plug>NERDCommenterToggle
-vmap <silent> s <S-s>
+vmap <silent> <Leader>c c
+vmap <silent> <Leader>s <S-s>
 
 inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
