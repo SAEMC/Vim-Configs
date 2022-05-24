@@ -72,12 +72,12 @@ $ source ~/.zshrc
 - `\` + `b`: NerdTree 토글
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI `Ctrl` + `d`)
 - `\` + `f`: 코드 폴딩 토글 (Fold)
-- `\` + `h`: CoC 검사 / GitGutter 표시 토글 (Hide)
 - `\` + `l`: `/search` / `:set list` 결과 끄기 (CLI `Ctrl` + `l`)
 - `\` + `n`: 라인 넘버링 토글
+- `\` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
 - `\` + `t`: Tagbar 토글
-- `\` + `i`: 터미널 수평 분할 (하단 NerdTree 수평 분할 참고)
-- `\` + `s`: 터미널 수직 분할 (하단 NerdTree 수직 분할 참고)
+- `\` + `t` + `i`: 터미널 수평 분할 (하단 NerdTree 수평 분할처럼)
+- `\` + `t` + `s`: 터미널 수직 분할 (하단 NerdTree 수직 분할처럼)
 - `\` + `[` or `]`: 버퍼 윈도우 이동
 - `c`: 커서 기준 단어 수정 (Change)
 
