@@ -396,6 +396,7 @@ set smartindent
 set smarttab
 set softtabstop=2
 set splitbelow
+set splitright
 set tabstop=2
 set updatetime=300
 
@@ -477,11 +478,11 @@ nnoremap <silent> <Leader>h :call CocAction('diagnosticToggle')<CR> \| :GitGutte
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>n :set nu! rnu!<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
-nnoremap <silent> <Leader>v "*p
 nnoremap <silent> <Leader>x :T<CR>i
 nnoremap <silent> <Leader>xv :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
+nnoremap <silent> <C-v> "*p
 nnoremap <silent> c ciw
 nnoremap <silent> ga :<C-u>CocList diagnostics<CR>
 nnoremap <silent> gd <Plug>(coc-definition)
@@ -492,8 +493,9 @@ nnoremap <silent> g[ <Plug>(coc-diagnostic-prev)
 nnoremap <silent> g] <Plug>(coc-diagnostic-next)
 nmap <silent> <F2> <Plug>(coc-rename)
 
-vnoremap <silent> <Leader>c "*y
 vnoremap <silent> <Leader>f zf
+vnoremap <silent> <C-c> "*y
+vmap <silent> <Leader>q <Plug>NERDCommenterToggle
 vmap <silent> s <S-s>
 
 inoremap <silent> <expr> <TAB>
