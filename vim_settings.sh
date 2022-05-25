@@ -497,7 +497,7 @@ let g:coc_global_extensions = [
 " [[ Functions ]]
 function! EnterSelect()
     if pumvisible() && complete_info()["selected"] == -1
-        return "\<C-g>u\<CR>"
+        return "\<C-y>\<CR>"
     elseif pumvisible()
         return coc#_select_confirm()
     else
