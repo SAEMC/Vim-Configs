@@ -470,6 +470,7 @@ let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
 
 let g:AutoPairsMapCh = 0
+let g:AutoPairsMapCR = 0
 
 " [iTerm2] -> [Preferences] -> [General] -> [Selection]
 " Check up 'Applications in terminal may access clipboard'
