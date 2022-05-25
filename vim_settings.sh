@@ -437,7 +437,7 @@ au BufWinEnter *
 \ silent NERDTreeMirror | endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
-augroup OnNerdTree
+augroup NerdTreeMap
   au!
   au FileType nerdtree nmap <buffer> <silent> <Leader>h i
   au FileType nerdtree nmap <buffer> <silent> <Leader>v s
