@@ -390,7 +390,6 @@ set incsearch
 set laststatus=2
 set nobackup
 set nowritebackup
-set pumblend=50
 set re=0
 set number relativenumber
 set ruler
@@ -438,8 +437,6 @@ au BufWinEnter *
 \ silent NERDTreeMirror | endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
-au User CocOpenFloat 
-\ call setwinvar(g:coc_last_float_win, "&winblend", 50)
 augroup NerdTreeMap
   au!
   au FileType nerdtree nmap <buffer> <silent> <Leader>h i
@@ -544,9 +541,9 @@ inoremap <silent> <expr> <CR> EnterSelect()
 inoremap <silent> <expr> <ESC> pumvisible() ? "\<C-o>coc#_hide()" : "<ESC>"
 inoremap <silent> <expr> <C-Space> coc#refresh()
 inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
+inoremap <silent> <expr> <C-j> coc#float#has_scroll() ? "\<C-r>=coc#float#scroll(1, 1)\<CR>" : "\<C-o>j"
+inoremap <silent> <expr> <C-k> coc#float#has_scroll() ? "\<C-r>=coc#float#scroll(0, 1)\<CR>" : "\<C-o>k"
 inoremap <silent> <C-h> <C-o>h
-inoremap <silent> <C-j> <C-o>j
-inoremap <silent> <C-k> <C-o>k
 inoremap <silent> <C-l> <C-o>l
 
 tnoremap <silent> <C-w>h <C-\><C-n><C-w>h
@@ -564,6 +561,10 @@ EOF
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "suggest.enablePreselect": false,
   "suggest.noselect": true,
+  "suggest.floatConfig": { "maxWidth": 30, "winblend": 10 },
+  "hover.floatConfig": { "maxWidth": 30, "winblend": 10 },
+  "signature.floatConfig": { "maxWidth": 30, "winblend": 10 },
+  "diagnostic.floatConfig": { "maxWidth": 30, "winblend": 10 },
   "diagnostic.errorSign": "XX",
   "diagnostic.warningSign": "!!",
   "diagnostic.infoSign": "**",
