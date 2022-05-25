@@ -69,11 +69,11 @@ $ source ~/.zshrc
 
 ##### [N]
 
-- `\` + `b`: NerdTree 토글 (VSCode Tree Open)
+- `\` + `b`: NerdTree 토글 (VSCode - Tree Open)
 - `\` + `c`: 커서 기준 단어 변경 (Change)
-- `\` + `d`: 버퍼 윈도우 닫기 (CLI Exit)
+- `\` + `d`: 버퍼 윈도우 닫기 (CLI - Exit)
 - `\` + `h`: 터미널 수평 분할 (Horizontal)
-- `\` + `l`: `/search` 결과 / `:set list` 끄기 (CLI Clear)
+- `\` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
 - `\` + `n`: 라인 넘버링 토글 (Number)
 - `\` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
 - `\` + `t`: Tagbar 토글 (Tagbar)
@@ -85,8 +85,8 @@ $ source ~/.zshrc
 - `\` + `c`: 선택된 부분 변경 (Change)
 - `\` + `f`: 코드 폴딩 토글 (Fold)
 - `\` + `s`: 선택된 부분 서라운드 (Surround)
-- `Ctrl` + `c`: OS 클립보드로 복사 (Mac Copy)
-- `Ctrl` + `/`: 주석 토글 (VSCode Comments)
+- `Ctrl` + `c`: OS 클립보드로 복사 (Mac - Copy)
+- `Ctrl` + `/`: 주석 토글 (VSCode - Comments)
 
 ##### [I]
 
