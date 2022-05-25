@@ -70,10 +70,10 @@ $ source ~/.zshrc
 ##### [N]
 
 - `\` + `b`: NerdTree 토글 (VSCode Tree Open)
-- `\` + `c`: 커서 기준 단어 수정 (Change)
+- `\` + `c`: 커서 기준 단어 변경 (Change)
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI `Ctrl` + `d`)
 - `\` + `h`: 터미널 수평 분할 (Horizontal)
-- `\` + `l`: `/search` / `:set list` 결과 끄기 (CLI `Ctrl` + `l`)
+- `\` + `l`: `/search` 결과 / `:set list` 끄기 (CLI `Ctrl` + `l`)
 - `\` + `n`: 라인 넘버링 토글 (Number)
 - `\` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
 - `\` + `t`: Tagbar 토글 (Tagbar)
@@ -82,7 +82,7 @@ $ source ~/.zshrc
 
 ##### [V]
 
-- `\` + `c`: 선택된 부분 수정 (Change)
+- `\` + `c`: 선택된 부분 변경 (Change)
 - `\` + `f`: 코드 폴딩 토글 (Fold)
 - `\` + `s`: 선택된 부분 서라운드 (Surround)
 - `Ctrl` + `c`: OS 클립보드로 복사 (Mac `Cmd` + `c`)
@@ -90,14 +90,14 @@ $ source ~/.zshrc
 
 ##### [I]
 
-- `Ctrl` + `d`: 커서 포함 다음 글자 지우기 (Delete)
-- `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동하기 (Vim moving)
+- `Ctrl` + `d`: 커서 포함 다음 글자 제거 (Delete)
+- `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동
 
 ##### [NerdTree 윈도우]
 
-- `\` + `e`: 윈도우 확장 토글 (Extend)
-- `\` + `h`: 윈도우 수평 분할 (Horizontal)
-- `\` + `r`: 윈도우 새로고침 (Refresh)
-- `\` + `v`: 윈도우 수직 분할 (Vertical)
+- `\` + `e`: NerdTree 윈도우 확장 토글 (Extend)
+- `\` + `h`: NerdTree 윈도우 수평 분할 (Horizontal)
+- `\` + `r`: NerdTree 윈도우 새로고침 (Refresh)
+- `\` + `v`: NerdTree 윈도우 수직 분할 (Vertical)
 
 <br/>
