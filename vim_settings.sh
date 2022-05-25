@@ -390,6 +390,7 @@ set incsearch
 set laststatus=2
 set nobackup
 set nowritebackup
+set pumblend=50
 set re=0
 set number relativenumber
 set ruler
@@ -437,6 +438,8 @@ au BufWinEnter *
 \ silent NERDTreeMirror | endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
+au User CocOpenFloat 
+\ call setwinvar(g:coc_last_float_win, "&winblend", 50)
 augroup NerdTreeMap
   au!
   au FileType nerdtree nmap <buffer> <silent> <Leader>h i
@@ -538,6 +541,7 @@ inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
 inoremap <silent> <expr> <CR> EnterSelect()
+inoremap <silent> <expr> <ESC> pumvisible() ? "\<C-o>coc#_hide()" : "<ESC>"
 inoremap <silent> <expr> <C-Space> coc#refresh()
 inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
 inoremap <silent> <C-h> <C-o>h
