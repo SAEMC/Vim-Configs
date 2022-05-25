@@ -76,6 +76,7 @@ $ source ~/.zshrc
 - `\` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
 - `\` + `n`: 라인 넘버링 토글 (Number)
 - `\` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
+- `\` + `r`: 버퍼 윈도우 새로고침 (Refresh)
 - `\` + `t`: Tagbar 토글 (Tagbar)
 - `\` + `v`: 터미널 수직 분할 (Vertical)
 - `\` + `[` or `]`: 버퍼 윈도우 이동
