@@ -560,6 +560,10 @@ EOF
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "suggest.enablePreselect": false,
   "suggest.noselect": true,
+  "diagnostic.errorSign": "XX",
+  "diagnostic.warningSign": "!!",
+  "diagnostic.infoSign": "**",
+  "diagnostic.hintSign": "??",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "${black_path}"
 }
