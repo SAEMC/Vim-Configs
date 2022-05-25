@@ -494,6 +494,17 @@ let g:coc_global_extensions = [
   \ 'coc-yaml'
   \ ]
 
+" [[ Functions ]]
+function! EnterSelect()
+    if pumvisible() && complete_info()["selected"] == -1
+        return "\<C-g>u\<CR>"
+    elseif pumvisible()
+        return coc#_select_confirm()
+    else
+        return "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
+    endif
+endfunction
+
 " [[ Key Mappings ]]
 nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>c ciw
@@ -525,7 +536,7 @@ vmap <silent> <Leader>s <S-s>
 inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
-inoremap <silent> <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent> <expr> <CR> EnterSelect()
 inoremap <silent> <expr> <C-Space> coc#refresh()
 inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
 inoremap <silent> <C-h> <C-o>h
@@ -544,7 +555,10 @@ EOF
   cat >${HOME}/.config/nvim/coc-settings.json <<EOF
 {
   "coc.preferences.promptInput": false,
+  "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "suggest.enablePreselect": false,
+  "suggest.noselect": true,
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "${black_path}"
 }
