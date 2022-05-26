@@ -402,6 +402,7 @@ set smarttab
 set softtabstop=2
 set splitbelow
 set splitright
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 set tabstop=2
 set updatetime=300
 
