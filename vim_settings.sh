@@ -299,6 +299,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -424,18 +425,6 @@ au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 \ exe "norm g\`\"" |
 \ endif
-au VimEnter *
-\ NERDTree |
-\ wincmd p
-au BufEnter *
-\ if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-\ quit | endif
-au BufEnter *
-\ if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-\ quit | endif
-au BufWinEnter *
-\ if getcmdwintype() == '' |
-\ silent NERDTreeMirror | endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
 augroup NerdTreeMap
@@ -455,6 +444,8 @@ augroup END
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 let g:NERDCreateDefaultMappings = 1
 let g:NERDSpaceDelims = 1
@@ -508,7 +499,7 @@ function! EnterSelect()
 endfunction
 
 " [[ Key Mappings ]]
-nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>b :NERDTreeTabsToggle<CR>
 nnoremap <silent> <Leader>c ciw
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>h :T<CR>i
