@@ -428,7 +428,7 @@ au BufReadPost *
 \ endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
-augroup Folds
+augroup FoldView
   au!
   au BufWinLeave * mkview
   au BufWinEnter * silent! loadview
@@ -508,14 +508,14 @@ function! ShowSignature()
     silent call feedkeys('K', 'in')
   endif
 endfunction
-function! VimFolds()
+function! CodeFold()
   if foldclosed('.') != -1
     execute 'normal gv zo'
   else
     execute 'normal gv zf'
   endif
 endfunction
-function! VS()
+function! Surround()
   let msg = execute(':verbose vmap <Plug>VSurround')
   call eval(printf(matchstr(msg, '<SNR>.*0)')))
 endfunction
@@ -546,9 +546,9 @@ nnoremap <silent> <Leader>c] :<C-u>call CocActionAsync('diagnosticNext')<CR>
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 nnoremap <silent> <Space> <Nop>
 
-vnoremap <silent> <Leader>f :call VimFolds()<CR>
+vnoremap <silent> <Leader>f :call CodeFold()<CR>
 vnoremap <silent> <Leader>m c
-vnoremap <silent> <Leader>s :call VS()<CR>
+vnoremap <silent> <Leader>s :call Surround()<CR>
 vnoremap <silent> <Leader>y :OSCYank<CR>
 vnoremap <silent> <Leader><Leader> :call nerdcommenter#Comment("x", "Toggle")<CR>
 
