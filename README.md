@@ -70,27 +70,27 @@ $ source ~/.zshrc
 
 ##### [N]
 
-- `\` + `b`: NerdTree 토글 (VSCode - Tree Open)
-- `\` + `d`: 버퍼 윈도우 닫기 (CLI - Exit)
-- `\` + `e`: 저장 전 변경된 내용 확인 (Edited)
-- `\` + `h`: 터미널 수평 분할 (Horizontal)
-- `\` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
-- `\` + `m`: 커서 기준 단어 수정 (Modify)
-- `\` + `n`: 라인 넘버링 토글 (Number)
-- `\` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
-- `\` + `r`: 버퍼 윈도우 새로고침 (Refresh)
-- `\` + `t`: Tagbar 토글 (Tagbar)
-- `\` + `v`: 터미널 수직 분할 (Vertical)
-- `\` + `[` or `]`: 버퍼 윈도우 이동
-- `\` + `=`: 분할된 윈도우 크기 동일하게 조절
+- `,` + `b`: NerdTree 토글 (VSCode - Tree Open)
+- `,` + `d`: 버퍼 윈도우 닫기 (CLI - Exit)
+- `,` + `e`: 저장 전 변경된 내용 확인 (Edited)
+- `,` + `h`: 터미널 수평 분할 (Horizontal)
+- `,` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
+- `,` + `m`: 커서 기준 단어 수정 (Modify)
+- `,` + `n`: 라인 넘버링 토글 (Number)
+- `,` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
+- `,` + `r`: 버퍼 윈도우 새로고침 (Refresh)
+- `,` + `t`: Tagbar 토글 (Tagbar)
+- `,` + `v`: 터미널 수직 분할 (Vertical)
+- `,` + `[` or `]`: 버퍼 윈도우 이동
+- `,` + `=`: 분할된 윈도우 크기 동일하게 조절
 
 ##### [V]
 
-- `Ctrl` + `c`: OS 클립보드로 복사 (Mac - Copy)
-- `Ctrl` + `f`: 코드 폴딩 토글 (Fold)
-- `Ctrl` + `m`: 선택된 부분 수정 (Modify)
-- `Ctrl` + `s`: 선택된 부분 서라운드 (Surround)
-- `Ctrl` + `/`: 주석 토글 (VSCode - Comments)
+- `,` + `f`: 코드 폴딩 토글 (Fold)
+- `,` + `m`: 선택된 부분 수정 (Modify)
+- `,` + `s`: 선택된 부분 서라운드 (Surround)
+- `,` + `y`: OS 클립보드로 복사 (Yank)
+- `,` + `,`: 주석 토글 (VSCode - Comments)
 
 ##### [I]
 
@@ -99,10 +99,8 @@ $ source ~/.zshrc
 
 ##### [NerdTree 윈도우]
 
-- `\` + `c`: NerdTree 현재 디렉터리 변경 (Change)
-- `\` + `e`: NerdTree 윈도우 확장 토글 (Extend)
-- `\` + `h`: NerdTree 윈도우 수평 분할 (Horizontal)
-- `\` + `r`: NerdTree 윈도우 새로고침 (Refresh)
-- `\` + `v`: NerdTree 윈도우 수직 분할 (Vertical)
-
-<br/>
+- `,` + `c`: NerdTree 현재 디렉터리 변경 (Change)
+- `,` + `e`: NerdTree 윈도우 확장 토글 (Extend)
+- `,` + `h`: NerdTree 윈도우 수평 분할 (Horizontal)
+- `,` + `r`: NerdTree 윈도우 새로고침 (Refresh)
+- `,` + `v`: NerdTree 윈도우 수직 분할 (Vertical)
