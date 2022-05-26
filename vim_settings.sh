@@ -507,8 +507,8 @@ function! ShowSignature()
   endif
 endfunction
 function! VS()
-  let vs = execute(':verbose vmap <Plug>VSurround')
-  call eval(printf(matchstr(vs, '<SNR>.*0)')))
+  let msg = execute(':verbose vmap <Plug>VSurround')
+  call eval(printf(matchstr(msg, '<SNR>.*0)')))
 endfunction
 
 " [[ Key Mappings ]]
