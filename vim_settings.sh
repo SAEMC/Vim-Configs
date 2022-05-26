@@ -549,7 +549,7 @@ vnoremap <silent> <Leader>f :call VimFolds()<CR>
 vnoremap <silent> <Leader>m c
 vnoremap <silent> <Leader>s :call VS()<CR>
 vnoremap <silent> <Leader>y :OSCYank<CR>
-vnoremap <silent> <Leader>, :call nerdcommenter#Comment("x", "Toggle")<CR>
+vnoremap <silent> <Leader><Leader> :call nerdcommenter#Comment("x", "Toggle")<CR>
 
 inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
