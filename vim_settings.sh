@@ -560,6 +560,7 @@ EOF
   "diagnostic.warningSign": "!!",
   "diagnostic.infoSign": "**",
   "diagnostic.hintSign": "??",
+  "diagnostic.messageTarget": "echo",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "${black_path}"
 }
