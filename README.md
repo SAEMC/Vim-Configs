@@ -71,13 +71,13 @@ $ source ~/.zshrc
 ##### [N]
 
 - `<Space>` + `b`: NerdTree 토글 (VSCode - Tree Open)
-- `<Space>` + `c` + `c`: Coc Check
-- `<Space>` + `c` + `d`: Coc Definition
-- `<Space>` + `c` + `i`: Coc Implementation
-- `<Space>` + `c` + `r`: Coc Reference
-- `<Space>` + `c` + `s`: Coc Signature
-- `<Space>` + `c` + `t`: Coc Type Definition
-- `<Space>` + `c` + [[`[` or `]`]]: Coc Diagnostics 이동
+- `<Space>` + `c` + `c`: CoC Check
+- `<Space>` + `c` + `d`: CoC Definition
+- `<Space>` + `c` + `i`: CoC Implementation
+- `<Space>` + `c` + `r`: CoC Reference
+- `<Space>` + `c` + `s`: CoC Signature
+- `<Space>` + `c` + `t`: CoC Type Definition
+- `<Space>` + `c` + [[`[` or `]`]]: CoC Diagnostics 이동
 - `<Space>` + `d`: 윈도우 닫기 (CLI - Exit)
 - `<Space>` + `e`: 저장 전 변경된 내용 확인 (Edited)
 - `<Space>` + `h`: 터미널 수평 분할 (Horizontal)
@@ -90,7 +90,7 @@ $ source ~/.zshrc
 - `<Space>` + `v`: 터미널 수직 분할 (Vertical)
 - `<Space>` + [[`[` or `]`]]: 윈도우 이동
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절
-- `<Space>` + `<F2>`: Coc Rename
+- `<Space>` + `<F2>`: CoC Rename
 
 ##### [V]
 
