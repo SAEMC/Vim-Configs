@@ -382,8 +382,8 @@ set incsearch
 set laststatus=2
 set nobackup
 set nowritebackup
-set re=0
 set number relativenumber
+set re=0
 set ruler
 set shiftwidth=2
 set shortmess+=c
