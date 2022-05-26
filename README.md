@@ -82,7 +82,7 @@ $ source ~/.zshrc
 - `<Space>` + `m`: 커서 기준 단어 수정 (Modify)
 - `<Space>` + `n`: 라인 넘버링 토글 (Number)
 - `<Space>` + `o`: NerdTree 토글 (Open)
-- `<Space>` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
+- `<Space>` + `p`: CoC 검사 표시 / GitGutter 변경 표시 토글 (Plugins)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
 - `<Space>` + `t`: Tagbar 토글 (Tagbar)
 - `<Space>` + `v`: 터미널 수직 분할 (Vertical)
