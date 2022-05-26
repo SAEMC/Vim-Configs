@@ -78,18 +78,18 @@ $ source ~/.zshrc
 - `<Space>` + `c` + `s`: Coc Signature
 - `<Space>` + `c` + `t`: Coc Type Definition
 - `<Space>` + `c` + [[`[` or `]`]]: Coc Diagnostics 이동
-- `<Space>` + `d`: 버퍼 윈도우 닫기 (CLI - Exit)
+- `<Space>` + `d`: 윈도우 닫기 (CLI - Exit)
 - `<Space>` + `e`: 저장 전 변경된 내용 확인 (Edited)
 - `<Space>` + `h`: 터미널 수평 분할 (Horizontal)
 - `<Space>` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
 - `<Space>` + `m`: 커서 기준 단어 수정 (Modify)
 - `<Space>` + `n`: 라인 넘버링 토글 (Number)
 - `<Space>` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
-- `<Space>` + `r`: 버퍼 윈도우 새로고침 (Refresh)
+- `<Space>` + `r`: 윈도우 새로고침 (Refresh)
 - `<Space>` + `t`: Tagbar 토글 (Tagbar)
 - `<Space>` + `v`: 터미널 수직 분할 (Vertical)
-- `<Space>` + [[`[` or `]`]]: 버퍼 윈도우 이동
-- `<Space>` + `=`: 분할된 윈도우 크기 동일하게 조절
+- `<Space>` + [[`[` or `]`]]: 윈도우 이동
+- `<Space>` + `=`: 윈도우 크기 동일하게 조절
 - `<Space>` + `<F2>`: Coc Rename
 
 ##### [V]
@@ -109,10 +109,10 @@ $ source ~/.zshrc
 
 - `Ctrl` + `w` + [[`h` or `j` or `k` or `l`]]: 윈도우 이동
 
-##### [NerdTree 윈도우]
+##### [NerdTree]
 
-- `<Space>` + `c`: NerdTree 현재 디렉터리 변경 (Change)
-- `<Space>` + `e`: NerdTree 윈도우 확장 토글 (Extend)
-- `<Space>` + `h`: NerdTree 윈도우 수평 분할 (Horizontal)
-- `<Space>` + `r`: NerdTree 윈도우 새로고침 (Refresh)
-- `<Space>` + `v`: NerdTree 윈도우 수직 분할 (Vertical)
+- `<Space>` + `c`: 현재 디렉터리 변경 (Change)
+- `<Space>` + `e`: 윈도우 확장 토글 (Extend)
+- `<Space>` + `h`: 윈도우 수평 분할 (Horizontal)
+- `<Space>` + `r`: 윈도우 새로고침 (Refresh)
+- `<Space>` + `v`: 윈도우 수직 분할 (Vertical)
