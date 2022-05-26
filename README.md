@@ -99,6 +99,7 @@ $ source ~/.zshrc
 
 ##### [NerdTree 윈도우]
 
+- `\` + `c`: NerdTree 현재 디렉터리 변경 (Change)
 - `\` + `e`: NerdTree 윈도우 확장 토글 (Extend)
 - `\` + `h`: NerdTree 윈도우 수평 분할 (Horizontal)
 - `\` + `r`: NerdTree 윈도우 새로고침 (Refresh)
