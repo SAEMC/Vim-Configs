@@ -398,7 +398,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 set tabstop=2
 set updatetime=300
 
-let mapleader = ','
+let mapleader = ' '
 
 colorscheme onedark
 syntax on
@@ -543,6 +543,7 @@ nnoremap <silent> gr <Plug>(coc-references)
 nnoremap <silent> gs :call ShowSignature()<CR>
 nnoremap <silent> gt <Plug>(coc-type-definition)
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
+nnoremap <silent> <SPACE> <Nop>
 
 vnoremap <silent> <Leader>f :call VimFolds()<CR>
 vnoremap <silent> <Leader>m c
