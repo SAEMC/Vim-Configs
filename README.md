@@ -68,7 +68,6 @@ $ source ~/.zshrc
 
 ##### [Normal]
 
-- `<Space>` + `b`: NerdTree 토글 (VSCode - Tree Open)
 - `<Space>` + `c` + `c`: CoC Check
 - `<Space>` + `c` + `d`: CoC Definition
 - `<Space>` + `c` + `i`: CoC Implementation
@@ -82,6 +81,7 @@ $ source ~/.zshrc
 - `<Space>` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
 - `<Space>` + `m`: 커서 기준 단어 수정 (Modify)
 - `<Space>` + `n`: 라인 넘버링 토글 (Number)
+- `<Space>` + `o`: NerdTree 토글 (Open)
 - `<Space>` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
 - `<Space>` + `t`: Tagbar 토글 (Tagbar)
