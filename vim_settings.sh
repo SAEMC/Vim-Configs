@@ -506,6 +506,13 @@ function! ShowSignature()
     silent call feedkeys('K', 'in')
   endif
 endfunction
+function! VimFolds()
+  if foldclosed('.') != -1
+    execute 'normal gv zo'
+  else
+    execute 'normal gv zf'
+  endif
+endfunction
 function! VS()
   let msg = execute(':verbose vmap <Plug>VSurround')
   call eval(printf(matchstr(msg, '<SNR>.*0)')))
@@ -513,11 +520,11 @@ endfunction
 
 " [[ Key Mappings ]]
 nnoremap <silent> <Leader>b :NERDTreeTabsToggle<CR>
-nnoremap <silent> <Leader>c ciw
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>e :w !diff % -<CR>
 nnoremap <silent> <Leader>h :T<CR>i
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
+nnoremap <silent> <Leader>m ciw
 nnoremap <silent> <Leader>n :set number! relativenumber!<CR>
 nnoremap <silent> <Leader>p :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>r :w<CR> \| :edit<CR>
@@ -526,21 +533,19 @@ nnoremap <silent> <Leader>v :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
-nnoremap <silent> ga :<C-u>CocList diagnostics<CR>
-nnoremap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> gi <Plug>(coc-implementation)
-nnoremap <silent> gm :call CocAction('diagnosticInfo')<CR>
-nnoremap <silent> gr <Plug>(coc-references)
-nnoremap <silent> gs :call ShowSignature()<CR>
-nnoremap <silent> gt <Plug>(coc-type-definition)
-nnoremap <silent> g[ <Plug>(coc-diagnostic-prev)
-nnoremap <silent> g] <Plug>(coc-diagnostic-next)
+nnoremap <silent> <C-a> :<C-u>CocList diagnostics<CR>
+nnoremap <silent> <C-d> <Plug>(coc-definition)
+nnoremap <silent> <C-i> <Plug>(coc-implementation)
+nnoremap <silent> <C-m> :call CocAction('diagnosticInfo')<CR>
+nnoremap <silent> <C-r> <Plug>(coc-references)
+nnoremap <silent> <C-s> :call ShowSignature()<CR>
+nnoremap <silent> <C-t> <Plug>(coc-type-definition)
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 
-vnoremap <silent> <expr> <Leader>f foldclosed('.') != -1 ? 'zo' : 'zf'
-vnoremap <silent> <Leader>c c
-vnoremap <silent> <Leader>s :call VS()<CR>
 vnoremap <silent> <C-c> :OSCYank<CR>
+vnoremap <silent> <C-f> :call VimFolds()<CR>
+vnoremap <silent> <C-m> c
+vnoremap <silent> <C-s> :call VS()<CR>
 vnoremap <silent> <C-_> :call nerdcommenter#Comment("x", "Toggle")<CR>
 
 inoremap <silent> <expr> <TAB>
