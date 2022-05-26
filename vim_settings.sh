@@ -511,6 +511,7 @@ endfunction
 nnoremap <silent> <Leader>b :NERDTreeTabsToggle<CR>
 nnoremap <silent> <Leader>c ciw
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
+nnoremap <silent> <Leader>e :w !diff % -<CR>
 nnoremap <silent> <Leader>h :T<CR>i
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>n :set number! relativenumber!<CR>
