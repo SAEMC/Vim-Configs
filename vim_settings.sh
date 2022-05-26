@@ -497,6 +497,13 @@ function! EnterSelect()
         return "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
     endif
 endfunction
+function! ShowSignature()
+  if CocAction('hasProvider', 'hover')
+    silent call CocActionAsync('doHover')
+  else
+    silent call feedkeys('K', 'in')
+  endif
+endfunction
 
 " [[ Key Mappings ]]
 nnoremap <silent> <Leader>b :NERDTreeTabsToggle<CR>
@@ -514,7 +521,9 @@ nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> ga :<C-u>CocList diagnostics<CR>
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gm :call CocAction('diagnosticInfo')<CR>
 nnoremap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gs :call ShowSignature()<CR>
 nnoremap <silent> gt <Plug>(coc-type-definition)
 nnoremap <silent> g[ <Plug>(coc-diagnostic-prev)
 nnoremap <silent> g] <Plug>(coc-diagnostic-next)
@@ -560,7 +569,7 @@ EOF
   "diagnostic.warningSign": "!!",
   "diagnostic.infoSign": "**",
   "diagnostic.hintSign": "??",
-  "diagnostic.messageTarget": "echo",
+  "diagnostic.enableMessage": "jump",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "${black_path}"
 }
