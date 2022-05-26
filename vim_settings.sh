@@ -413,8 +413,8 @@ else
   set signcolumn=yes
 endif
 
-syntax on
 colorscheme onedark
+syntax on
 
 " [[ Native Commands ]]
 command! -nargs=* T split | resize 10 | terminal <args>
@@ -427,6 +427,11 @@ au BufReadPost *
 \ endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
+augroup Folds
+  au!
+  au BufWinLeave * mkview
+  au BufWinEnter * silent! loadview
+augroup END
 augroup NerdTreeMap
   au!
   au FileType nerdtree nmap <buffer> <silent> <Leader>c C
@@ -435,32 +440,27 @@ augroup NerdTreeMap
   au FileType nerdtree nmap <buffer> <silent> <Leader>r R
   au FileType nerdtree nmap <buffer> <silent> <Leader>v s
 augroup END
-augroup Folds
-  au!
-  au BufWinLeave * mkview
-  au BufWinEnter * silent! loadview
-augroup END
 
 " [[ Plug Options ]]
 let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
 
 let g:nerdtree_tabs_open_on_console_startup = 1
 
-let g:NERDCreateDefaultMappings = 1
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDCreateDefaultMappings = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDSpaceDelims = 1
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_sep = ' '
 
-let g:tagbar_ctags_bin = '$ctags_path'
 let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
+let g:tagbar_ctags_bin = '$ctags_path'
 
 let g:AutoPairsMapCh = 0
 let g:AutoPairsMapCR = 0
@@ -471,8 +471,8 @@ let g:surround_no_mappings = 1
 " Check up 'Applications in terminal may access clipboard'
 " [oscyank_max_length] -> ASCII == 1 / Non-ASCII == 3
 let g:oscyank_max_length = 1000000
-let g:oscyank_term = 'tmux'
 let g:oscyank_silent = v:true
+let g:oscyank_term = 'tmux'
 
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 let g:coc_global_extensions = [
