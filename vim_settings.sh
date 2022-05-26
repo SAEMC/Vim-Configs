@@ -293,22 +293,22 @@ filetype off
 
 " [[ Plugs ]]
 call plug#begin()
-Plug 'navarasu/onedark.nvim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdtree'
+Plug 'ap/vim-css-color'
+Plug 'blueyed/vim-diminactive'
+Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'navarasu/onedark.nvim'
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'blueyed/vim-diminactive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ap/vim-css-color'
-Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 EOF
 
