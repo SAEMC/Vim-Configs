@@ -60,7 +60,7 @@ $ source ~/.zshrc
 
 ### 사용 방법
 
-#### [N: Normal] | [V: Visual] | [S: Select] | [O: Operator-pending] | [I: Insert]
+#### [N: Normal] | [V: Visual] | [I: Insert] | [T: Terminal]
 
 #### 매핑된 커맨드는 `~/.vimrc` 파일 확인
 
@@ -70,37 +70,41 @@ $ source ~/.zshrc
 
 ##### [N]
 
-- `,` + `b`: NerdTree 토글 (VSCode - Tree Open)
-- `,` + `d`: 버퍼 윈도우 닫기 (CLI - Exit)
-- `,` + `e`: 저장 전 변경된 내용 확인 (Edited)
-- `,` + `h`: 터미널 수평 분할 (Horizontal)
-- `,` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
-- `,` + `m`: 커서 기준 단어 수정 (Modify)
-- `,` + `n`: 라인 넘버링 토글 (Number)
-- `,` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
-- `,` + `r`: 버퍼 윈도우 새로고침 (Refresh)
-- `,` + `t`: Tagbar 토글 (Tagbar)
-- `,` + `v`: 터미널 수직 분할 (Vertical)
-- `,` + `[` or `]`: 버퍼 윈도우 이동
-- `,` + `=`: 분할된 윈도우 크기 동일하게 조절
+- `<Space>` + `b`: NerdTree 토글 (VSCode - Tree Open)
+- `<Space>` + `d`: 버퍼 윈도우 닫기 (CLI - Exit)
+- `<Space>` + `e`: 저장 전 변경된 내용 확인 (Edited)
+- `<Space>` + `h`: 터미널 수평 분할 (Horizontal)
+- `<Space>` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
+- `<Space>` + `m`: 커서 기준 단어 수정 (Modify)
+- `<Space>` + `n`: 라인 넘버링 토글 (Number)
+- `<Space>` + `p`: CoC 검사 / GitGutter 플러그인 표시 토글 (Plugins)
+- `<Space>` + `r`: 버퍼 윈도우 새로고침 (Refresh)
+- `<Space>` + `t`: Tagbar 토글 (Tagbar)
+- `<Space>` + `v`: 터미널 수직 분할 (Vertical)
+- `<Space>` + `[` or `]`: 버퍼 윈도우 이동
+- `<Space>` + `=`: 분할된 윈도우 크기 동일하게 조절
 
 ##### [V]
 
-- `,` + `f`: 코드 폴딩 토글 (Fold)
-- `,` + `m`: 선택된 부분 수정 (Modify)
-- `,` + `s`: 선택된 부분 서라운드 (Surround)
-- `,` + `y`: OS 클립보드로 복사 (Yank)
-- `,` + `,`: 주석 토글 (VSCode - Comments)
+- `<Space>` + `f`: 코드 폴딩 토글 (Fold)
+- `<Space>` + `m`: 선택된 부분 수정 (Modify)
+- `<Space>` + `s`: 선택된 부분 서라운드 (Surround)
+- `<Space>` + `y`: OS 클립보드로 복사 (Yank)
+- `<Space>` + `,`: 주석 토글 (VSCode - Comments)
 
 ##### [I]
 
 - `Ctrl` + `d`: 커서 포함 다음 글자 제거 (Delete)
-- `Ctrl` + `h` or `j` or `k` or `l`: 커서 이동
+- `Ctrl` + [`h` or `j` or `k` or `l`]: 커서 이동
+
+##### [T]
+
+- `Ctrl` + `w` + [`h` or `j` or `k` or `l`]: 윈도우 이동
 
 ##### [NerdTree 윈도우]
 
-- `,` + `c`: NerdTree 현재 디렉터리 변경 (Change)
-- `,` + `e`: NerdTree 윈도우 확장 토글 (Extend)
-- `,` + `h`: NerdTree 윈도우 수평 분할 (Horizontal)
-- `,` + `r`: NerdTree 윈도우 새로고침 (Refresh)
-- `,` + `v`: NerdTree 윈도우 수직 분할 (Vertical)
+- `<Space>` + `c`: NerdTree 현재 디렉터리 변경 (Change)
+- `<Space>` + `e`: NerdTree 윈도우 확장 토글 (Extend)
+- `<Space>` + `h`: NerdTree 윈도우 수평 분할 (Horizontal)
+- `<Space>` + `r`: NerdTree 윈도우 새로고침 (Refresh)
+- `<Space>` + `v`: NerdTree 윈도우 수직 분할 (Vertical)
