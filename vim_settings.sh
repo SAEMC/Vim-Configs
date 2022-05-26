@@ -464,6 +464,8 @@ let g:tagbar_autofocus = 1
 let g:AutoPairsMapCh = 0
 let g:AutoPairsMapCR = 0
 
+let g:surround_no_mappings = 1
+
 " [iTerm2] -> [Preferences] -> [General] -> [Selection]
 " Check up 'Applications in terminal may access clipboard'
 " [oscyank_max_length] -> ASCII == 1 / Non-ASCII == 3
@@ -533,7 +535,7 @@ vnoremap <silent> <expr> <Leader>f foldclosed('.') != -1 ? 'zo' : 'zf'
 vnoremap <silent> <C-c> :OSCYank<CR>
 vmap <silent> <C-_> <Plug>NERDCommenterToggle
 vmap <silent> <Leader>c c
-vmap <silent> <Leader>s <S-s>
+vmap <silent> <Leader>s <Plug>VSurround
 
 inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
