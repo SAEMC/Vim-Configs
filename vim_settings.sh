@@ -530,7 +530,6 @@ inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
 inoremap <silent> <expr> <CR> EnterSelect()
-inoremap <silent> <expr> <ESC> pumvisible() ? "\<C-o>coc#_hide()" : "<ESC>"
 inoremap <silent> <expr> <C-Space> coc#refresh()
 inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
 inoremap <silent> <expr> <C-j> coc#float#has_scroll() ? "\<C-r>=coc#float#scroll(1, 1)\<CR>" : "\<C-o>j"
