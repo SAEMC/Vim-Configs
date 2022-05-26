@@ -532,7 +532,7 @@ nnoremap <silent> gs :call ShowSignature()<CR>
 nnoremap <silent> gt <Plug>(coc-type-definition)
 nnoremap <silent> g[ <Plug>(coc-diagnostic-prev)
 nnoremap <silent> g] <Plug>(coc-diagnostic-next)
-nmap <silent> <F2> <Plug>(coc-rename)
+nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 
 vnoremap <silent> <expr> <Leader>f foldclosed('.') != -1 ? 'zo' : 'zf'
 vnoremap <silent> <C-c> :OSCYank<CR>
