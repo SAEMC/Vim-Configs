@@ -456,7 +456,7 @@ let g:indent_guides_start_level = 2
 
 let g:NERDCommentEmptyLines = 1
 let g:NERDCompactSexyComs = 1
-let g:NERDCreateDefaultMappings = 1
+let g:NERDCreateDefaultMappings = 0
 let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
 
@@ -535,13 +535,14 @@ nnoremap <silent> <Leader>v :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
-nnoremap <silent> ga :<C-u>CocList diagnostics<CR>
-nnoremap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> gi <Plug>(coc-implementation)
-nnoremap <silent> gm :call CocAction('diagnosticInfo')<CR>
-nnoremap <silent> gr <Plug>(coc-references)
-nnoremap <silent> gs :call ShowSignature()<CR>
-nnoremap <silent> gt <Plug>(coc-type-definition)
+nnoremap <silent> <Leader>cc :<C-u>call CocAction('diagnosticInfo')<CR>
+nnoremap <silent> <Leader>cd :<C-u>call CocActionAsync('jumpDefinition')<CR>
+nnoremap <silent> <Leader>ci :<C-u>call CocActionAsync('jumpImplementation')<CR>
+nnoremap <silent> <Leader>cr :<C-u>call CocActionAsync('jumpReferences')<CR>
+nnoremap <silent> <Leader>cs :<C-u>call ShowSignature()<CR>
+nnoremap <silent> <Leader>ct :<C-u>call CocActionAsync('jumpTypeDefinition')<CR>
+nnoremap <silent> <Leader>c[ :<C-u>call CocActionAsync('diagnosticPrevious')<CR>
+nnoremap <silent> <Leader>c] :<C-u>call CocActionAsync('diagnosticNext')<CR>
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 nnoremap <silent> <Space> <Nop>
 
