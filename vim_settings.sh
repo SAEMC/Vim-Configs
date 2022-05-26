@@ -521,13 +521,13 @@ function! SurroundCode()
 endfunction
 
 " [[ Key Mappings ]]
-nnoremap <silent> <Leader>b :NERDTreeTabsToggle<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>e :w !diff % -<CR>
 nnoremap <silent> <Leader>h :T<CR>i
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>m ciw
 nnoremap <silent> <Leader>n :set number! relativenumber!<CR>
+nnoremap <silent> <Leader>o :NERDTreeTabsToggle<CR>
 nnoremap <silent> <Leader>p :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>r :w<CR> \| :edit<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
