@@ -365,15 +365,6 @@ function writeScripts() {
   cat >>${HOME}/.vimrc <<EOF
 
 " [[ Native Options ]]
-if (empty(\$TMUX))
-  if (has("nvim"))
-    let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-
 set autoindent
 set background=dark
 set backspace=indent,eol,start
@@ -407,14 +398,22 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 set tabstop=2
 set updatetime=300
 
+colorscheme onedark
+syntax on
+
 if has("nvim-0.5.0") || has("patch-8.1.1564")
   set signcolumn=number
 else
   set signcolumn=yes
 endif
-
-colorscheme onedark
-syntax on
+if (empty(\$TMUX))
+  if (has("nvim"))
+    let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
 " [[ Native Commands ]]
 command! -nargs=* T split | resize 10 | terminal <args>
