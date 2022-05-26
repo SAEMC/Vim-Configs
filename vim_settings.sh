@@ -533,13 +533,13 @@ nnoremap <silent> <Leader>v :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
-nnoremap <silent> <C-a> :<C-u>CocList diagnostics<CR>
-nnoremap <silent> <C-d> <Plug>(coc-definition)
-nnoremap <silent> <C-i> <Plug>(coc-implementation)
-nnoremap <silent> <C-m> :call CocAction('diagnosticInfo')<CR>
-nnoremap <silent> <C-r> <Plug>(coc-references)
-nnoremap <silent> <C-s> :call ShowSignature()<CR>
-nnoremap <silent> <C-t> <Plug>(coc-type-definition)
+nnoremap <silent> ga :<C-u>CocList diagnostics<CR>
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gm :call CocAction('diagnosticInfo')<CR>
+nnoremap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gs :call ShowSignature()<CR>
+nnoremap <silent> gt <Plug>(coc-type-definition)
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 
 vnoremap <silent> <C-c> :OSCYank<CR>
