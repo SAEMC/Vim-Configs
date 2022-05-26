@@ -543,7 +543,7 @@ nnoremap <silent> gr <Plug>(coc-references)
 nnoremap <silent> gs :call ShowSignature()<CR>
 nnoremap <silent> gt <Plug>(coc-type-definition)
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
-nnoremap <silent> <SPACE> <Nop>
+nnoremap <silent> <Space> <Nop>
 
 vnoremap <silent> <Leader>f :call VimFolds()<CR>
 vnoremap <silent> <Leader>m c
