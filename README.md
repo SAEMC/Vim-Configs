@@ -60,15 +60,13 @@ $ source ~/.zshrc
 
 ### 사용 방법
 
-#### [N: Normal] | [V: Visual] | [I: Insert] | [T: Terminal]
-
 #### 매핑된 커맨드는 `~/.vimrc` 파일 확인
 
 #### 이외의 커맨드는 Vim 기본 커맨드 (Vim 기본 커맨드 참조)
 
 <br/>
 
-##### [N]
+##### [Normal]
 
 - `<Space>` + `b`: NerdTree 토글 (VSCode - Tree Open)
 - `<Space>` + `c` + `c`: CoC Check
@@ -92,7 +90,7 @@ $ source ~/.zshrc
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절
 - `<Space>` + `<F2>`: CoC Rename
 
-##### [V]
+##### [Visual]
 
 - `<Space>` + `f`: 코드 폴딩 토글 (Fold)
 - `<Space>` + `m`: 선택된 부분 수정 (Modify)
@@ -100,12 +98,12 @@ $ source ~/.zshrc
 - `<Space>` + `y`: OS 클립보드로 복사 (Yank)
 - `<Space>` + `<Space>`: 주석 토글 (VSCode - Comments)
 
-##### [I]
+##### [Insert]
 
 - `Ctrl` + `d`: 커서 포함 다음 글자 제거 (Delete)
 - `Ctrl` + [[`h` or `j` or `k` or `l`]]: 커서 이동
 
-##### [T]
+##### [Terminal]
 
 - `Ctrl` + `w` + [[`h` or `j` or `k` or `l`]]: 윈도우 이동
 
