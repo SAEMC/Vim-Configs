@@ -8,6 +8,7 @@
 - `Plug 'tpope/vim-fugitive'`
 - `Plug 'airblade/vim-gitgutter'`
 - `Plug 'scrooloose/nerdtree'`
+- `Plug 'jistr/vim-nerdtree-tabs'`
 - `Plug 'preservim/nerdcommenter'`
 - `Plug 'preservim/tagbar'`
 - `Plug 'nathanaelkane/vim-indent-guides'`
