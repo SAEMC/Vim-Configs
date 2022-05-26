@@ -432,6 +432,7 @@ augroup NerdTreeMap
   au FileType nerdtree nmap <buffer> <silent> <Leader>h i
   au FileType nerdtree nmap <buffer> <silent> <Leader>v s
   au FileType nerdtree nmap <buffer> <silent> <Leader>e A
+  au FileType nerdtree nmap <buffer> <silent> <Leader>c C
   au FileType nerdtree nmap <buffer> <silent> <Leader>r R
 augroup END
 augroup Folds
