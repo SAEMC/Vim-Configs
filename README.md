@@ -73,6 +73,7 @@ $ source ~/.zshrc
 - `\` + `b`: NerdTree 토글 (VSCode - Tree Open)
 - `\` + `c`: 커서 기준 단어 변경 (Change)
 - `\` + `d`: 버퍼 윈도우 닫기 (CLI - Exit)
+- `\` + `e`: 저장 전 변경된 내용 확인 (Edited)
 - `\` + `h`: 터미널 수평 분할 (Horizontal)
 - `\` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
 - `\` + `n`: 라인 넘버링 토글 (Number)
