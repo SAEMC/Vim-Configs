@@ -429,11 +429,11 @@ au CursorHold *
 \ silent call CocActionAsync('highlight')
 augroup NerdTreeMap
   au!
-  au FileType nerdtree nmap <buffer> <silent> <Leader>h i
-  au FileType nerdtree nmap <buffer> <silent> <Leader>v s
-  au FileType nerdtree nmap <buffer> <silent> <Leader>e A
   au FileType nerdtree nmap <buffer> <silent> <Leader>c C
+  au FileType nerdtree nmap <buffer> <silent> <Leader>e A
+  au FileType nerdtree nmap <buffer> <silent> <Leader>h i
   au FileType nerdtree nmap <buffer> <silent> <Leader>r R
+  au FileType nerdtree nmap <buffer> <silent> <Leader>v s
 augroup END
 augroup Folds
   au!
