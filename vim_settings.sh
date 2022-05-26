@@ -492,13 +492,13 @@ let g:coc_global_extensions = [
 
 " [[ Functions ]]
 function! EnterSelect()
-    if pumvisible() && complete_info()["selected"] == -1
-        return "\<C-y>"
-    elseif pumvisible()
-        return coc#_select_confirm()
-    else
-        return "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
-    endif
+  if pumvisible() && complete_info()["selected"] == -1
+      return "\<C-y>"
+  elseif pumvisible()
+      return coc#_select_confirm()
+  else
+      return "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
+  endif
 endfunction
 function! ShowSignature()
   if CocAction('hasProvider', 'hover')
@@ -506,6 +506,10 @@ function! ShowSignature()
   else
     silent call feedkeys('K', 'in')
   endif
+endfunction
+function! VS()
+  let vs = execute(':verbose vmap <Plug>VSurround')
+  call eval(printf(matchstr(vs, '<SNR>.*0)')))
 endfunction
 
 " [[ Key Mappings ]]
@@ -535,10 +539,10 @@ nnoremap <silent> g] <Plug>(coc-diagnostic-next)
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 
 vnoremap <silent> <expr> <Leader>f foldclosed('.') != -1 ? 'zo' : 'zf'
+vnoremap <silent> <Leader>c c
+vnoremap <silent> <Leader>s :call VS()<CR>
 vnoremap <silent> <C-c> :OSCYank<CR>
-vmap <silent> <C-_> <Plug>NERDCommenterToggle
-vmap <silent> <Leader>c c
-vmap <silent> <Leader>s <Plug>VSurround
+vnoremap <silent> <C-_> :call nerdcommenter#Comment("x", "Toggle")<CR>
 
 inoremap <silent> <expr> <TAB>
 \ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
