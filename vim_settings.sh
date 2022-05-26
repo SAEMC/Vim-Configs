@@ -492,6 +492,13 @@ let g:coc_global_extensions = [
   \ ]
 
 " [[ Functions ]]
+function! FoldCode()
+  if foldclosed('.') != -1
+    execute 'normal gv zo'
+  else
+    execute 'normal gv zf'
+  endif
+endfunction
 function! EnterSelect()
   if pumvisible() && complete_info()["selected"] == -1
       return "\<C-y>"
@@ -508,14 +515,7 @@ function! ShowSignature()
     silent call feedkeys('K', 'in')
   endif
 endfunction
-function! CodeFold()
-  if foldclosed('.') != -1
-    execute 'normal gv zo'
-  else
-    execute 'normal gv zf'
-  endif
-endfunction
-function! Surround()
+function! SurroundCode()
   let msg = execute(':verbose vmap <Plug>VSurround')
   call eval(printf(matchstr(msg, '<SNR>.*0)')))
 endfunction
@@ -546,9 +546,9 @@ nnoremap <silent> <Leader>c] :<C-u>call CocActionAsync('diagnosticNext')<CR>
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 nnoremap <silent> <Space> <Nop>
 
-vnoremap <silent> <Leader>f :call CodeFold()<CR>
+vnoremap <silent> <Leader>f :call FoldCode()<CR>
 vnoremap <silent> <Leader>m c
-vnoremap <silent> <Leader>s :call Surround()<CR>
+vnoremap <silent> <Leader>s :call SurroundCode()<CR>
 vnoremap <silent> <Leader>y :OSCYank<CR>
 vnoremap <silent> <Leader><Leader> :call nerdcommenter#Comment("x", "Toggle")<CR>
 
