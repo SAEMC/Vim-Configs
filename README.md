@@ -81,7 +81,7 @@ $ source ~/.zshrc
 - `<Space>` + `r`: 버퍼 윈도우 새로고침 (Refresh)
 - `<Space>` + `t`: Tagbar 토글 (Tagbar)
 - `<Space>` + `v`: 터미널 수직 분할 (Vertical)
-- `<Space>` + `[` or `]`: 버퍼 윈도우 이동
+- `<Space>` + [[`[` or `]`]]: 버퍼 윈도우 이동
 - `<Space>` + `=`: 분할된 윈도우 크기 동일하게 조절
 
 ##### [V]
@@ -95,11 +95,11 @@ $ source ~/.zshrc
 ##### [I]
 
 - `Ctrl` + `d`: 커서 포함 다음 글자 제거 (Delete)
-- `Ctrl` + [ `h` or `j` or `k` or `l` ]: 커서 이동
+- `Ctrl` + [[`h` or `j` or `k` or `l`]]: 커서 이동
 
 ##### [T]
 
-- `Ctrl` + `w` + [ `h` or `j` or `k` or `l` ]: 윈도우 이동
+- `Ctrl` + `w` + [[`h` or `j` or `k` or `l`]]: 윈도우 이동
 
 ##### [NerdTree 윈도우]
 
