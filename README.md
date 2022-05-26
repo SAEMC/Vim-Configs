@@ -90,7 +90,7 @@ $ source ~/.zshrc
 - `<Space>` + `m`: 선택된 부분 수정 (Modify)
 - `<Space>` + `s`: 선택된 부분 서라운드 (Surround)
 - `<Space>` + `y`: OS 클립보드로 복사 (Yank)
-- `<Space>` + `,`: 주석 토글 (VSCode - Comments)
+- `<Space>` + `<Space>`: 주석 토글 (VSCode - Comments)
 
 ##### [I]
 
