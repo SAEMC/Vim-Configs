@@ -71,20 +71,21 @@ $ source ~/.zshrc
 - `<Space>` + `c` + `c`: CoC Check
 - `<Space>` + `c` + `d`: CoC Definition
 - `<Space>` + `c` + `i`: CoC Implementation
+- `<Space>` + `c` + `o`: CoC 토글 (CoC On/Off)
 - `<Space>` + `c` + `r`: CoC Reference
 - `<Space>` + `c` + `s`: CoC Signature
 - `<Space>` + `c` + `t`: CoC Type Definition
 - `<Space>` + `c` + [[`[` or `]`]]: CoC Diagnostics 이동
 - `<Space>` + `d`: 윈도우 닫기 (CLI - Exit)
 - `<Space>` + `e`: 저장 전 변경된 내용 확인 (Edited)
+- `<Space>` + `g` + `o`: GitGutter 토글 (GitGutter On/Off)
 - `<Space>` + `h`: 터미널 수평 분할 (Horizontal)
-- `<Space>` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Clear)
+- `<Space>` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Line clear)
 - `<Space>` + `m`: 커서 기준 단어 수정 (Modify)
-- `<Space>` + `n`: 라인 넘버링 토글 (Number)
-- `<Space>` + `o`: NerdTree 토글 (Open)
-- `<Space>` + `p`: CoC 검사 표시 / GitGutter 변경 표시 토글 (Plugins)
+- `<Space>` + `n` + `o`: 라인 넘버링 토글 (Number On/Off)
+- `<Space>` + `o`: NerdTree 토글 (On/Off)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
-- `<Space>` + `t`: Tagbar 토글 (Tagbar)
+- `<Space>` + `t` + `o`: Tagbar 토글 (Tagbar On/Off)
 - `<Space>` + `v`: 터미널 수직 분할 (Vertical)
 - `<Space>` + [[`[` or `]`]]: 윈도우 이동
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절
