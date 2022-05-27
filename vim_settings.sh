@@ -537,11 +537,11 @@ nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 
+vnoremap <silent> <Leader><Leader> :<C-u>call nerdcommenter#Comment("x", "Toggle")<CR>
 vnoremap <silent> <Leader>f :<C-u>call FoldCode()<CR>
 vnoremap <silent> <Leader>m c
 vnoremap <silent> <Leader>s :<C-u>call SurroundCode()<CR>
 vnoremap <silent> <Leader>y :<C-u>OSCYank<CR>
-vnoremap <silent> <Leader><Leader> :<C-u>call nerdcommenter#Comment("x", "Toggle")<CR>
 
 inoremap <silent> <expr> <CR> EnterSelect()
 inoremap <silent> <expr> <TAB> pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
