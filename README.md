@@ -76,32 +76,32 @@ $ source ~/.zshrc
 - `<Space>` + `c` + `s`: CoC Signature
 - `<Space>` + `c` + `t`: CoC Type Definition
 - `<Space>` + `c` + [[`[` or `]`]]: CoC Diagnostics 이동
-- `<Space>` + `d`: 윈도우 닫기 (CLI - Exit)
-- `<Space>` + `e`: 저장 전 변경된 내용 확인 (Edited)
 - `<Space>` + `g` + `o`: GitGutter 토글 (GitGutter On/Off)
 - `<Space>` + `h`: 터미널 수평 분할 (Horizontal)
-- `<Space>` + `l`: `/search` 결과 / `:set list` 끄기 (CLI - Line clear)
-- `<Space>` + `m`: 커서 기준 단어 수정 (Modify)
-- `<Space>` + `n` + `o`: 라인 넘버링 토글 (Number On/Off)
+- `<Space>` + `i`: 변경된 내용 검사 (Inspect)
+- `<Space>` + `m`: 단어 수정 (Modify)
+- `<Space>` + `n` + `o`: 라인 넘버링 토글 (Numbering On/Off)
 - `<Space>` + `o`: NerdTree 토글 (On/Off)
+- `<Space>` + `q`: 윈도우 나가기 (Quit)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
 - `<Space>` + `t` + `o`: Tagbar 토글 (Tagbar On/Off)
 - `<Space>` + `v`: 터미널 수직 분할 (Vertical)
+- `<Space>` + `w`: 검색 결과 지우기 (Wipe off)
 - `<Space>` + [[`[` or `]`]]: 윈도우 이동
-- `<Space>` + `=`: 윈도우 크기 동일하게 조절
+- `<Space>` + `=`: 윈도우 크기 동일하게 조절 (Equal)
 - `<Space>` + `<F2>`: CoC Rename
 
 ##### [Visual]
 
 - `<Space>` + `f`: 코드 폴딩 토글 (Fold)
-- `<Space>` + `m`: 선택된 부분 수정 (Modify)
-- `<Space>` + `s`: 선택된 부분 서라운드 (Surround)
+- `<Space>` + `m`: 선택 부분 수정 (Modify)
+- `<Space>` + `s`: 선택 부분 서라운드 (Surround)
 - `<Space>` + `y`: OS 클립보드로 복사 (Yank)
 - `<Space>` + `<Space>`: 주석 토글
 
 ##### [Insert]
 
-- `<Ctrl>` + `d`: 커서 포함 다음 글자 제거 (Delete)
+- `<Ctrl>` + `d`: 다음 글자 제거 (Delete)
 - `<Ctrl>` + [[`h` or `j` or `k` or `l`]]: 커서 이동
 
 ##### [Terminal]
