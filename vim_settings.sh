@@ -482,13 +482,6 @@ let g:coc_global_extensions = [
   \ ]
 
 " [[ Functions ]]
-function! FoldCode()
-  if foldclosed('.') != -1
-    execute 'normal gv zo'
-  else
-    execute 'normal gv zf'
-  endif
-endfunction
 function! EnterSelect()
   if pumvisible() && complete_info()["selected"] == -1
       return "\<C-y>"
@@ -496,6 +489,13 @@ function! EnterSelect()
       return coc#_select_confirm()
   else
       return "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
+  endif
+endfunction
+function! FoldCode()
+  if foldclosed('.') != -1
+    execute 'normal gv zo'
+  else
+    execute 'normal gv zf'
   endif
 endfunction
 function! ShowSignature()
