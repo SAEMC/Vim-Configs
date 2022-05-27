@@ -399,7 +399,6 @@ set tabstop=2
 set updatetime=300
 
 let mapleader = ' '
-
 colorscheme onedark
 syntax on
 
@@ -445,36 +444,27 @@ augroup END
 " [[ Plug Options ]]
 let g:AutoPairsMapCh = 0
 let g:AutoPairsMapCR = 0
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep = ' '
-
-let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
-
 let g:NERDCommentEmptyLines = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDCreateDefaultMappings = 0
 let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
-
 let g:nerdtree_tabs_open_on_console_startup = 1
-
 " [iTerm2] -> [Preferences] -> [General] -> [Selection]
 " Check up 'Applications in terminal may access clipboard'
 " [oscyank_max_length] -> ASCII == 1 / Non-ASCII == 3
 let g:oscyank_max_length = 1000000
 let g:oscyank_silent = v:true
 let g:oscyank_term = 'tmux'
-
 let g:surround_no_mappings = 1
-
 let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
 let g:tagbar_ctags_bin = '$ctags_path'
-
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 let g:coc_global_extensions = [
   \ 'coc-clangd',
