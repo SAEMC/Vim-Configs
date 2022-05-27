@@ -78,7 +78,7 @@ $ source ~/.zshrc
 - `<Space>` + `c` + [[`[` or `]`]]: CoC Diagnostics 이동
 - `<Space>` + `g` + `o`: GitGutter 토글 (GitGutter On/Off)
 - `<Space>` + `h`: 터미널 수평 분할 (Horizontal)
-- `<Space>` + `i`: 변경된 내용 검사 (Inspect)
+- `<Space>` + `i`: 변경 내용 검사 (Inspect)
 - `<Space>` + `m`: 단어 수정 (Modify)
 - `<Space>` + `n` + `o`: 넘버링 토글 (Numbering On/Off)
 - `<Space>` + `o`: NerdTree 토글 (On/Off)
