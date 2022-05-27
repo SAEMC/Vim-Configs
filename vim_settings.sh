@@ -514,6 +514,7 @@ endfunction
 nnoremap <silent> <Leader>cc :<C-u>call CocAction('diagnosticInfo')<CR>
 nnoremap <silent> <Leader>cd :<C-u>call CocActionAsync('jumpDefinition')<CR>
 nnoremap <silent> <Leader>ci :<C-u>call CocActionAsync('jumpImplementation')<CR>
+nnoremap <silent> <Leader>co :<C-u>call CocAction('diagnosticToggle')<CR>
 nnoremap <silent> <Leader>cr :<C-u>call CocActionAsync('jumpReferences')<CR>
 nnoremap <silent> <Leader>cs :<C-u>call ShowSignature()<CR>
 nnoremap <silent> <Leader>ct :<C-u>call CocActionAsync('jumpTypeDefinition')<CR>
@@ -521,14 +522,14 @@ nnoremap <silent> <Leader>c[ :<C-u>call CocActionAsync('diagnosticPrevious')<CR>
 nnoremap <silent> <Leader>c] :<C-u>call CocActionAsync('diagnosticNext')<CR>
 nnoremap <silent> <Leader>d :bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>e :w !diff % -<CR>
+nnoremap <silent> <Leader>go :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>h :T<CR>i
 nnoremap <silent> <Leader>l :noh<CR> \| :set nolist<CR>
 nnoremap <silent> <Leader>m ciw
-nnoremap <silent> <Leader>n :set number! relativenumber!<CR>
+nnoremap <silent> <Leader>no :set number! relativenumber!<CR>
 nnoremap <silent> <Leader>o :NERDTreeTabsToggle<CR>
-nnoremap <silent> <Leader>p :call CocAction('diagnosticToggle')<CR> \| :GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>r :w<CR> \| :edit<CR>
-nnoremap <silent> <Leader>t :TagbarToggle<CR>
+nnoremap <silent> <Leader>to :TagbarToggle<CR>
 nnoremap <silent> <Leader>v :VT<CR>i
 nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
