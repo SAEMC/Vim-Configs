@@ -542,8 +542,7 @@ vnoremap <silent> <Leader>s :call SurroundCode()<CR>
 vnoremap <silent> <Leader>y :OSCYank<CR>
 vnoremap <silent> <Leader><Leader> :call nerdcommenter#Comment("x", "Toggle")<CR>
 
-inoremap <silent> <expr> <TAB>
-\ pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
+inoremap <silent> <expr> <TAB> pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
 inoremap <silent> <expr> <CR> EnterSelect()
 inoremap <silent> <expr> <C-Space> coc#refresh()
