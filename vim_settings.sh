@@ -511,6 +511,7 @@ function! SurroundCode()
 endfunction
 
 " [[ Key Mappings ]]
+nnoremap <silent> <Space> <Nop>
 nnoremap <silent> <Leader>cc :<C-u>call CocAction('diagnosticInfo')<CR>
 nnoremap <silent> <Leader>cd :<C-u>call CocActionAsync('jumpDefinition')<CR>
 nnoremap <silent> <Leader>ci :<C-u>call CocActionAsync('jumpImplementation')<CR>
@@ -535,7 +536,6 @@ nnoremap <silent> <Leader>[ :bprevious!<CR>
 nnoremap <silent> <Leader>] :bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
-nnoremap <silent> <Space> <Nop>
 
 vnoremap <silent> <Leader>f :<C-u>call FoldCode()<CR>
 vnoremap <silent> <Leader>m c
