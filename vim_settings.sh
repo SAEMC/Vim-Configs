@@ -573,12 +573,12 @@ EOF
   "diagnostic.infoSign": "**",
   "diagnostic.warningSign": "!!",
   "hover.floatConfig": { "maxWidth": 30, "winblend": 10 },
+  "python.formatting.blackPath": "${black_path}",
+  "python.formatting.provider": "black",
   "signature.floatConfig": { "maxWidth": 30, "winblend": 10 },
   "suggest.enablePreselect": false,
   "suggest.floatConfig": { "maxWidth": 30, "winblend": 10 },
-  "suggest.noselect": true,
-  "python.formatting.blackPath": "${black_path}",
-  "python.formatting.provider": "black"
+  "suggest.noselect": true
 }
 EOF
 }
