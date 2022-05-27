@@ -562,22 +562,22 @@ EOF
   echo -e "\n *** Write Config into ~/.config/nvim/coc-settings.json *** \n"
   cat >${HOME}/.config/nvim/coc-settings.json <<EOF
 {
-  "coc.preferences.promptInput": false,
-  "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "suggest.enablePreselect": false,
-  "suggest.noselect": true,
-  "suggest.floatConfig": { "maxWidth": 30, "winblend": 10 },
-  "hover.floatConfig": { "maxWidth": 30, "winblend": 10 },
-  "signature.floatConfig": { "maxWidth": 30, "winblend": 10 },
-  "diagnostic.floatConfig": { "maxWidth": 30, "winblend": 10 },
-  "diagnostic.errorSign": "XX",
-  "diagnostic.warningSign": "!!",
-  "diagnostic.infoSign": "**",
-  "diagnostic.hintSign": "??",
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.promptInput": false,
   "diagnostic.enableMessage": "jump",
+  "diagnostic.errorSign": "XX",
+  "diagnostic.floatConfig": { "maxWidth": 30, "winblend": 10 },
+  "diagnostic.hintSign": "??",
+  "diagnostic.infoSign": "**",
+  "diagnostic.warningSign": "!!",
+  "hover.floatConfig": { "maxWidth": 30, "winblend": 10 },
+  "suggest.enablePreselect": false,
+  "suggest.floatConfig": { "maxWidth": 30, "winblend": 10 },
+  "suggest.noselect": true,
+  "python.formatting.blackPath": "${black_path}",
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "${black_path}"
+  "signature.floatConfig": { "maxWidth": 30, "winblend": 10 }
 }
 EOF
 }
