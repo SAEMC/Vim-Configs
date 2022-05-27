@@ -521,19 +521,19 @@ nnoremap <silent> <Leader>cs :<C-u>call ShowSignature()<CR>
 nnoremap <silent> <Leader>ct :<C-u>call CocActionAsync('jumpTypeDefinition')<CR>
 nnoremap <silent> <Leader>c[ :<C-u>call CocActionAsync('diagnosticPrevious')<CR>
 nnoremap <silent> <Leader>c] :<C-u>call CocActionAsync('diagnosticNext')<CR>
-nnoremap <silent> <Leader>go :GitGutterBufferToggle<CR>
-nnoremap <silent> <Leader>h :T<CR>i
-nnoremap <silent> <Leader>i :w !diff % -<CR>
+nnoremap <silent> <Leader>go :<C-u>GitGutterBufferToggle<CR>
+nnoremap <silent> <Leader>h :<C-u>T<CR>i
+nnoremap <silent> <Leader>i :<C-u>w !diff % -<CR>
 nnoremap <silent> <Leader>m ciw
-nnoremap <silent> <Leader>no :set number! relativenumber!<CR>
-nnoremap <silent> <Leader>o :NERDTreeTabsToggle<CR>
-nnoremap <silent> <Leader>q :bp <BAR> bd #<CR>
-nnoremap <silent> <Leader>r :w<CR> \| :edit<CR>
-nnoremap <silent> <Leader>to :TagbarToggle<CR>
-nnoremap <silent> <Leader>v :VT<CR>i
-nnoremap <silent> <Leader>w :noh<CR>
-nnoremap <silent> <Leader>[ :bprevious!<CR>
-nnoremap <silent> <Leader>] :bnext!<CR>
+nnoremap <silent> <Leader>no :<C-u>set number! relativenumber!<CR>
+nnoremap <silent> <Leader>o :<C-u>NERDTreeTabsToggle<CR>
+nnoremap <silent> <Leader>q :<C-u>bp <BAR> bd #<CR>
+nnoremap <silent> <Leader>r :<C-u>w<CR> \| <C-u>:edit<CR>
+nnoremap <silent> <Leader>to :<C-u>TagbarToggle<CR>
+nnoremap <silent> <Leader>v :<C-u>VT<CR>i
+nnoremap <silent> <Leader>w :<C-u>noh<CR>
+nnoremap <silent> <Leader>[ :<C-u>bprevious!<CR>
+nnoremap <silent> <Leader>] :<C-u>bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 
