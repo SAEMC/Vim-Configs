@@ -544,10 +544,10 @@ vnoremap <silent> <Leader><Leader> :call nerdcommenter#Comment("x", "Toggle")<CR
 
 inoremap <silent> <expr> <CR> EnterSelect()
 inoremap <silent> <expr> <TAB> pumvisible() ? "\<C-n>" : col('.') < col('$') ? "\<Right>" : "\<Tab>"
-inoremap <silent> <expr> <C-Space> coc#refresh()
 inoremap <silent> <expr> <C-d> col('.') < col('$') ? "\<C-o>x" : "\<Right>"
 inoremap <silent> <expr> <C-j> coc#float#has_scroll() ? "\<C-r>=coc#float#scroll(1, 1)\<CR>" : "\<C-o>j"
 inoremap <silent> <expr> <C-k> coc#float#has_scroll() ? "\<C-r>=coc#float#scroll(0, 1)\<CR>" : "\<C-o>k"
+inoremap <silent> <expr> <C-Space> coc#refresh()
 inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<Left>"
 inoremap <silent> <C-h> <C-o>h
 inoremap <silent> <C-l> <C-o>l
