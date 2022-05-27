@@ -472,12 +472,12 @@ let g:coc_global_extensions = [
   \ 'coc-docker',
   \ 'coc-emmet',
   \ 'coc-html',
-  \ 'coc-tsserver',
   \ 'coc-json',
   \ 'coc-markdownlint',
   \ 'coc-prettier',
   \ 'coc-pyright',
   \ 'coc-sh',
+  \ 'coc-tsserver',
   \ 'coc-yaml'
   \ ]
 
