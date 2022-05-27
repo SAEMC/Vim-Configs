@@ -9,10 +9,10 @@
 - `Plug 'jistr/vim-nerdtree-tabs'`
 - `Plug 'nathanaelkane/vim-indent-guides'`
 - `Plug 'navarasu/onedark.nvim'`
+- `Plug 'neoclide/coc.nvim', {'branch': 'release'}`
 - `Plug 'ojroques/vim-oscyank', {'branch': 'main'}`
 - `Plug 'preservim/nerdcommenter'`
 - `Plug 'preservim/tagbar'`
-- `Plug 'neoclide/coc.nvim', {'branch': 'release'}`
 - `Plug 'scrooloose/nerdtree'`
 - `Plug 'tpope/vim-fugitive'`
 - `Plug 'tpope/vim-surround'`
