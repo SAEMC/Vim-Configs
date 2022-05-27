@@ -100,12 +100,12 @@ $ source ~/.zshrc
 
 ##### [Insert]
 
-- `Ctrl` + `d`: 커서 포함 다음 글자 제거 (Delete)
-- `Ctrl` + [[`h` or `j` or `k` or `l`]]: 커서 이동
+- `<Ctrl>` + `d`: 커서 포함 다음 글자 제거 (Delete)
+- `<Ctrl>` + [[`h` or `j` or `k` or `l`]]: 커서 이동
 
 ##### [Terminal]
 
-- `Ctrl` + `w` + [[`h` or `j` or `k` or `l`]]: 윈도우 이동
+- `<Ctrl>` + `w` + [[`h` or `j` or `k` or `l`]]: 윈도우 이동
 
 ##### [NerdTree]
 
