@@ -375,7 +375,6 @@ set encoding=utf-8
 set expandtab
 set fileencodings=utf8,cp949
 set foldmethod=manual
-set guicursor=n-o-i-r-c-ci-cr-sm:ver1,v-ve:hor1
 set hidden
 set hlsearch
 set incsearch
@@ -402,18 +401,17 @@ let mapleader = ' '
 colorscheme onedark
 syntax on
 
+if (has("nvim"))
+  let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
+  let \$NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+endif
 if has("nvim-0.5.0") || has("patch-8.1.1564")
   set signcolumn=number
 else
   set signcolumn=yes
 endif
-if (empty(\$TMUX))
-  if (has("nvim"))
-    let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
+if (has("termguicolors"))
+  set termguicolors
 endif
 
 " [[ Native Commands ]]
@@ -427,6 +425,10 @@ au BufReadPost *
 \ endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
+au VimEnter,VimResume *
+\ silent set guicursor=n-o-i-r-c-ci-cr-sm:ver1,v-ve:hor1
+au VimLeave,VimSuspend *
+\ silent set guicursor=a:block
 augroup FoldView
   au!
   au BufWinLeave * mkview
