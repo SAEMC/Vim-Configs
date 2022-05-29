@@ -351,9 +351,9 @@ function writeScripts() {
     exit 1
   fi
 
-  # Clear ~/.config/nvim/coc-settings.json file
+  # Clear ~/.config/nvim/coc-settings.json
   if [[ -f ${HOME}/.config/nvim/coc-settings.json ]]; then
-    echo -e "\n *** Clear ~/.config/nvim/coc-settings.json file *** \n"
+    echo -e "\n *** Clear ~/.config/nvim/coc-settings.json *** \n"
     sudo rm ${HOME}/.config/nvim/coc-settings.json
   fi
 
