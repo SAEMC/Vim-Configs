@@ -141,6 +141,10 @@ EOF
     echo -e "\n *** Install Black *** \n"
     pip3 install black
 
+    # Install Tmux
+    echo -e "\n *** Install Tmux *** \n"
+    sudo apt-get install -y tmux
+
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     echo -e "\n *** Mac detected *** \n"
@@ -236,6 +240,10 @@ EOF
     # Set Pip3 path
     export PATH="$pip3_path:$PATH"
     pip3 install black
+
+    # Install Tmux
+    echo -e "\n *** Install Tmux *** \n"
+    /bin/zsh -e "brew install tmux"
 
   # If not Ubuntu and Mac
   else
