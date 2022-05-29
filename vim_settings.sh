@@ -75,6 +75,7 @@ function installDependencies() {
       cat >>${HOME}/.bashrc <<EOF
 
 # Neo VIM Alias
+alias vi="nvim"
 alias vim="nvim"
 EOF
     fi
@@ -174,6 +175,7 @@ EOF
 export LANG=en_US.UTF-8
 
 # Neo VIM Alias
+alias vi="nvim"
 alias vim="nvim"
 EOF
     fi
