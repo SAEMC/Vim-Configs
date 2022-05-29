@@ -77,15 +77,15 @@ $ source ~/.zshrc
 - `<Space>` + `c` + `t`: CoC Type Definition
 - `<Space>` + `c` + [[`[` or `]`]]: CoC Diagnostics 이동
 - `<Space>` + `g` + `o`: GitGutter 토글 (GitGutter On/Off)
-- `<Space>` + `h`: 터미널 수평 분할 (Horizontal)
 - `<Space>` + `i`: 변경 내용 검사 (Inspect)
 - `<Space>` + `m`: 단어 수정 (Modify)
 - `<Space>` + `n` + `o`: 넘버링 토글 (Numbering On/Off)
 - `<Space>` + `o`: NerdTree 토글 (On/Off)
 - `<Space>` + `q`: 윈도우 나가기 (Quit)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
+- `<Space>` + `s`: 터미널 수평 분할 (Split)
 - `<Space>` + `t` + `o`: Tagbar 토글 (Tagbar On/Off)
-- `<Space>` + `v`: 터미널 수직 분할 (Vertical)
+- `<Space>` + `v`: 터미널 수직 분할 (Vertical Split)
 - `<Space>` + `w`: 검색 결과 지우기 (Wipe off)
 - `<Space>` + [[`[` or `]`]]: 윈도우 이동
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절 (Equal)
@@ -112,6 +112,6 @@ $ source ~/.zshrc
 
 - `<Space>` + `c`: 현재 디렉터리 변경 (Change)
 - `<Space>` + `e`: 윈도우 확장 토글 (Extend)
-- `<Space>` + `h`: 윈도우 수평 분할 (Horizontal)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
-- `<Space>` + `v`: 윈도우 수직 분할 (Vertical)
+- `<Space>` + `s`: 윈도우 수평 분할 (Split)
+- `<Space>` + `v`: 윈도우 수직 분할 (Vertical Split)
