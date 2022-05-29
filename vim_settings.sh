@@ -8,7 +8,6 @@ function installDependencies() {
   check_node="node --version >/dev/null 2>&1"
   check_ctags="ctags --version >/dev/null 2>&1"
   check_pip3="pip3 --version >/dev/null 2>&1"
-  check_tmux="tmux -V >/dev/null 2>&1"
   check_neovim_alias="grep -w 'alias vim=\"nvim\"' ~/.bashrc >/dev/null 2>&1"
 
   # Check OS
@@ -142,13 +141,6 @@ EOF
     echo -e "\n *** Install Black *** \n"
     pip3 install black
 
-    eval "$check_tmux"
-    if [[ "$?" -ne 0 ]]; then
-      # Install Tmux
-      echo -e "\n *** Install Tmux *** \n"
-      sudo apt-get install -y tmux
-    fi
-
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     echo -e "\n *** Mac detected *** \n"
@@ -244,13 +236,6 @@ EOF
     # Set Pip3 path
     export PATH="$pip3_path:$PATH"
     pip3 install black
-
-    eval "$check_tmux"
-    if [[ "$?" -ne 0 ]]; then
-      # Install Tmux
-      echo -e "\n *** Install Tmux *** \n"
-      /bin/zsh -e "brew install tmux"
-    fi
 
   # If not Ubuntu and Mac
   else
