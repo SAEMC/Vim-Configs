@@ -436,8 +436,8 @@ augroup NerdTreeMap
   au!
   au FileType nerdtree nmap <buffer> <silent> <Leader>c C
   au FileType nerdtree nmap <buffer> <silent> <Leader>e A
-  au FileType nerdtree nmap <buffer> <silent> <Leader>h i
   au FileType nerdtree nmap <buffer> <silent> <Leader>r R
+  au FileType nerdtree nmap <buffer> <silent> <Leader>s i
   au FileType nerdtree nmap <buffer> <silent> <Leader>v s
 augroup END
 
@@ -522,13 +522,13 @@ nnoremap <silent> <Leader>ct :<C-u>call CocActionAsync('jumpTypeDefinition')<CR>
 nnoremap <silent> <Leader>c[ :<C-u>call CocActionAsync('diagnosticPrevious')<CR>
 nnoremap <silent> <Leader>c] :<C-u>call CocActionAsync('diagnosticNext')<CR>
 nnoremap <silent> <Leader>go :<C-u>GitGutterBufferToggle<CR>
-nnoremap <silent> <Leader>h :<C-u>T<CR>i
 nnoremap <silent> <Leader>i :<C-u>w !diff % -<CR>
 nnoremap <silent> <Leader>m ciw
 nnoremap <silent> <Leader>no :<C-u>set number! relativenumber!<CR>
 nnoremap <silent> <Leader>o :<C-u>NERDTreeTabsToggle<CR>
 nnoremap <silent> <Leader>q :<C-u>bp <BAR> bd #<CR>
 nnoremap <silent> <Leader>r :<C-u>w<CR> \| <C-u>:edit<CR>
+nnoremap <silent> <Leader>s :<C-u>T<CR>i
 nnoremap <silent> <Leader>to :<C-u>TagbarToggle<CR>
 nnoremap <silent> <Leader>v :<C-u>VT<CR>i
 nnoremap <silent> <Leader>w :<C-u>noh<CR>
