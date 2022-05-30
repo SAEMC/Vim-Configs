@@ -110,8 +110,8 @@ $ source ~/.zshrc
 
 ##### [NerdTree]
 
-- `<Space>` + `c`: 현재 디렉터리 변경 (Change)
 - `<Space>` + `e`: 윈도우 확장 토글 (Extend)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
 - `<Space>` + `s`: 윈도우 수평 분할 (Split)
 - `<Space>` + `v`: 윈도우 수직 분할 (Vertical Split)
+- `<Space>` + `<Enter>`: 현재 디렉터리 변경
