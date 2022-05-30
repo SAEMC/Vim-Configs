@@ -438,11 +438,11 @@ augroup FoldView
 augroup END
 augroup NerdTreeMap
   au!
-  au FileType nerdtree nmap <buffer> <silent> <Leader>c C
   au FileType nerdtree nmap <buffer> <silent> <Leader>e A
   au FileType nerdtree nmap <buffer> <silent> <Leader>r R
   au FileType nerdtree nmap <buffer> <silent> <Leader>s i
   au FileType nerdtree nmap <buffer> <silent> <Leader>v s
+  au FileType nerdtree nmap <buffer> <silent> <Leader><CR> C
 augroup END
 
 " [[ Plug Options ]]
