@@ -389,6 +389,7 @@ set ruler
 set shiftwidth=2
 set shortmess+=c
 set showmatch
+set signcolumn=number
 set smartcase
 set smartindent
 set smarttab
@@ -400,18 +401,11 @@ set tabstop=2
 set updatetime=300
 
 let mapleader = ' '
+let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
+let \$NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 colorscheme onedark
 syntax on
 
-if (has("nvim"))
-  let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
-  let \$NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-endif
-if has("nvim-0.5.0") || has("patch-8.1.1564")
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
 if (has("termguicolors"))
   set termguicolors
 endif
@@ -497,9 +491,9 @@ function! EnterSelect()
 endfunction
 function! FoldCode()
   if foldclosed('.') != -1
-    execute 'normal gv zo'
+    silent execute 'normal gv zo'
   else
-    execute 'normal gv zf'
+    silent execute 'normal gv zf'
   endif
 endfunction
 function! ShowSignature()
@@ -511,7 +505,7 @@ function! ShowSignature()
 endfunction
 function! SurroundCode()
   let msg = execute(':verbose vmap <Plug>VSurround')
-  call eval(printf(matchstr(msg, '<SNR>.*0)')))
+  silent call eval(printf(matchstr(msg, '<SNR>.*0)')))
 endfunction
 
 " [[ Key Mappings ]]
