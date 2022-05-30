@@ -445,6 +445,7 @@ let g:AutoPairsMapCR = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep = ' '
+let g:indent_guides_default_mapping = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:NERDCommentEmptyLines = 1
