@@ -421,6 +421,8 @@ au BufReadPost *
 \ endif
 au CursorHold * 
 \ silent call CocActionAsync('highlight')
+au FileType * 
+\ silent set formatoptions-=cro
 au VimEnter,VimResume *
 \ silent set guicursor=n-o-i-r-c-ci-cr-sm:ver1,v-ve:hor1
 au VimLeave,VimSuspend *
