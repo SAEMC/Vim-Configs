@@ -566,7 +566,7 @@ EOF
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "coc.preferences.formatOnType": true,
-  "coc.preferences.promptInput": true,
+  "coc.preferences.promptInput": false,
   "diagnostic.enableMessage": "jump",
   "diagnostic.errorSign": "XX",
   "diagnostic.floatConfig": { "maxWidth": 30, "winblend": 10 },
