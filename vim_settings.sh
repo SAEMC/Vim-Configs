@@ -579,7 +579,7 @@ EOF
   "signature.floatConfig": { "maxWidth": 30, "winblend": 10 },
   "suggest.enablePreselect": false,
   "suggest.floatConfig": { "maxWidth": 30, "winblend": 10 },
-  "suggest.noselect": true
+  "suggest.noselect": true,
 }
 EOF
 }
