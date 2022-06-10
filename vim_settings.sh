@@ -548,6 +548,10 @@ nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 
 vnoremap <silent> c <Nop>
+vnoremap <silent> cd <Nop>
+vnoremap <silent> cp <Nop>
+vnoremap <silent> cs <Nop>
+vnoremap <silent> cx <Nop>
 vnoremap <silent> <Leader><Leader> :<C-u>call nerdcommenter#Comment("x", "Toggle")<CR>
 vnoremap <silent> <Leader>f :<C-u>call FoldCode()<CR>
 vnoremap <silent> <Leader>m c
