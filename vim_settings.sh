@@ -515,6 +515,11 @@ endfunction
 " [[ Key Mappings ]]
 nnoremap <silent> <Space> <Nop>
 nnoremap <silent> cc <Nop>
+nnoremap <silent> ch <Nop>
+nnoremap <silent> ciw <Nop>
+nnoremap <silent> cj <Nop>
+nnoremap <silent> ck <Nop>
+nnoremap <silent> cl <Nop>
 nnoremap <silent> <Leader>cc :<C-u>call CocAction('diagnosticInfo')<CR>
 nnoremap <silent> <Leader>cd :<C-u>call CocActionAsync('jumpDefinition')<CR>
 nnoremap <silent> <Leader>ci :<C-u>call CocActionAsync('jumpImplementation')<CR>
