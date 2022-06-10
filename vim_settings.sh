@@ -516,7 +516,6 @@ endfunction
 nnoremap <silent> <Space> <Nop>
 nnoremap <silent> cc <Nop>
 nnoremap <silent> ch <Nop>
-nnoremap <silent> ciw <Nop>
 nnoremap <silent> cj <Nop>
 nnoremap <silent> ck <Nop>
 nnoremap <silent> cl <Nop>
