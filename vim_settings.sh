@@ -450,11 +450,12 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:indent_guides_default_mapping = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
-let g:NERDCommentEmptyLines = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDCreateDefaultMappings = 0
 let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
+let g:NERDToggleCheckAllLines = 1
+let g:NERDTrimTrailingWhitespace = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
 " [iTerm2] -> [Preferences] -> [General] -> [Selection]
 " Check up 'Applications in terminal may access clipboard'
