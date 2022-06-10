@@ -77,7 +77,7 @@ $ source ~/.zshrc
 - `<Space>` + `c` + `t`: CoC go to Type Definition
 - `<Space>` + `c` + [[`[` or `]`]]: CoC Diagnostics 이동
 - `<Space>` + `g` + `o`: GitGutter 토글 (GitGutter On/Off)
-- `<Space>` + `i`: 변경 내용 검사 (Inspect)
+- `<Space>` + `i`: 현재 버퍼 변경 내용 검사 (Inspect)
 - `<Space>` + `m`: 단어 수정 (Modify)
 - `<Space>` + `n` + `o`: 넘버링 토글 (Numbering On/Off)
 - `<Space>` + `o`: NerdTree 토글 (On/Off)
