@@ -69,12 +69,12 @@ $ source ~/.zshrc
 ##### [Normal]
 
 - `<Space>` + `c` + `c`: CoC Check
-- `<Space>` + `c` + `d`: CoC Definition
-- `<Space>` + `c` + `i`: CoC Implementation
+- `<Space>` + `c` + `d`: CoC go to Definition
+- `<Space>` + `c` + `i`: CoC go to Implementation
 - `<Space>` + `c` + `o`: CoC 토글 (CoC On/Off)
-- `<Space>` + `c` + `r`: CoC Reference
+- `<Space>` + `c` + `r`: CoC go to Reference
 - `<Space>` + `c` + `s`: CoC Signature
-- `<Space>` + `c` + `t`: CoC Type Definition
+- `<Space>` + `c` + `t`: CoC go to Type Definition
 - `<Space>` + `c` + [[`[` or `]`]]: CoC Diagnostics 이동
 - `<Space>` + `g` + `o`: GitGutter 토글 (GitGutter On/Off)
 - `<Space>` + `i`: 변경 내용 검사 (Inspect)
