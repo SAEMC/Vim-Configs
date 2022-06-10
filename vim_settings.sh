@@ -512,6 +512,7 @@ function! SurroundCode()
   silent call eval(printf(matchstr(msg, '<SNR>.*0)')))
 endfunction
 
+
 " [[ Key Mappings ]]
 nnoremap <silent> <Space> <Nop>
 nnoremap <silent> cc <Nop>
