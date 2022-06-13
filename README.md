@@ -76,6 +76,11 @@ $ source ~/.zshrc
 - `<Space>` + `c` + `s`: CoC Signature
 - `<Space>` + `c` + `t`: CoC go to Type Definition
 - `<Space>` + `c` + [[`[` or `]`]]: CoC Diagnostics 이동
+- `<Space>` + `g` + `a`: Git Add
+- `<Space>` + `g` + `b`: Git Blame
+- `<Space>` + `g` + `c`: Git Commit
+- `<Space>` + `g` + `d`: Git Diff
+- `<Space>` + `g` + `l`: Git Log
 - `<Space>` + `g` + `o`: GitGutter 토글 (GitGutter On/Off)
 - `<Space>` + `i`: 현재 버퍼 변경 내용 검사 (Inspect)
 - `<Space>` + `m`: 단어 수정 (Modify)
