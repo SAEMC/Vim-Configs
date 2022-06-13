@@ -531,6 +531,11 @@ nnoremap <silent> <Leader>cs :<C-u>call ShowSignature()<CR>
 nnoremap <silent> <Leader>ct :<C-u>call CocActionAsync('jumpTypeDefinition')<CR>
 nnoremap <silent> <Leader>c[ :<C-u>call CocActionAsync('diagnosticPrevious')<CR>
 nnoremap <silent> <Leader>c] :<C-u>call CocActionAsync('diagnosticNext')<CR>
+nnoremap <silent> <Leader>ga :<C-u>Git add .<CR>
+nnoremap <silent> <Leader>gb :<C-u>Git blame<CR>
+nnoremap <silent> <Leader>gc :<C-u>Git commit<CR>
+nnoremap <silent> <Leader>gd :<C-u>Git diff<CR>
+nnoremap <silent> <Leader>gl :<C-u>Git log<CR>
 nnoremap <silent> <Leader>go :<C-u>GitGutterBufferToggle<CR>
 nnoremap <silent> <Leader>i :<C-u>w !diff % -<CR>
 nnoremap <silent> <Leader>m ciw
