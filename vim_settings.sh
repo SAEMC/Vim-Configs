@@ -547,6 +547,7 @@ nnoremap <silent> <Leader>] :<C-u>bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 
+
 vnoremap <silent> c <Nop>
 vnoremap <silent> cd <Nop>
 vnoremap <silent> cp <Nop>
