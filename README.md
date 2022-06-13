@@ -96,7 +96,7 @@ $ source ~/.zshrc
 - `<Space>` + `f`: 코드 폴딩 토글 (Fold)
 - `<Space>` + `m`: 선택 부분 수정 (Modify)
 - `<Space>` + `s`: 선택 부분 서라운드 (Surround)
-- `<Space>` + `y`: 클립보드(Vim -> XTerm -> OS)로 복사 (Yank)
+- `<Space>` + `y`: 클립보드(Vim -> Xterm -> OS)로 복사 (Yank)
 - `<Space>` + `<Space>`: 주석 토글
 
 ##### [Insert]
