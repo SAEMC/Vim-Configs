@@ -592,7 +592,7 @@ EOF
   "diagnostic.hintSign": "H>",
   "diagnostic.infoSign": "I>",
   "diagnostic.warningSign": "W>",
-  "hover.floatConfig": { "maxWidth": 30, "winblend": 10 },
+  "hover.floatConfig": { "winblend": 10 },
   "python.formatting.blackPath": "${black_path}",
   "python.formatting.provider": "black",
   "signature.floatConfig": { "maxWidth": 30, "winblend": 10 },
