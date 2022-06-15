@@ -524,6 +524,8 @@ nnoremap <silent> cj <Nop>
 nnoremap <silent> ck <Nop>
 nnoremap <silent> cl <Nop>
 nnoremap <silent> cw <Nop>
+nnoremap <silent> <expr> <C-j> coc#float#has_scroll() ? coc#float#scroll(1, 1) : "\<C-j>"
+nnoremap <silent> <expr> <C-k> coc#float#has_scroll() ? coc#float#scroll(0, 1) : "\<C-k>"
 nnoremap <silent> <Leader>cc :<C-u>call CocAction('diagnosticInfo')<CR>
 nnoremap <silent> <Leader>cd :<C-u>call CocActionAsync('jumpDefinition')<CR>
 nnoremap <silent> <Leader>ci :<C-u>call CocActionAsync('jumpImplementation')<CR>
@@ -559,6 +561,8 @@ vnoremap <silent> cd <Nop>
 vnoremap <silent> cp <Nop>
 vnoremap <silent> cs <Nop>
 vnoremap <silent> cx <Nop>
+vnoremap <silent> <expr> <C-j> coc#float#has_scroll() ? coc#float#scroll(1, 1) : "\<C-j>"
+vnoremap <silent> <expr> <C-k> coc#float#has_scroll() ? coc#float#scroll(0, 1) : "\<C-k>"
 vnoremap <silent> <Leader><Leader> :<C-u>call nerdcommenter#Comment("x", "Toggle")<CR>
 vnoremap <silent> <Leader>f :<C-u>call FoldCode()<CR>
 vnoremap <silent> <Leader>m c
