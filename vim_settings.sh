@@ -142,6 +142,9 @@ EOF
     echo -e "\n *** Install Black *** \n"
     pip3 install black
 
+    # Install Pynvim
+    # python3 -m pip install --user --upgrade pynvim
+
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     echo -e "\n *** Mac detected *** \n"
@@ -239,6 +242,9 @@ EOF
     export PATH="$pip3_path:$PATH"
     pip3 install black
 
+    # Install Pynvim
+    # python3 -m pip install --user --upgrade pynvim
+
   # If not Ubuntu and Mac
   else
     echo "${os_type} not supports!"
@@ -298,8 +304,10 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'blueyed/vim-diminactive'
+Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'jpalardy/vim-slime', { 'for': 'python' }
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'navarasu/onedark.nvim'
@@ -555,6 +563,14 @@ nnoremap <silent> <Leader>[ :<C-u>bprevious!<CR>
 nnoremap <silent> <Leader>] :<C-u>bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
+nnoremap <silent> <F4>a :<C-u>IPythonCellRun<CR>
+nnoremap <silent> <F4>j :<C-u>IPythonCellNextCell<CR>
+nnoremap <silent> <F4>k :<C-u>IPythonCellPrevCell<CR>
+nnoremap <silent> <F4>l :<C-u>IPythonCellClear<CR>
+nnoremap <silent> <F4>n :<C-u>IPythonCellExecuteCellJump<CR>
+nnoremap <silent> <F4>o :<C-u>SlimeSend1 ipython --matplotlib<CR>
+nnoremap <silent> <F4>q :<C-u>IPythonCellClose<CR>
+nnoremap <silent> <F4>r :<C-u>IPythonCellRestart<CR>
 
 vnoremap <silent> c <Nop>
 vnoremap <silent> cd <Nop>
