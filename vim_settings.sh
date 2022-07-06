@@ -570,12 +570,13 @@ nnoremap <silent> <Leader>] :<C-u>bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 " nnoremap <silent> <F4>a :<C-u>IPythonCellRun<CR>
+" nnoremap <silent> <F4>c :<C-u>IPythonCellClose<CR>
 " nnoremap <silent> <F4>j :<C-u>IPythonCellNextCell<CR>
 " nnoremap <silent> <F4>k :<C-u>IPythonCellPrevCell<CR>
 " nnoremap <silent> <F4>l :<C-u>IPythonCellClear<CR>
 " nnoremap <silent> <F4>n :<C-u>IPythonCellExecuteCellJump<CR>
 " nnoremap <silent> <F4>o :<C-u>SlimeSend1 ipython --matplotlib<CR>
-" nnoremap <silent> <F4>q :<C-u>IPythonCellClose<CR>
+" nnoremap <silent> <F4>q :<C-u>SlimeSend1 exit<CR>
 " nnoremap <silent> <F4>r :<C-u>IPythonCellRestart<CR>
 
 vnoremap <silent> c <Nop>
