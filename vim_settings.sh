@@ -304,10 +304,10 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'blueyed/vim-diminactive'
-Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+" Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'jpalardy/vim-slime', { 'for': 'python' }
+" Plug 'jpalardy/vim-slime', { 'for': 'python' }
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'navarasu/onedark.nvim'
@@ -473,12 +473,12 @@ let g:oscyank_max_length = 1000000
 let g:oscyank_silent = v:true
 let g:oscyank_term = 'tmux'
 let g:rainbow_active = 1
-let g:slime_default_config = {
-\ 'socket_name': get(split(\$TMUX, ','), 0),
-\ 'target_pane': '{top-right}' }
-let g:slime_dont_ask_default = 1
-let g:slime_python_ipython = 1
-let g:slime_target = 'tmux'
+" let g:slime_default_config = {
+" \ 'socket_name': get(split(\$TMUX, ','), 0),
+" \ 'target_pane': '{top-right}' }
+" let g:slime_dont_ask_default = 1
+" let g:slime_python_ipython = 1
+" let g:slime_target = 'tmux'
 let g:surround_no_mappings = 1
 let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
@@ -569,14 +569,14 @@ nnoremap <silent> <Leader>[ :<C-u>bprevious!<CR>
 nnoremap <silent> <Leader>] :<C-u>bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
-nnoremap <silent> <F4>a :<C-u>IPythonCellRun<CR>
-nnoremap <silent> <F4>j :<C-u>IPythonCellNextCell<CR>
-nnoremap <silent> <F4>k :<C-u>IPythonCellPrevCell<CR>
-nnoremap <silent> <F4>l :<C-u>IPythonCellClear<CR>
-nnoremap <silent> <F4>n :<C-u>IPythonCellExecuteCellJump<CR>
-nnoremap <silent> <F4>o :<C-u>SlimeSend1 ipython --matplotlib<CR>
-nnoremap <silent> <F4>q :<C-u>IPythonCellClose<CR>
-nnoremap <silent> <F4>r :<C-u>IPythonCellRestart<CR>
+" nnoremap <silent> <F4>a :<C-u>IPythonCellRun<CR>
+" nnoremap <silent> <F4>j :<C-u>IPythonCellNextCell<CR>
+" nnoremap <silent> <F4>k :<C-u>IPythonCellPrevCell<CR>
+" nnoremap <silent> <F4>l :<C-u>IPythonCellClear<CR>
+" nnoremap <silent> <F4>n :<C-u>IPythonCellExecuteCellJump<CR>
+" nnoremap <silent> <F4>o :<C-u>SlimeSend1 ipython --matplotlib<CR>
+" nnoremap <silent> <F4>q :<C-u>IPythonCellClose<CR>
+" nnoremap <silent> <F4>r :<C-u>IPythonCellRestart<CR>
 
 vnoremap <silent> c <Nop>
 vnoremap <silent> cd <Nop>
