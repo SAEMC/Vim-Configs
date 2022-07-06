@@ -5,8 +5,10 @@
 - `Plug 'airblade/vim-gitgutter'`
 - `Plug 'ap/vim-css-color'`
 - `Plug 'blueyed/vim-diminactive'`
+- `Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }`
 - `Plug 'jiangmiao/auto-pairs'`
 - `Plug 'jistr/vim-nerdtree-tabs'`
+- `Plug 'jpalardy/vim-slime', { 'for': 'python' }`
 - `Plug 'luochen1990/rainbow'`
 - `Plug 'nathanaelkane/vim-indent-guides'`
 - `Plug 'navarasu/onedark.nvim'`
@@ -95,7 +97,14 @@ $ source ~/.zshrc
 - `<Space>` + `w`: 검색 결과 지우기 (Wipe off)
 - `<Space>` + [[`[` or `]`]]: 윈도우 이동
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절 (Equal)
-- `<Space>` + `<F2>`: CoC Rename
+- `<F2>`: CoC Rename
+- `<F4>` + `a`: Vim-iPython 전체 셀 실행 (All Cells)
+- `<F4>` + [[`j` or `k`]]: Vim-iPython 셀 이동
+- `<F4>` + `l`: Vim-iPython 셀 클리어
+- `<F4>` + `n`: Vim-iPython 셀 실행 후 다음 셀 이동 (Next Cell)
+- `<F4>` + `o`: Vim-iPython 실행 (Open)
+- `<F4>` + `q`: Vim-iPython Plot 종료 (Quit)
+- `<F4>` + `r`: Vim-iPython 재실행 (Restart)
 
 ##### [Visual]
 
