@@ -5,10 +5,8 @@
 - `Plug 'airblade/vim-gitgutter'`
 - `Plug 'ap/vim-css-color'`
 - `Plug 'blueyed/vim-diminactive'`
-- `Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }` (옵션)
 - `Plug 'jiangmiao/auto-pairs'`
 - `Plug 'jistr/vim-nerdtree-tabs'`
-- `Plug 'jpalardy/vim-slime', { 'for': 'python' }` (옵션)
 - `Plug 'luochen1990/rainbow'`
 - `Plug 'nathanaelkane/vim-indent-guides'`
 - `Plug 'navarasu/onedark.nvim'`
@@ -21,6 +19,8 @@
 - `Plug 'tpope/vim-surround'`
 - `Plug 'vim-airline/vim-airline'`
 - `Plug 'vim-airline/vim-airline-themes'`
+- `Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }` (옵션)
+- `Plug 'jpalardy/vim-slime', { 'for': 'python' }` (옵션)
 
 ---
 
@@ -98,14 +98,6 @@ $ source ~/.zshrc
 - `<Space>` + [[`[` or `]`]]: 윈도우 이동
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절 (Equal)
 - `<F2>`: CoC Rename
-- `<F4>` + `a`: Vim-iPython 전체 셀 실행 (All Cells) (옵션)
-- `<F4>` + `c`: Vim-iPython Plot 닫기 (Close) (옵션)
-- `<F4>` + [[`j` or `k`]]: Vim-iPython 셀 이동 (옵션)
-- `<F4>` + `l`: Vim-iPython 셀 클리어 (옵션)
-- `<F4>` + `n`: Vim-iPython 셀 실행 후 다음 셀 이동 (Next Cell) (옵션)
-- `<F4>` + `q`: Vim-iPython 종료 (Quit) (옵션)
-- `<F4>` + `r`: Vim-iPython 재실행 (Restart) (옵션)
-- `<F4>` + `s`: Vim-iPython 실행 (Start) (옵션)
 
 ##### [Visual]
 
@@ -131,3 +123,14 @@ $ source ~/.zshrc
 - `<Space>` + `s`: 윈도우 수평 분할 (Split)
 - `<Space>` + `v`: 윈도우 수직 분할 (Vertical Split)
 - `<Space>` + `<Enter>`: 현재 디렉터리 변경
+
+##### [Vim-Slime & Vim-iPython] (옵션)
+
+- `<F4>` + `a`: Vim-iPython 전체 셀 실행 (All Cells)
+- `<F4>` + `c`: Vim-iPython Plot 닫기 (Close)
+- `<F4>` + [[`j` or `k`]]: Vim-iPython 셀 이동
+- `<F4>` + `l`: Vim-iPython 셀 클리어
+- `<F4>` + `n`: Vim-iPython 셀 실행 후 다음 셀 이동 (Next Cell)
+- `<F4>` + `q`: Vim-iPython 종료 (Quit)
+- `<F4>` + `r`: Vim-iPython 재실행 (Restart)
+- `<F4>` + `s`: Vim-iPython 실행 (Start)
