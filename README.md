@@ -123,11 +123,11 @@ $ source ~/.zshrc (Mac인 경우)
 
 ##### [Vim-Slime & Vim-iPython] (옵션: `~/.vimrc` 파일에서 관련 내용 주석 해제)
 
-- `<F4>` + `a`: Vim-iPython 전체 셀 실행 (All Cells)
-- `<F4>` + `c`: Vim-iPython Plot 닫기 (Close)
-- `<F4>` + [[`j` or `k`]]: Vim-iPython 셀 이동
-- `<F4>` + `l`: Vim-iPython 셀 클리어
-- `<F4>` + `n`: Vim-iPython 셀 실행 후 다음 셀 이동 (Next Cell)
-- `<F4>` + `q`: Vim-iPython 종료 (Quit)
-- `<F4>` + `r`: Vim-iPython 재실행 (Restart)
-- `<F4>` + `s`: Vim-iPython 실행 (Start)
+- `<F4>` + `a`: 전체 셀 실행 (All Cells)
+- `<F4>` + `c`: Plot 닫기 (Close)
+- `<F4>` + [[`j` or `k`]]: 셀 이동
+- `<F4>` + `l`: 셀 클리어
+- `<F4>` + `n`: 셀 실행 후 다음 셀 이동 (Next Cell)
+- `<F4>` + `q`: 종료 (Quit)
+- `<F4>` + `r`: 재실행 (Restart)
+- `<F4>` + `s`: 실행 (Start)
