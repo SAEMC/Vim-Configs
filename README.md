@@ -103,9 +103,9 @@ $ source ~/.zshrc
 - `<F4>` + [[`j` or `k`]]: Vim-iPython 셀 이동 (옵션)
 - `<F4>` + `l`: Vim-iPython 셀 클리어 (옵션)
 - `<F4>` + `n`: Vim-iPython 셀 실행 후 다음 셀 이동 (Next Cell) (옵션)
-- `<F4>` + `o`: Vim-iPython 실행 (Open) (옵션)
 - `<F4>` + `q`: Vim-iPython 종료 (Quit) (옵션)
 - `<F4>` + `r`: Vim-iPython 재실행 (Restart) (옵션)
+- `<F4>` + `s`: Vim-iPython 실행 (Start) (옵션)
 
 ##### [Visual]
 
