@@ -50,16 +50,10 @@ $ ./vim_settings.sh [OPTIONS]
 ```
 
 - Dependencies 설치 활성화 (Plugins만 설치 및 Scripts만 작성은 제외)
-  > Linux인 경우
 
 ```bash
-$ source ~/.bashrc
-```
-
-> Mac인 경우
-
-```bash
-$ source ~/.zshrc
+$ source ~/.bashrc (Linux인 경우)
+$ source ~/.zshrc (Mac인 경우)
 ```
 
 ---
