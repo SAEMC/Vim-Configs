@@ -20,7 +20,7 @@
 - `Plug 'vim-airline/vim-airline'`
 - `Plug 'vim-airline/vim-airline-themes'`
 
-> 옵션 - `~/.vimrc` 파일에서 주석 해제 필요
+> 옵션: `~/.vimrc` 파일에서 주석 해제 필요
 
 - `Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }`
 - `Plug 'jpalardy/vim-slime', { 'for': 'python' }`
@@ -127,7 +127,7 @@ $ source ~/.zshrc
 - `<Space>` + `v`: 윈도우 수직 분할 (Vertical Split)
 - `<Space>` + `<Enter>`: 현재 디렉터리 변경
 
-##### [Vim-Slime & Vim-iPython] (옵션)
+##### [Vim-Slime & Vim-iPython] (옵션: `~/.vimrc` 파일에서 주석 해제 필요)
 
 - `<F4>` + `a`: Vim-iPython 전체 셀 실행 (All Cells)
 - `<F4>` + `c`: Vim-iPython Plot 닫기 (Close)
