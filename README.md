@@ -128,6 +128,6 @@ $ source ~/.zshrc (Mac인 경우)
 - `<F4>` + [[`j` or `k`]]: 셀 이동
 - `<F4>` + `l`: 셀 클리어
 - `<F4>` + `n`: 셀 실행 후 다음 셀 이동 (Next Cell)
-- `<F4>` + `q`: Vim-iPython 종료 (Quit)
-- `<F4>` + `r`: Vim-iPython 재실행 (Restart)
-- `<F4>` + `s`: Vim-iPython 실행 (Start)
+- `<F4>` + `q`: iPython 종료 (Quit)
+- `<F4>` + `r`: iPython 재실행 (Restart)
+- `<F4>` + `s`: iPython 실행 (Start)
