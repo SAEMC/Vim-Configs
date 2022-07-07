@@ -30,7 +30,7 @@
 ### 준비 사항
 
 - `sudo` 및 `git` 설치
-  > Mac은 XCode/Homebrew가 이미 설치되어 있는 환경
+  > Mac은 XCode 및 Homebrew가 이미 설치되어 있는 환경
 
 ```bash
 $ (sudo) apt-get update && \
