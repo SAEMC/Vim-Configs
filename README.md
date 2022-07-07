@@ -38,9 +38,9 @@ $ (sudo) apt-get update && \
 ```
 
 - SAEMC Vim-Settings 프로젝트 다운로드 및 실행
-  > `$ ./vim_settings.sh -a` -> Dependencies/Plugins 설치 후 Scripts 작성  
-  > `$ ./vim_settings.sh -d` -> Dependencies만 설치  
-  > `$ ./vim_settings.sh -p` -> Plugins만 설치 (작성되어 있는 Scripts 제거됨)  
+  > `$ ./vim_settings.sh -a` -> Dependencies/Plugins 설치 후 Scripts 작성 (권장)
+  > `$ ./vim_settings.sh -d` -> Dependencies만 설치
+  > `$ ./vim_settings.sh -p` -> Plugins만 설치 (작성되어 있는 Scripts 제거됨)
   > `$ ./vim_settings.sh -s` -> Scripts만 작성
 
 ```bash
