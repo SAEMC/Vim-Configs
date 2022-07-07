@@ -19,7 +19,9 @@
 - `Plug 'tpope/vim-surround'`
 - `Plug 'vim-airline/vim-airline'`
 - `Plug 'vim-airline/vim-airline-themes'`
-  > 옵션 - `~/.vimrc` 파일에서 주석 해제 필요
+
+> 옵션 - `~/.vimrc` 파일에서 주석 해제 필요
+
 - `Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }`
 - `Plug 'jpalardy/vim-slime', { 'for': 'python' }`
 
