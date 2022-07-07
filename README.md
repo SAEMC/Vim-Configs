@@ -125,9 +125,10 @@ $ source ~/.zshrc (Mac인 경우)
 
 - `<F4>` + `a`: 전체 셀 실행 (All Cells)
 - `<F4>` + `c`: Plot 닫기 (Close)
-- `<F4>` + [[`j` or `k`]]: 셀 이동
-- `<F4>` + `l`: 셀 클리어
-- `<F4>` + `n`: 셀 실행 후 다음 셀 이동 (Next Cell)
+- `<F4>` + `j`: 현재 셀 실행 후 다음 셀 이동 (Jump Cell)
+- `<F4>` + `n`: 다음 셀 이동 (Next Cell)
+- `<F4>` + `p`: 이전 셀 이동 (Previous Cell)
 - `<F4>` + `q`: iPython 종료 (Quit)
 - `<F4>` + `r`: iPython 재실행 (Restart)
 - `<F4>` + `s`: iPython 실행 (Start)
+- `<F4>` + `w`: iPython 실행 결과 지우기 (Wipe off)
