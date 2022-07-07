@@ -304,10 +304,8 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'blueyed/vim-diminactive'
-" Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
-" Plug 'jpalardy/vim-slime', { 'for': 'python' }
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'navarasu/onedark.nvim'
@@ -320,6 +318,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+" Plug 'jpalardy/vim-slime', { 'for': 'python' }
 call plug#end()
 EOF
 
@@ -570,6 +571,7 @@ nnoremap <silent> <Leader>[ :<C-u>bprevious!<CR>
 nnoremap <silent> <Leader>] :<C-u>bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
+
 " nnoremap <silent> <F4>a :<C-u>IPythonCellRun<CR>
 " nnoremap <silent> <F4>c :<C-u>IPythonCellClose<CR>
 " nnoremap <silent> <F4>j :<C-u>IPythonCellNextCell<CR>
