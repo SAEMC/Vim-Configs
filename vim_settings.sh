@@ -574,7 +574,7 @@ nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
 
 " nnoremap <silent> <F4>a :<C-u>IPythonCellRun<CR>
 " nnoremap <silent> <F4>c :<C-u>IPythonCellClose<CR>
-" nnoremap <silent> <F4>j :<C-u>IPythonCellExecuteCellJump<CR>
+" nnoremap <silent> <F4>j :<C-u>IPythonCellExecuteCellVerboseJump<CR>
 " nnoremap <silent> <F4>n :<C-u>IPythonCellNextCell<CR>
 " nnoremap <silent> <F4>p :<C-u>IPythonCellPrevCell<CR>
 " nnoremap <silent> <F4>q :<C-u>SlimeSend1 exit<CR>
