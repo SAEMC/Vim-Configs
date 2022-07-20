@@ -487,11 +487,7 @@ let g:tagbar_autofocus = 1
 let g:tagbar_ctags_bin = '$ctags_path'
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 let g:coc_global_extensions = [
-  \ 'coc-clangd',
-  \ 'coc-css',
   \ 'coc-docker',
-  \ 'coc-emmet',
-  \ 'coc-html',
   \ 'coc-json',
   \ 'coc-markdownlint',
   \ 'coc-prettier',
