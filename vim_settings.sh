@@ -487,7 +487,7 @@ let g:tagbar_autofocus = 1
 let g:tagbar_ctags_bin = '$ctags_path'
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 " If need 'coc-clangd', 'coc-css', 'coc-emmet', 'coc-html' then add those
-" Check ~/.config/coc/extensions and next
+" Check ~/.config/coc/extensions/[node_modules and package.json]
 let g:coc_global_extensions = [
   \ 'coc-docker',
   \ 'coc-json',
