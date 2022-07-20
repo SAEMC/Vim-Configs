@@ -300,6 +300,7 @@ set nocompatible
 filetype off
 
 " [[ Plugs ]]
+" Check ~/.local/share/nvim/plugged
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
@@ -488,6 +489,7 @@ let g:tagbar_ctags_bin = '$ctags_path'
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
 " If need 'coc-clangd', 'coc-css', 'coc-emmet', 'coc-html' then add those
 " Check ~/.config/coc/extensions/[node_modules and package.json]
+" Check ~/.config/nvim/coc-settings.json
 let g:coc_global_extensions = [
   \ 'coc-docker',
   \ 'coc-json',
