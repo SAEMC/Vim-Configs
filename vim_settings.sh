@@ -471,7 +471,7 @@ let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
 let g:tagbar_ctags_bin = '$ctags_path'
 " Check https://github.com/neoclide/coc.nvim/wiki/Language-servers
-" If need 'coc-clangd', 'coc-css', 'coc-emmet', 'coc-html' then add those
+" If need 'coc-clangd', 'coc-css', 'coc-emmet', 'coc-html', 'coc-sumneko-lua' then add those
 " If not need execute [:CocUninstall 'coc-name']
 " Check ~/.config/coc/extensions/[node_modules and package.json]
 " Check ~/.config/nvim/coc-settings.json
@@ -482,7 +482,6 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-pyright',
   \ 'coc-sh',
-  \ 'coc-sumneko-lua',
   \ 'coc-tsserver',
   \ 'coc-yaml'
   \ ]
