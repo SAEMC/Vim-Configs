@@ -142,9 +142,6 @@ EOF
     echo -e "\n *** Install Black *** \n"
     pip3 install black
 
-    # Install Pynvim
-    # python3 -m pip install --user --upgrade pynvim
-
   # If Mac
   elif [[ "$os_type" == "darwin"* ]]; then
     echo -e "\n *** Mac detected *** \n"
@@ -242,9 +239,6 @@ EOF
     export PATH="$pip3_path:$PATH"
     pip3 install black
 
-    # Install Pynvim
-    # python3 -m pip install --user --upgrade pynvim
-
   # If not Ubuntu and Mac
   else
     echo "${os_type} not supports!"
@@ -319,9 +313,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
-" Plug 'jpalardy/vim-slime', { 'for': 'python' }
 call plug#end()
 EOF
 
@@ -475,14 +466,6 @@ let g:oscyank_max_length = 1000000
 let g:oscyank_silent = v:true
 let g:oscyank_term = 'tmux'
 let g:rainbow_active = 1
-" Execute [python3 -m pip install --user --upgrade pynvim]
-" Execute [pip install IPython matplotlib]
-" let g:slime_default_config = {
-" \ 'socket_name': get(split(\$TMUX, ','), 0),
-" \ 'target_pane': '{top-right}' }
-" let g:slime_dont_ask_default = 1
-" let g:slime_python_ipython = 1
-" let g:slime_target = 'tmux'
 let g:surround_no_mappings = 1
 let g:tagbar_autoclose = 0
 let g:tagbar_autofocus = 1
@@ -572,16 +555,6 @@ nnoremap <silent> <Leader>[ :<C-u>bprevious!<CR>
 nnoremap <silent> <Leader>] :<C-u>bnext!<CR>
 nnoremap <silent> <Leader>= <C-w>=
 nnoremap <silent> <F2> :<C-u>call CocActionAsync('rename')<CR>
-
-" nnoremap <silent> <F4>a :<C-u>IPythonCellRun<CR>
-" nnoremap <silent> <F4>c :<C-u>IPythonCellClose<CR>
-" nnoremap <silent> <F4>j :<C-u>IPythonCellExecuteCellVerboseJump<CR>
-" nnoremap <silent> <F4>n :<C-u>IPythonCellNextCell<CR>
-" nnoremap <silent> <F4>p :<C-u>IPythonCellPrevCell<CR>
-" nnoremap <silent> <F4>q :<C-u>SlimeSend1 exit<CR>
-" nnoremap <silent> <F4>r :<C-u>IPythonCellRestart<CR>
-" nnoremap <silent> <F4>s :<C-u>SlimeSend1 ipython --matplotlib<CR>
-" nnoremap <silent> <F4>w :<C-u>IPythonCellClear<CR>
 
 vnoremap <silent> c <Nop>
 vnoremap <silent> cd <Nop>
