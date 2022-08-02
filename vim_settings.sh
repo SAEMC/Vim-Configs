@@ -477,11 +477,11 @@ let g:tagbar_ctags_bin = '$ctags_path'
 let g:coc_global_extensions = [
   \ 'coc-docker',
   \ 'coc-json',
-  \ 'coc-lua',
   \ 'coc-markdownlint',
   \ 'coc-prettier',
   \ 'coc-pyright',
   \ 'coc-sh',
+  \ 'coc-sumneko-lua',
   \ 'coc-tsserver',
   \ 'coc-yaml'
   \ ]
