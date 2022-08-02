@@ -476,6 +476,7 @@ let g:oscyank_silent = v:true
 let g:oscyank_term = 'tmux'
 let g:rainbow_active = 1
 " Execute [python3 -m pip install --user --upgrade pynvim]
+" Execute [pip install IPython matplotlib]
 " let g:slime_default_config = {
 " \ 'socket_name': get(split(\$TMUX, ','), 0),
 " \ 'target_pane': '{top-right}' }
