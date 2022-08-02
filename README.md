@@ -20,11 +20,6 @@
 - `Plug 'vim-airline/vim-airline'`
 - `Plug 'vim-airline/vim-airline-themes'`
 
-> 옵션: `~/.vimrc` 파일에서 주석 해제 후 `PlugInstall` 실행
-
-- `Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }`
-- `Plug 'jpalardy/vim-slime', { 'for': 'python' }`
-
 ---
 
 ### 준비 사항
@@ -118,15 +113,3 @@ $ source ~/.zshrc (Mac인 경우)
 - `<Space>` + `s`: 윈도우 수평 분할 (Split)
 - `<Space>` + `v`: 윈도우 수직 분할 (Vertical Split)
 - `<Space>` + `<Enter>`: 현재 디렉터리 변경
-
-##### [Vim-Slime & Vim-iPython] (옵션: `~/.vimrc` 파일에서 관련 내용 주석 해제)
-
-- `<F4>` + `a`: 전체 셀 실행 (All Cells)
-- `<F4>` + `c`: Plot 닫기 (Close)
-- `<F4>` + `j`: 현재 셀 실행 후 다음 셀 이동 (Jump Cell)
-- `<F4>` + `n`: 다음 셀 이동 (Next Cell)
-- `<F4>` + `p`: 이전 셀 이동 (Previous Cell)
-- `<F4>` + `q`: iPython 종료 (Quit)
-- `<F4>` + `r`: iPython 재실행 (Restart)
-- `<F4>` + `s`: iPython 실행 (Start)
-- `<F4>` + `w`: iPython 실행 결과 지우기 (Wipe off)
