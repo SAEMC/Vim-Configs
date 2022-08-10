@@ -313,7 +313,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-python/python-syntax'
 call plug#end()
 EOF
 
@@ -466,7 +465,6 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 let g:oscyank_max_length = 1000000
 let g:oscyank_silent = v:true
 let g:oscyank_term = 'tmux'
-let g:python_highlight_all = 1
 let g:rainbow_active = 1
 let g:surround_no_mappings = 1
 let g:tagbar_autoclose = 0
