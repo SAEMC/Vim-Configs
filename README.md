@@ -11,6 +11,7 @@
 - `Plug 'nathanaelkane/vim-indent-guides'`
 - `Plug 'navarasu/onedark.nvim'`
 - `Plug 'neoclide/coc.nvim', {'branch': 'release'}`
+- `Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}`
 - `Plug 'ojroques/vim-oscyank', {'branch': 'main'}`
 - `Plug 'preservim/nerdcommenter'`
 - `Plug 'preservim/tagbar'`
