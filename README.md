@@ -15,6 +15,7 @@
 - `Plug 'ojroques/vim-oscyank', {'branch': 'main'}`
 - `Plug 'preservim/nerdcommenter'`
 - `Plug 'preservim/tagbar'`
+- `Plug 'p00f/nvim-ts-rainbow'`
 - `Plug 'scrooloose/nerdtree'`
 - `Plug 'tpope/vim-fugitive'`
 - `Plug 'tpope/vim-surround'`
