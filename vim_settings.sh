@@ -309,6 +309,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
+Plug 'p00f/nvim-ts-rainbow'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -330,6 +331,18 @@ require 'nvim-treesitter.configs'.setup {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
+}
+
+require("nvim-treesitter.configs").setup {
+  highlight = {
+    -- ...
+  },
+  -- ...
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+  }
 }
 EOF
 }
