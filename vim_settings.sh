@@ -440,6 +440,7 @@ let \$NVIM_TUI_ENABLE_TRUE_COLOR=1
 let \$NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 colorscheme onedark
 syntax on
+hi rainbowcol1 guifg=#123456
 
 " [[ Native Commands ]]
 command! -nargs=* T split | resize 10 | terminal <args>
