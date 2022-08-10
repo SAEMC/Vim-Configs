@@ -322,7 +322,8 @@ EOF
   nvim +PlugInstall +qall
 
   cat >>${HOME}/.config/nvim/treesitter.lua <<EOF
-require 'nvim-treesitter.configs'.setup {
+
+require("nvim-treesitter.configs").setup {
   ensure_installed = { "bash", "json", "lua", "markdown", "python", "typescript", "vim", "yaml" },
   sync_install = false,
   auto_install = true,
@@ -330,19 +331,13 @@ require 'nvim-treesitter.configs'.setup {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
-}
-
-require("nvim-treesitter.configs").setup {
-  highlight = {
-    -- ...
-  },
-  -- ...
   rainbow = {
     enable = true,
     extended_mode = true,
     max_file_lines = nil,
   }
 }
+
 EOF
 }
 
