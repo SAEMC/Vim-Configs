@@ -305,6 +305,7 @@ Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'navarasu/onedark.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
@@ -319,6 +320,18 @@ EOF
   # Execute Neo VIM PlugInstall
   echo -e "\n *** Execute Neo VIM PlugInstall *** \n"
   nvim +PlugInstall +qall
+
+  cat >>${HOME}/.config/nvim/treesitter.lua <<EOF
+require 'nvim-treesitter.configs'.setup {
+  ensure_installed = { "bash", "json", "lua", "markdown", "python", "typescript", "vim", "yaml" },
+  sync_install = false,
+  auto_install = true,
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
 }
 
 function writeScripts() {
@@ -367,6 +380,9 @@ function writeScripts() {
   # Write Config into ~/.vimrc
   echo -e "\n *** Write Config into ~/.vimrc *** \n"
   cat >>${HOME}/.vimrc <<EOF
+
+" [[ Luafile ]]
+luafile \$HOME/.config/nvim/treesitter.lua
 
 " [[ Native Options ]]
 set autoindent
