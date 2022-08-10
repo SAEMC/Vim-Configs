@@ -7,7 +7,6 @@
 - `Plug 'blueyed/vim-diminactive'`
 - `Plug 'jiangmiao/auto-pairs'`
 - `Plug 'jistr/vim-nerdtree-tabs'`
-- `Plug 'luochen1990/rainbow'`
 - `Plug 'nathanaelkane/vim-indent-guides'`
 - `Plug 'navarasu/onedark.nvim'`
 - `Plug 'neoclide/coc.nvim', {'branch': 'release'}`
