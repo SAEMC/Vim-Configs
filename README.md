@@ -1,4 +1,4 @@
-# SAEMC Vim Settings
+# SAEMC's Vim Settings
 
 ### 사용 플러그인
 
@@ -48,8 +48,8 @@ $ ./vim_settings.sh [OPTIONS]
 - Dependencies 설치 활성화 (Plugins만 설치 및 Scripts만 작성은 제외)
 
 ```bash
-$ source ~/.bashrc (Linux인 경우)
-$ source ~/.zshrc (Mac인 경우)
+source ~/.bashrc (Linux인 경우)
+source ~/.zshrc (Mac인 경우)
 ```
 
 ---
