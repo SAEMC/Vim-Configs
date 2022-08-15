@@ -1,4 +1,4 @@
-# SAEMC's Vim Settings
+# SAEMC's Vim Configs (Will be deprecated soon...)
 
 ### 사용 플러그인
 
@@ -33,16 +33,16 @@ $ (sudo) apt-get update && \
   (sudo) apt-get install -y sudo git
 ```
 
-- SAEMC Vim-Settings 프로젝트 다운로드 및 실행
-  > `$ ./vim_settings.sh -a` -> Dependencies/Plugins 설치 후 Scripts 작성 (권장)  
-  > `$ ./vim_settings.sh -d` -> Dependencies만 설치  
-  > `$ ./vim_settings.sh -p` -> Plugins만 설치 (작성되어 있는 Scripts 제거됨)  
-  > `$ ./vim_settings.sh -s` -> Scripts만 작성
+- SAEMC's Vim-Configs 프로젝트 다운로드 및 실행
+  > `$ ./vim_configs.sh -a` -> Dependencies/Plugins 설치 후 Scripts 작성 (권장)  
+  > `$ ./vim_configs.sh -d` -> Dependencies만 설치  
+  > `$ ./vim_configs.sh -p` -> Plugins만 설치 (작성되어 있는 Scripts 제거됨)  
+  > `$ ./vim_configs.sh -s` -> Scripts만 작성
 
 ```bash
-$ git clone https://github.com/SAEMC/Vim-Settings && \
-  cd ./Vim-Settings
-$ ./vim_settings.sh [OPTIONS]
+$ git clone https://github.com/SAEMC/Vim-Configs && \
+  cd ./Vim-Configs
+$ ./vim_configs.sh [OPTIONS]
 ```
 
 - Dependencies 설치 활성화 (Plugins만 설치 및 Scripts만 작성은 제외)
