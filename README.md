@@ -1,6 +1,6 @@
 # SAEMC's Vim-Configs (Will be deprecated soon...)
 
-### 사용 플러그인
+## 1. 사용 플러그인
 
 - `Plug 'airblade/vim-gitgutter'`
 - `Plug 'ap/vim-css-color'`
@@ -21,46 +21,64 @@
 - `Plug 'vim-airline/vim-airline'`
 - `Plug 'vim-airline/vim-airline-themes'`
 
----
+<br/>
 
-### 준비 사항
+## 2. 준비 사항
 
-- `sudo` 및 `git` 설치
-  > Mac은 XCode 및 Homebrew가 이미 설치되어 있는 환경
+### 2-1. (Ubuntu만 해당) `sudo` 및 `git` 설치
 
-```bash
-$ (sudo) apt-get update && \
-  (sudo) apt-get install -y sudo git
-```
-
-- SAEMC's Vim-Configs 프로젝트 다운로드 및 실행
-  > `$ ./vim_configs.sh -a` -> Dependencies/Plugins 설치 후 Scripts 작성 (권장)  
-  > `$ ./vim_configs.sh -d` -> Dependencies만 설치  
-  > `$ ./vim_configs.sh -p` -> Plugins만 설치 (작성되어 있는 Scripts 제거됨)  
-  > `$ ./vim_configs.sh -s` -> Scripts만 작성
+> 최초 설치인 경우에만 다음 명령어 실행
 
 ```bash
-$ git clone https://github.com/SAEMC/Vim-Configs && \
-  cd ./Vim-Configs
-$ ./vim_configs.sh [OPTIONS]
+apt-get update && apt-get install -y sudo git
 ```
 
-- Dependencies 설치 활성화 (Plugins만 설치 및 Scripts만 작성은 제외)
+### 2-2. SAEMC's Vim-Configs 다운로드 및 실행
 
 ```bash
-source ~/.bashrc (Linux인 경우)
-source ~/.zshrc (Mac인 경우)
+git clone https://github.com/SAEMC/Vim-Configs && \
+cd ./Vim-Configs
 ```
 
----
+> `$ ./vim_configs.sh -a` -> Dependencies & Plugins 설치 후 Scripts 작성 (권장)
+>
+> `$ ./vim_configs.sh -d` -> Dependencies만 설치
+>
+> `$ ./vim_configs.sh -p` -> Plugins만 설치 (작성되어 있는 Scripts 제거됨)
+>
+> `$ ./vim_configs.sh -s` -> Scripts만 작성
 
-### 사용 방법
+```bash
+./vim_configs.sh [OPTIONS]
+```
 
-#### 매핑된 커맨드는 `~/.vimrc` 파일 확인
+<br/>
 
-#### 이외의 커맨드는 Vim 기본 커맨드 (Vim 기본 커맨드 참조)
+## 2. 플러그인 동기화 및 설정 적용
 
-##### [Normal]
+### 2-1. 디펜던시 설치 활성화
+
+- Ubuntu인 경우
+
+```bash
+source ~/.bashrc
+```
+
+- Mac인 경우
+
+```bash
+source ~/.zshrc
+```
+
+<br/>
+
+## 3. 사용 방법
+
+### 3-1. 매핑된 커맨드는 `~/.vimrc` 파일 확인
+
+### 3-2. 이외의 커맨드는 Vim 기본 커맨드 (Vim 기본 커맨드 참조)
+
+### 3-3. [Normal]
 
 - `<Space>` + `c` + `c`: CoC Check
 - `<Space>` + `c` + `d`: CoC go to Definition
@@ -90,7 +108,7 @@ source ~/.zshrc (Mac인 경우)
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절 (Equal)
 - `<F2>`: CoC Rename
 
-##### [Visual]
+### 3-4. [Visual]
 
 - `<Space>` + `f`: 코드 폴딩 토글 (Fold)
 - `<Space>` + `m`: 선택 부분 수정 (Modify)
@@ -98,16 +116,16 @@ source ~/.zshrc (Mac인 경우)
 - `<Space>` + `y`: 클립보드(Vim -> Xterm -> OS)로 복사 (Yank)
 - `<Space>` + `<Space>`: 주석 토글
 
-##### [Insert]
+### 3-5. [Insert]
 
 - `<Ctrl>` + `d`: 다음 글자 제거 (Delete)
 - `<Ctrl>` + [[`h` or `j` or `k` or `l`]]: 커서 이동
 
-##### [Terminal]
+### 3-6. [Terminal]
 
 - `<Ctrl>` + `w` + [[`h` or `j` or `k` or `l`]]: 윈도우 이동
 
-##### [NerdTree]
+### 3-7. [NerdTree]
 
 - `<Space>` + `e`: 윈도우 확장 토글 (Extend)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
