@@ -125,8 +125,6 @@ source ~/.zshrc
 
 - `<Ctrl>` + `w` + [[`h` or `j` or `k` or `l`]]: 윈도우 이동
 
-test
-
 ### 4-7. [NerdTree]
 
 - `<Space>` + `e`: 윈도우 확장 토글 (Extend)
