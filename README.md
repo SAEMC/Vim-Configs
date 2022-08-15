@@ -1,4 +1,4 @@
-# SAEMC's Vim Configs (Will be deprecated soon...)
+# SAEMC's Vim-Configs (Will be deprecated soon...)
 
 ### 사용 플러그인
 
