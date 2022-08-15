@@ -54,9 +54,9 @@ cd ./Vim-Configs
 
 <br/>
 
-## 2. 플러그인 동기화 및 설정 적용
+## 3. 플러그인 동기화 및 설정 적용
 
-### 2-1. 디펜던시 설치 활성화
+### 3-1. 디펜던시 설치 활성화
 
 - Ubuntu인 경우
 
@@ -72,13 +72,13 @@ source ~/.zshrc
 
 <br/>
 
-## 3. 사용 방법
+## 4. 사용 방법
 
-### 3-1. 매핑된 커맨드는 `~/.vimrc` 파일 확인
+### 4-1. 매핑된 커맨드는 `~/.vimrc` 파일 확인
 
-### 3-2. 이외의 커맨드는 Vim 기본 커맨드 (Vim 기본 커맨드 참조)
+### 4-2. 이외의 커맨드는 Vim 기본 커맨드 (Vim 기본 커맨드 참조)
 
-### 3-3. [Normal]
+### 4-3. [Normal]
 
 - `<Space>` + `c` + `c`: CoC Check
 - `<Space>` + `c` + `d`: CoC go to Definition
@@ -108,7 +108,7 @@ source ~/.zshrc
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절 (Equal)
 - `<F2>`: CoC Rename
 
-### 3-4. [Visual]
+### 4-4. [Visual]
 
 - `<Space>` + `f`: 코드 폴딩 토글 (Fold)
 - `<Space>` + `m`: 선택 부분 수정 (Modify)
@@ -116,16 +116,16 @@ source ~/.zshrc
 - `<Space>` + `y`: 클립보드(Vim -> Xterm -> OS)로 복사 (Yank)
 - `<Space>` + `<Space>`: 주석 토글
 
-### 3-5. [Insert]
+### 4-5. [Insert]
 
 - `<Ctrl>` + `d`: 다음 글자 제거 (Delete)
 - `<Ctrl>` + [[`h` or `j` or `k` or `l`]]: 커서 이동
 
-### 3-6. [Terminal]
+### 4-6. [Terminal]
 
 - `<Ctrl>` + `w` + [[`h` or `j` or `k` or `l`]]: 윈도우 이동
 
-### 3-7. [NerdTree]
+### 4-7. [NerdTree]
 
 - `<Space>` + `e`: 윈도우 확장 토글 (Extend)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
