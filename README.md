@@ -87,7 +87,7 @@ source ~/.zshrc
 - `<Space>` + `c` + `r`: CoC go to Reference
 - `<Space>` + `c` + `s`: CoC Signature
 - `<Space>` + `c` + `t`: CoC go to Type Definition
-- `<Space>` + `c` + [[`[` or `]`]]: CoC Diagnostics 이동
+- `<Space>` + `c` + `[`/`]`: CoC Diagnostics 이동
 - `<Space>` + `g` + `a`: Git Add
 - `<Space>` + `g` + `b`: Git Blame
 - `<Space>` + `g` + `c`: Git Commit
@@ -104,7 +104,7 @@ source ~/.zshrc
 - `<Space>` + `t` + `o`: Tagbar 토글 (Tagbar On/Off)
 - `<Space>` + `v`: 터미널 수직 분할 (Vertical Split)
 - `<Space>` + `w`: 검색 결과 지우기 (Wipe off)
-- `<Space>` + [[`[` or `]`]]: 윈도우 이동
+- `<Space>` + `[`/`]`: 윈도우 이동
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절 (Equal)
 - `<F2>`: CoC Rename
 
@@ -119,11 +119,11 @@ source ~/.zshrc
 ### 4-5. [Insert]
 
 - `<Ctrl>` + `d`: 다음 글자 제거 (Delete)
-- `<Ctrl>` + [[`h` or `j` or `k` or `l`]]: 커서 이동
+- `<Ctrl>` + `h`/`j`/`k`/`l`: 커서 이동
 
 ### 4-6. [Terminal]
 
-- `<Ctrl>` + `w` + [[`h` or `j` or `k` or `l`]]: 윈도우 이동
+- `<Ctrl>` + `w` + `h`/`j`/`k`/`l`: 윈도우 이동
 
 ### 4-7. [NerdTree]
 
