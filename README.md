@@ -2,24 +2,24 @@
 
 ## 1. 사용 플러그인
 
-- `Plug 'airblade/vim-gitgutter'`
-- `Plug 'ap/vim-css-color'`
-- `Plug 'blueyed/vim-diminactive'`
-- `Plug 'jiangmiao/auto-pairs'`
-- `Plug 'jistr/vim-nerdtree-tabs'`
-- `Plug 'nathanaelkane/vim-indent-guides'`
-- `Plug 'navarasu/onedark.nvim'`
-- `Plug 'neoclide/coc.nvim', {'branch': 'release'}`
-- `Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}`
-- `Plug 'ojroques/vim-oscyank', {'branch': 'main'}`
-- `Plug 'preservim/nerdcommenter'`
-- `Plug 'preservim/tagbar'`
-- `Plug 'p00f/nvim-ts-rainbow'`
-- `Plug 'scrooloose/nerdtree'`
-- `Plug 'tpope/vim-fugitive'`
-- `Plug 'tpope/vim-surround'`
-- `Plug 'vim-airline/vim-airline'`
-- `Plug 'vim-airline/vim-airline-themes'`
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- [vim-css-color](https://github.com/ap/vim-css-color)
+- [vim-diminactive](https://github.com/blueyed/vim-diminactive)
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs)
+- [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
+- [nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
+- [navarasu/onedark.nvim](https://github.com/navarasu/onedark.nvim)
+- [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
+- [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [ojroques/vim-oscyank](https://github.com/ojroques/vim-oscyank)
+- [preservim/nerdcommenter](https://github.com/preservim/nerdcommenter)
+- [preservim/tagbar](https://github.com/preservim/tagbar)
+- [p00f/nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow)
+- [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
+- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [tpope/vim-surround](https://github.com/tpope/vim-surround)
+- [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)
+- [vim-airline/vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 
 <br/>
 
