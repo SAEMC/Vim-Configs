@@ -74,11 +74,13 @@ source ~/.zshrc
 
 ## 4. 사용 방법
 
-### 4-1. 매핑된 커맨드는 `~/.vimrc` 파일 확인
+### 4-1. 변경된 커맨드
 
-### 4-2. 이외의 커맨드는 Vim 기본 커맨드 (Vim 기본 커맨드 참조)
+#### 4-1-1. 매핑된 커맨드는 `~/.vimrc` 파일 확인
 
-### 4-3. [Normal]
+#### 4-1-2. 이외의 커맨드는 Vim 기본 커맨드 (Vim 기본 커맨드 참조)
+
+#### 4-1-3. [Normal]
 
 - `<Space>` + `c` + `c`: CoC Check
 - `<Space>` + `c` + `d`: CoC go to Definition
@@ -108,7 +110,7 @@ source ~/.zshrc
 - `<Space>` + `=`: 윈도우 크기 동일하게 조절 (Equal)
 - `<F2>`: CoC Rename
 
-### 4-4. [Visual]
+#### 4-1-4. [Visual]
 
 - `<Space>` + `f`: 코드 폴딩 토글 (Fold)
 - `<Space>` + `m`: 선택 부분 수정 (Modify)
@@ -116,16 +118,16 @@ source ~/.zshrc
 - `<Space>` + `y`: 클립보드(Vim -> Xterm -> OS)로 복사 (Yank)
 - `<Space>` + `<Space>`: 주석 토글
 
-### 4-5. [Insert]
+#### 4-1-5. [Insert]
 
 - `<Ctrl>` + `d`: 다음 글자 제거 (Delete)
 - `<Ctrl>` + `h`/`j`/`k`/`l`: 커서 이동
 
-### 4-6. [Terminal]
+#### 4-1-6. [Terminal]
 
 - `<Ctrl>` + `w` + `h`/`j`/`k`/`l`: 윈도우 이동
 
-### 4-7. [NerdTree]
+#### 4-1-7. [NerdTree]
 
 - `<Space>` + `e`: 윈도우 확장 토글 (Extend)
 - `<Space>` + `r`: 윈도우 새로고침 (Refresh)
