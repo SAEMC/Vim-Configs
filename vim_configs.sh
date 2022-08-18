@@ -57,7 +57,7 @@ function installDependencies() {
       sudo apt-get install -y neovim
     fi
 
-    # If cannot install neovim/stable => Install neovim/unstable
+    # If cannot install neovim/stable -> Install neovim/unstable
     if [[ "$?" -ne 0 ]]; then
       echo -e "\n *** Add Neo VIM (Unstable) into package *** \n"
       sudo add-apt-repository -yu ppa:neovim-ppa/unstable
@@ -123,7 +123,7 @@ EOF
       sudo apt-get update
       sudo apt-get install -y universal-ctags
 
-      # If cannot install universal-ctags => Install exuberant-ctags
+      # If cannot install universal-ctags -> Install exuberant-ctags
       if [[ "$?" -ne 0 ]]; then
         echo -e "\n *** Install exuberant-ctags *** \n"
         sudo apt-get install -y exuberant-ctags
