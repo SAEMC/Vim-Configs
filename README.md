@@ -1,4 +1,8 @@
-# SAEMC's Vim-Configs (Will be deprecated soon...)
+# SAEMC's Vim-Configs
+
+It has been deprecated... Never updated. Please check [SAEMC's Nvim-Configs](https://github.com/SAEMC/Nvim-Configs).
+
+<br/>
 
 ## 1. 사용 플러그인
 
